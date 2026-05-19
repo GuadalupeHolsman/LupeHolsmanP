@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Remove-Item \"C:\\\\Users\\\\guada\\\\Documents\\\\LupeHolsmanP\\\\LupeHolsmanP\\\\img\\\\profile.png\" -Force)",
+      "Bash(Rename-Item \"C:\\\\Users\\\\guada\\\\Documents\\\\LupeHolsmanP\\\\LupeHolsmanP\\\\img\\\\7377FF4B-1CE0-42EC-AF90-E082BBF73FB8.jpeg\" \"profile.png\")",
+      "PowerShell(Rename-Item \"C:\\\\Users\\\\guada\\\\Documents\\\\LupeHolsmanP\\\\LupeHolsmanP\\\\img\\\\7377FF4B-1CE0-42EC-AF90-E082BBF73FB8.jpeg\" \"profile.png\")",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"C:\\\\Users\\\\guada\\\\Documents\\\\LupeHolsmanP\\\\LupeHolsmanP\\\\img\\\\profile.png\"\\); \"$\\($img.Width\\) x $\\($img.Height\\)\"; $img.Dispose\\(\\))"
+    ]
+  }
+}
