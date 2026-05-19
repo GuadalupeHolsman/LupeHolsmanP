@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/Illustration.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">emailjs.init("YOUR_PUBLIC_KEY");</script>
+    <script type="text/javascript">emailjs.init("ISC9P7KgnY-2ohoqV");</script>
 </head>
 
 <body>
@@ -208,8 +208,8 @@
                         <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." data-i18n-placeholder="contact.form.messagePlaceholder" required></textarea>
                     </div>
                     <button type="submit" class="btn" data-i18n="contact.form.send">Send message</button>
-                    <p class="form-success" id="formSuccess" data-i18n="contact.form.success">Message sent! I'll be in touch soon ✦</p>
-                </form>
+                <p class="form-success" id="formSuccess" data-i18n="contact.form.success">Message sent! I'll be in touch soon ✦</p>
+            </form>
 
             </div>
         </section>
@@ -317,7 +317,7 @@
         const btn = this.querySelector('button[type="submit"]');
         btn.textContent = 'Sending...';
         btn.disabled = true;
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+        emailjs.sendForm('service_e1hgfwj', 'template_xpotur4', this)
             .then(() => {
                 document.getElementById('formSuccess').classList.add('visible');
                 this.reset();
