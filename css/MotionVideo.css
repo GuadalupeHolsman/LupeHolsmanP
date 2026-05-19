@@ -16,32 +16,30 @@
 
 .mv-tools-inner {
     display: flex;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1.2rem;
 }
 
 .mv-tools-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.6rem;
+    gap: 0.5rem;
 }
 
 .mv-tool-tag {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.5px;
-    color: var(--dark);
-    border: 1.5px solid #e0e0e0;
+    color: #555;
+    border: 1px solid #ddd;
     border-radius: 2rem;
-    padding: 0.45rem 1.1rem;
-    transition: border-color 0.25s, color 0.25s, background 0.25s;
+    padding: 0.45rem 1rem;
+    transition: border-color 0.3s, color 0.3s;
 }
 
 .mv-tool-tag:hover {
     border-color: var(--primary);
     color: var(--primary);
-    background: rgba(245, 0, 65, 0.04);
 }
 
 
