@@ -7,6 +7,44 @@
 .text-cyan { color: var(--cyan); }
 
 
+/* ── TOOLS ───────────────────────────────────── */
+.mv-tools {
+    padding: 4rem 0;
+    background: #fff;
+    border-top: 1px solid #f0f0f0;
+}
+
+.mv-tools-inner {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.mv-tools-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.mv-tool-tag {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--dark);
+    border: 1.5px solid #e0e0e0;
+    border-radius: 2rem;
+    padding: 0.45rem 1.1rem;
+    transition: border-color 0.25s, color 0.25s, background 0.25s;
+}
+
+.mv-tool-tag:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: rgba(245, 0, 65, 0.04);
+}
+
+
 /* ── HERO ────────────────────────────────────── */
 .mv-hero {
     position: relative;
