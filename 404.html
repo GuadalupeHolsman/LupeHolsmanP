@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Lupe Holsman</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+
+        /* ── 404 Page ────────────────────────────────────────────── */
+        .page-404 {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Giant watermark number */
+        .error-code {
+            font-size: clamp(7rem, 20vw, 15rem);
+            font-weight: 800;
+            line-height: 1;
+            color: transparent;
+            -webkit-text-stroke: 2px #f0f0f0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -55%);
+            z-index: 0;
+            user-select: none;
+            white-space: nowrap;
+            letter-spacing: -8px;
+            animation: errorCodeIn 1s cubic-bezier(.25,.46,.45,.94) both;
+        }
+
+        @keyframes errorCodeIn {
+            from { opacity: 0; transform: translate(-50%, -45%) scale(0.92); }
+            to   { opacity: 1; transform: translate(-50%, -55%) scale(1); }
+        }
+
+        /* Floating decorative blobs */
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .blob-1 {
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(245,0,65,0.06) 0%, transparent 70%);
+            top: 5%;
+            left: -80px;
+            animation: pulseSoft 7s ease-in-out infinite;
+        }
+
+        .blob-2 {
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(0,210,211,0.07) 0%, transparent 70%);
+            bottom: 10%;
+            right: 8%;
+            animation: pulseSoft 9s ease-in-out 2s infinite;
+        }
+
+        /* Decorative rings */
+        .ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(245,0,65,0.07);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .ring-1 {
+            width: 500px;
+            height: 500px;
+            top: -150px;
+            right: -150px;
+            animation: rotateSlow 30s linear infinite;
+        }
+
+        .ring-2 {
+            width: 200px;
+            height: 200px;
+            border-color: rgba(0,210,211,0.08);
+            bottom: 5%;
+            left: 3%;
+            animation: rotateSlow 20s linear reverse infinite;
+        }
+
+        @keyframes rotateSlow {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Error content */
+        .error-content {
+            position: relative;
+            z-index: 1;
+            max-width: 560px;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .error-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary);
+            color: white;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            padding: 0.4rem 1rem;
+            border-radius: 2rem;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* shimmer on tag */
+        .error-tag::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: translateX(-100%);
+            animation: shimmerTag 3s ease-in-out 1.5s infinite;
+        }
+
+        @keyframes shimmerTag {
+            to { transform: translateX(100%); }
+        }
+
+        .error-title {
+            font-size: clamp(1.8rem, 5vw, 3.2rem);
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--dark);
+            margin-bottom: 1.2rem;
+            animation: fadeInUp 0.8s ease-out 0.35s both;
+            letter-spacing: -0.5px;
+        }
+
+        /* Glitch effect */
+        .glitch {
+            position: relative;
+            display: inline-block;
+            color: var(--primary);
+        }
+
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .glitch::before {
+            color: var(--cyan);
+            animation: glitch1 4s infinite;
+            clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+        }
+
+        .glitch::after {
+            color: var(--primary);
+            animation: glitch2 4s infinite;
+            clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+        }
+
+        @keyframes glitch1 {
+            0%, 88%, 100% { transform: translate(0); opacity: 1; }
+            90%            { transform: translate(-5px, 1px); opacity: 0.9; }
+            93%            { transform: translate(5px, -2px); opacity: 0.85; }
+            96%            { transform: translate(-3px, 2px); opacity: 0.9; }
+        }
+
+        @keyframes glitch2 {
+            0%, 88%, 100% { transform: translate(0); opacity: 1; }
+            90%            { transform: translate(5px, -1px); opacity: 0.9; }
+            93%            { transform: translate(-5px, 1px); opacity: 0.85; }
+            96%            { transform: translate(3px, -2px); opacity: 0.9; }
+        }
+
+        .error-subtitle {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.75;
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 0.8s ease-out 0.45s both;
+            font-weight: 400;
+        }
+
+        /* Actions */
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.55s both;
+        }
+
+        .btn-outline {
+            padding: 0.75rem 1.6rem;
+            border-radius: 2rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            display: inline-block;
+            border: 2px solid var(--dark);
+            color: var(--dark);
+            transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            letter-spacing: 0.2px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-outline::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, transparent, rgba(0,0,0,0.05), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+
+        .btn-outline:hover::after {
+            transform: translateX(100%);
+        }
+
+        .btn-outline:hover {
+            background: var(--dark);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+        }
+
+        /* Character */
+        .error-character {
+            position: absolute;
+            bottom: 0;
+            right: 5%;
+            width: clamp(140px, 20vw, 280px);
+            opacity: 0;
+            transform: translateX(60px);
+            animation: slideInChar 0.9s cubic-bezier(.25,.46,.45,.94) 0.7s forwards;
+            pointer-events: none;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.08));
+            z-index: 2;
+        }
+
+        @keyframes slideInChar {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Bounce when visible */
+        .error-character.bouncing {
+            animation: slideInChar 0.9s cubic-bezier(.25,.46,.45,.94) 0.7s forwards,
+                       characterBounce 3.5s ease-in-out 1.6s infinite;
+        }
+
+        /* Subtle bottom divider line */
+        .page-404::after {
+            display: none;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .error-character {
+                width: clamp(100px, 35vw, 180px);
+                right: 0;
+            }
+
+            .error-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-outline {
+                width: 100%;
+                text-align: center;
+            }
+
+            .ring-1 {
+                width: 300px;
+                height: 300px;
+                top: -100px;
+                right: -100px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Custom cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <header id="siteHeader">
+        <div class="container">
+            <nav>
+                <ul id="navLinks">
+                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                    <li><a href="404.html"   data-i18n="nav.about">About</a></li>
+                    <li><a href="404.html"   data-i18n="nav.work">My Work</a></li>
+                </ul>
+                <div class="nav-right">
+                    <button class="lang-switch" id="langSwitch" aria-label="Switch language">
+                        <span class="lang-flag" id="langFlag">🇦🇷</span>
+                        <span class="lang-label" id="langLabel">ES</span>
+                    </button>
+                    <a href="index.html#contact" class="btn" data-i18n="nav.contact">Get in touch</a>
+                    <button class="hamburger" id="hamburger" aria-label="Menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-404">
+
+        <!-- Decorative elements -->
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="error-code">404</div>
+
+        <div class="error-content">
+            <span class="error-tag">Error 404</span>
+
+            <h1 class="error-title">
+                <span data-i18n="error.titleLine1">This page is still</span><br>
+                <span class="glitch" id="glitchSpan" data-i18n="error.titleLine2" data-text="in progress.">in progress.</span>
+            </h1>
+
+            <p class="error-subtitle" data-i18n="error.subtitle">
+                You found the one thing Lupe hasn't designed yet.<br>
+                Portfolio coming soon — the best work takes time.
+            </p>
+
+            <div class="error-actions">
+                <a href="index.html"         class="btn"         data-i18n="error.btnHome">Back to home</a>
+                <a href="index.html#contact" class="btn-outline" data-i18n="error.btnContact">Get in touch</a>
+            </div>
+        </div>
+
+        <!-- Character -->
+        <img
+            src="img/IMG_2661 1.png"
+            alt="Lupe character"
+            class="error-character"
+            id="errorChar"
+        >
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>LUPE HOLSMAN</h3>
+                <p data-i18n="footer.role">Multimedia Designer</p>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-contact">
+                <p>+54 221 596 4111</p>
+                <p>guadalupeholsman@gmail.com</p>
+                <p>La Plata, Buenos Aires, Argentina</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-icon"><img src="img/icon-whatsapp.png" alt="WhatsApp"></a>
+                <a href="https://www.linkedin.com/in/guadalupe-holsman" class="social-icon"><img src="img/icon-linkedin.png" alt="LinkedIn"></a>
+                <a href="#" class="social-icon"><img src="img/icon-instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        // ══════════════════════════════════════════════════════════════════
+        //  CURSOR PERSONALIZADO
+        // ══════════════════════════════════════════════════════════════════
+        const cursorDot  = document.getElementById('cursorDot');
+        const cursorRing = document.getElementById('cursorRing');
+
+        let mouseX = 0, mouseY = 0;
+        let ringX  = 0, ringY  = 0;
+
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursorDot.style.transform = `translate(calc(${mouseX}px - 50%), calc(${mouseY}px - 50%))`;
+        });
+
+        (function animateRing() {
+            ringX += (mouseX - ringX) * 0.14;
+            ringY += (mouseY - ringY) * 0.14;
+            cursorRing.style.transform = `translate(calc(${ringX}px - 50%), calc(${ringY}px - 50%))`;
+            requestAnimationFrame(animateRing);
+        })();
+
+
+        // ══════════════════════════════════════════════════════════════════
+        //  STICKY HEADER SHADOW
+        // ══════════════════════════════════════════════════════════════════
+        const siteHeader = document.getElementById('siteHeader');
+        window.addEventListener('scroll', () => {
+            siteHeader.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+
+        // ══════════════════════════════════════════════════════════════════
+        //  CHARACTER BOUNCE AFTER ENTRY ANIMATION
+        // ══════════════════════════════════════════════════════════════════
+        const errorChar = document.getElementById('errorChar');
+        setTimeout(() => {
+            errorChar.classList.add('bouncing');
+        }, 1600);
+
+
+        // ══════════════════════════════════════════════════════════════════
+        //  TRADUCCIONES 404
+        // ══════════════════════════════════════════════════════════════════
+        const translations = {
+            en: {
+                nav: {
+                    home:    'Home',
+                    about:   'About',
+                    work:    'My Work',
+                    contact: 'Get in touch'
+                },
+                error: {
+                    titleLine1: 'This page is still',
+                    titleLine2: 'in progress.',
+                    subtitle:   "You found the one thing Lupe hasn't designed yet.<br>Portfolio coming soon — the best work takes time.",
+                    btnHome:    'Back to home',
+                    btnContact: 'Get in touch'
+                },
+                footer: { role: 'Multimedia Designer' }
+            },
+            es: {
+                nav: {
+                    home:    'Inicio',
+                    about:   'Sobre mí',
+                    work:    'Mi trabajo',
+                    contact: 'Contactame'
+                },
+                error: {
+                    titleLine1: 'Esta página sigue',
+                    titleLine2: 'en construcción.',
+                    subtitle:   'Encontraste lo único que Lupe todavía no diseñó.<br>Portfolio próximamente — lo mejor lleva su tiempo.',
+                    btnHome:    'Volver al inicio',
+                    btnContact: 'Contactame'
+                },
+                footer: { role: 'Diseñadora Multimedia' }
+            }
+        };
+
+        // ══════════════════════════════════════════════════════════════════
+        //  MOTOR DE TRADUCCIÓN
+        // ══════════════════════════════════════════════════════════════════
+        function getT(lang, key) {
+            return key.split('.').reduce((obj, k) => (obj && obj[k] !== undefined ? obj[k] : null), translations[lang]);
+        }
+
+        function applyLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const val = getT(lang, el.dataset.i18n);
+                if (val !== null) {
+                    el.innerHTML = val;
+                    el.classList.add('lang-fade');
+                    el.addEventListener('animationend', () => el.classList.remove('lang-fade'), { once: true });
+                }
+            });
+
+            // Sync glitch data-text with translated text
+            const glitch = document.getElementById('glitchSpan');
+            if (glitch) {
+                const val = getT(lang, 'error.titleLine2');
+                if (val) glitch.setAttribute('data-text', val);
+            }
+
+            document.documentElement.lang = lang;
+
+            const isES = lang === 'es';
+            document.getElementById('langFlag').textContent  = isES ? '🇺🇸' : '🇦🇷';
+            document.getElementById('langLabel').textContent = isES ? 'EN' : 'ES';
+        }
+
+        // ══════════════════════════════════════════════════════════════════
+        //  ESTADO & TOGGLE
+        // ══════════════════════════════════════════════════════════════════
+        let currentLang = localStorage.getItem('lupe-lang') || 'en';
+        applyLang(currentLang);
+
+        document.getElementById('langSwitch').addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'es' : 'en';
+            localStorage.setItem('lupe-lang', currentLang);
+            applyLang(currentLang);
+        });
+
+        // ══════════════════════════════════════════════════════════════════
+        //  HAMBURGER MENU
+        // ══════════════════════════════════════════════════════════════════
+        const hamburger = document.getElementById('hamburger');
+        const navLinks  = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navLinks.classList.toggle('mobile-open');
+            siteHeader.classList.toggle('nav-open');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                navLinks.classList.remove('mobile-open');
+            });
+        });
+
+    </script>
+
+</body>
+</html>

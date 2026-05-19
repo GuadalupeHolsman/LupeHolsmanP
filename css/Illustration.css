@@ -1,0 +1,534 @@
+/* =============================================
+   ILLUSTRATION — PAGE STYLES
+   Complementa css/styles.css
+   ============================================= */
+
+/* ── UTILITIES ───────────────────────────────── */
+.text-cyan { color: var(--cyan); }
+
+
+/* ── LABEL ───────────────────────────────────── */
+.illus-label {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    display: block;
+    margin-bottom: 0.6rem;
+}
+
+.illus-label--dark { color: var(--primary); }
+
+
+/* ── HERO ────────────────────────────────────── */
+.illus-hero {
+    position: relative;
+    background: #fff;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5.5rem;
+    overflow: hidden;
+}
+
+/* Corner mark top-right */
+.illus-hero::before {
+    content: '';
+    position: absolute;
+    top: 5.5rem;
+    right: 3%;
+    width: 28px;
+    height: 28px;
+    border-top: 2px solid var(--cyan);
+    border-right: 2px solid var(--cyan);
+    opacity: 0.45;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.illus-hero-title-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.illus-hero-title h1 {
+    font-size: clamp(3.5rem, 8.5vw, 8rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -3px;
+    color: var(--dark);
+    margin: 0;
+}
+
+.illus-hero-title h1 em {
+    font-style: italic;
+    color: var(--cyan);
+    display: block;
+}
+
+/* Decoración trazo orgánico */
+.illus-brush-wrap {
+    width: 100%;
+    height: 90px;
+    overflow: visible;
+    pointer-events: none;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.illus-brush-wrap svg {
+    width: 106%;
+    height: 100%;
+    margin-left: -3%;
+    overflow: visible;
+    display: block;
+}
+
+.illus-hero-desc {
+    font-size: 0.78rem;
+    line-height: 1.75;
+    color: #666;
+    text-align: right;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    max-width: 320px;
+    margin-left: auto;
+    padding: 1.4rem 0 2.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ── SECTION HEADERS ─────────────────────────── */
+.illus-section-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 3.5rem;
+}
+
+.illus-section-head h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -1.2px;
+    color: #fff;
+    margin: 0.4rem 0 0;
+}
+
+.illus-section-head h2 em {
+    font-style: italic;
+    color: var(--cyan);
+}
+
+.illus-section-tagline {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    text-align: right;
+    max-width: 220px;
+    line-height: 1.65;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+
+/* ── CHARACTERS ──────────────────────────────── */
+.illus-characters {
+    background: #111;
+    padding: 6rem 0 7rem;
+}
+
+.illus-char-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.illus-char-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    cursor: pointer;
+}
+
+.illus-char-img-wrap {
+    aspect-ratio: 4 / 5;
+    background: #1c1c1c;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.illus-char-item:hover .illus-char-img-wrap {
+    border-color: rgba(0,210,211,0.3);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.illus-char-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(.215,.61,.355,1);
+}
+
+.illus-char-item:hover .illus-char-img-wrap img {
+    transform: scale(1.04);
+}
+
+.illus-char-info h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.5px;
+    margin: 0 0 0.4rem;
+}
+
+.illus-char-info p {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.illus-char-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.9rem;
+}
+
+.illus-char-tags span {
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.3rem 0.85rem;
+    border: 1px solid rgba(0,210,211,0.3);
+    border-radius: 2rem;
+    color: var(--cyan);
+}
+
+
+/* ── GALLERY ─────────────────────────────────── */
+.illus-gallery {
+    background: #000;
+    padding: 6rem 0 7rem;
+}
+
+.illus-gallery-head {
+    margin-bottom: 3rem;
+}
+
+.illus-gallery-head h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -1.2px;
+    color: #fff;
+    margin: 0.4rem 0 0.8rem;
+}
+
+.illus-gallery-head h2 em {
+    font-style: italic;
+    color: var(--cyan);
+}
+
+.illus-gallery-tagline {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.65;
+    max-width: 320px;
+}
+
+.illus-gallery-grid {
+    columns: 3;
+    column-gap: 1rem;
+}
+
+.illus-gallery-item {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #1c1c1c;
+    cursor: pointer;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.illus-gallery-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    z-index: 2;
+}
+
+.illus-gallery-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.illus-gallery-item:hover img { transform: scale(1.03); }
+
+
+/* ── SKETCHBOOK ──────────────────────────────── */
+.illus-sketchbook {
+    background: #f5f5f5;
+    padding: 6rem 0 7rem;
+    border-top: 1px solid #ebebeb;
+}
+
+.illus-sketch-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.illus-sketch-head h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: -0.8px;
+    color: var(--dark);
+    margin: 0.4rem 0 0;
+}
+
+.illus-sketch-tagline {
+    font-size: 0.78rem;
+    color: #888;
+    text-align: right;
+    max-width: 200px;
+    line-height: 1.65;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* Carousel */
+.sketch-carousel-wrap {
+    position: relative;
+}
+
+.sketch-carousel {
+    display: flex;
+    gap: 1.8rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0.5rem;
+    align-items: center;
+}
+
+.sketch-carousel::-webkit-scrollbar { display: none; }
+
+.sketch-card {
+    flex: 0 0 300px;
+    aspect-ratio: 1;
+    scroll-snap-align: start;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 1rem;
+    transform: rotate(var(--rotation, 0deg));
+    transition: transform 0.35s cubic-bezier(.25,.46,.45,.94), box-shadow 0.35s ease;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+}
+
+.sketch-card:hover {
+    transform: rotate(0deg) translateY(-10px) scale(1.03);
+    z-index: 10;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.sketch-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: sepia(0.15) contrast(0.92);
+}
+
+/* Botones del carousel */
+.sketch-btn {
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--dark);
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease;
+    z-index: 5;
+}
+
+.sketch-btn--prev {
+    right: auto;
+    left: -18px;
+}
+
+.sketch-btn:hover {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 8px 28px rgba(245,0,65,0.3);
+    transform: translateY(-50%) scale(1.08);
+}
+
+
+/* ── CONTACT ─────────────────────────────────── */
+.contact-section { background: #fafafa; }
+
+
+/* ── REVEAL ANIMATIONS ───────────────────────── */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(.25,.46,.45,.94);
+}
+
+.reveal.from-left  { transform: translateX(-28px); }
+.reveal.from-right { transform: translateX(28px);  }
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+
+/* ── RESPONSIVE ──────────────────────────────── */
+@media (max-width: 1024px) {
+    .illus-expertise-inner {
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .illus-char-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .illus-expertise-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .illus-gallery-grid {
+        columns: 2;
+    }
+
+    .illus-section-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .illus-section-tagline {
+        text-align: left;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .illus-hero {
+        padding-top: 4.5rem;
+        min-height: auto;
+    }
+
+    .illus-hero-title h1 {
+        font-size: 2.8rem;
+        letter-spacing: -1px;
+    }
+
+    .illus-hero-desc {
+        font-size: 0.72rem;
+        max-width: 240px;
+        padding: 1rem 0 2rem;
+    }
+
+    .illus-expertise-left h2 {
+        font-size: 2rem;
+    }
+
+    .illus-gallery-grid {
+        columns: 1;
+    }
+
+    .sketch-card {
+        flex: 0 0 220px;
+    }
+
+    /* Characters grid — already 1 col at 900px; tighten gap on mobile */
+    .illus-char-grid {
+        gap: 2.5rem;
+    }
+
+    .illus-char-info h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Section heads — stack on mobile */
+    .illus-section-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+
+    .illus-section-tagline {
+        text-align: left;
+        max-width: 100%;
+    }
+
+    /* Sketchbook head — stack on mobile */
+    .illus-sketch-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+
+    .illus-sketch-tagline {
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .illus-sketch-head h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Section padding reduction on mobile */
+    .illus-characters {
+        padding: 3.5rem 0 4rem;
+    }
+
+    .illus-gallery {
+        padding: 3.5rem 0 4rem;
+    }
+
+    .illus-sketchbook {
+        padding: 3.5rem 0 4rem;
+    }
+
+    /* Gallery head — stack on mobile */
+    .illus-gallery-head {
+        margin-bottom: 2rem;
+    }
+
+    .illus-gallery-head h2 {
+        font-size: 1.8rem;
+    }
+}

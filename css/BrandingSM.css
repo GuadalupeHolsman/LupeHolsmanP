@@ -1,0 +1,651 @@
+/* =============================================
+   BRANDING & SOCIAL MEDIA — PAGE STYLES
+   Complementa css/styles.css
+   ============================================= */
+
+/* ── UTILITIES ───────────────────────────────── */
+.text-cyan { color: var(--cyan); }
+
+
+/* ── HERO BRANDING ───────────────────────────── */
+.bsm-hero {
+    position: relative;
+    background: #fff;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5.5rem;
+    overflow: hidden;
+}
+
+/* Corner mark top-right */
+.bsm-hero::before {
+    content: '';
+    position: absolute;
+    top: 5.5rem;
+    right: 3%;
+    width: 28px;
+    height: 28px;
+    border-top: 2px solid var(--cyan);
+    border-right: 2px solid var(--cyan);
+    opacity: 0.55;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Título — ocupa el espacio central de la sección */
+.bsm-hero-title-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.bsm-hero-title h1 {
+    font-size: clamp(3.5rem, 8.5vw, 8rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -3px;
+    color: var(--dark);
+    margin: 0;
+}
+
+.bsm-hero-title h1 em {
+    font-style: italic;
+    color: var(--cyan);
+    display: block;
+}
+
+/* Onda SVG */
+.bsm-wave-wrap {
+    width: 100%;
+    height: 110px;
+    overflow: visible;
+    pointer-events: none;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.bsm-wave-wrap svg {
+    width: 106%;
+    height: 100%;
+    margin-left: -3%;
+    overflow: visible;
+    display: block;
+}
+
+/* Descripción — debajo de la ola, alineada a la derecha */
+.bsm-hero-desc {
+    font-size: 0.78rem;
+    line-height: 1.75;
+    color: #666;
+    text-align: right;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    max-width: 300px;
+    margin-left: auto;
+    padding: 1.4rem 0 2.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ── SELECTED PROJECTS ───────────────────────── */
+.bsm-projects {
+    background: #fff;
+    padding: 5rem 0 6rem;
+}
+
+.bsm-label {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 0.6rem;
+}
+
+.bsm-projects h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 2.5rem;
+    color: var(--dark);
+}
+
+/* Carousel */
+.bsm-carousel-wrap {
+    position: relative;
+}
+
+.bsm-carousel {
+    display: flex;
+    gap: 1.4rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0.5rem;
+}
+
+.bsm-carousel::-webkit-scrollbar { display: none; }
+
+/* ── CARDS ───────────────────────────────────── */
+.bsm-proj-card {
+    flex: 0 0 340px;
+    height: 420px;
+    background: #1c1c1c;
+    background-image: none;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.8rem 2.2rem;
+    scroll-snap-align: start;
+    transition: transform 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+
+.bsm-proj-card:hover {
+    transform: translateY(-8px);
+   background: pink;
+   background-image: linear-gradient(135deg, #1c1c1c 0%, #2a2a2a 100%);
+}
+
+
+/* Imagen del logo — posicionada arriba */
+.proj-logo-img {
+   
+    padding: 5.2rem 0 1.5rem;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.4s cubic-bezier(.25,.46,.45,.94);
+    }
+
+.bsm-proj-card:hover .proj-logo-img {
+    transform: translateY(-12px);
+    max-width: 120%;
+}
+
+/* Servicios — aparecen desde abajo con más espacio */
+.bsm-proj-services {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 1.8rem 2.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    transform: translateY(120%);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(.25,.46,.45,.94), opacity 0.35s ease;
+    z-index: 3;
+    text-align: center;
+}
+
+.bsm-proj-services span {
+    color: var(--cyan);
+    font-size: 0.80rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    line-height: 1.6;
+}
+
+.bsm-proj-card:hover .bsm-proj-services {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Arrow button */
+.bsm-carousel-btn {
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--dark);
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease;
+    z-index: 5;
+}
+
+.bsm-carousel-btn--prev {
+    right: auto;
+    left: -18px;
+}
+
+.bsm-carousel-btn:hover {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 8px 28px rgba(245,0,65,0.3);
+    transform: translateY(-50%) scale(1.08);
+}
+
+
+/* ── EXPERTISE ───────────────────────────────── */
+.bsm-expertise {
+    background: #fff;
+    padding: 6rem 0 7rem;
+    border-top: 1px solid #ebebeb;
+}
+
+.bsm-expertise-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: flex-start;
+}
+
+.bsm-expertise-left h2 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -1.2px;
+    margin: 0.5rem 0 1.5rem;
+    color: var(--dark);
+}
+
+.bsm-expertise-left h2 em {
+    font-style: italic;
+    font-weight: 900;
+}
+
+.bsm-expertise-left p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.8;
+    max-width: 380px;
+}
+
+/* What's Included — sin caja, layout limpio */
+.bsm-included-card {
+    padding: 0.5rem 0;
+}
+
+.bsm-included-card h4 {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 1.6rem;
+}
+
+.bsm-included-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.bsm-included-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    font-size: 0.92rem;
+    color: #2a2a2a;
+    font-weight: 500;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.bsm-included-list li:first-child {
+    border-top: 1px solid #e8e8e8;
+}
+
+/* "+" en cyan en vez de dot */
+.bsm-included-list li::before {
+    content: '+';
+    color: var(--cyan);
+    font-weight: 900;
+    font-size: 1.15rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+
+/* ── LOGOFOLIO ───────────────────────────────── */
+.bsm-logofolio {
+    background: #fff;
+    padding: 6rem 0 8rem;
+    border-top: 1px solid #ebebeb;
+    text-align: center;
+}
+
+.bsm-logofolio h2 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    color: var(--dark);
+    margin: 0.4rem 0 0.8rem;
+}
+
+.bsm-logofolio .bsm-subtitle {
+    font-size: 0.84rem;
+    color: #888;
+    max-width: 300px;
+    margin: 0 auto 3.5rem;
+    line-height: 1.65;
+}
+
+.bsm-logo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+}
+
+.bsm-logo-tile {
+    background: #f4f4f4;
+    border-radius: 12px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* Hover: borde rojo/magenta del prototipo */
+.bsm-logo-tile:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(245,0,65,0.12);
+}
+
+.bsm-logo-tile img {
+    max-width: 72%;
+    max-height: 115px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.bsm-logo-tile:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ── POSTS GALLERY ───────────────────────────── */
+.bsm-posts {
+    background: #111;
+    padding: 6rem 0 7rem;
+}
+
+.bsm-posts-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 2.8rem;
+}
+
+.bsm-posts-header .bsm-label { color: var(--cyan); }
+
+.bsm-posts-header h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: #fff;
+    margin: 0.4rem 0 0;
+}
+
+.bsm-posts-tagline {
+    font-size: 0.78rem;
+    color: #666;
+    text-align: right;
+    max-width: 200px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.bsm-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.7rem;
+}
+
+.bsm-post-tile {
+    aspect-ratio: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #1e1e1e;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.bsm-post-tile:hover {
+    transform: scale(1.03);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+    z-index: 2;
+}
+
+/* Placeholder gradient tiles */
+.bsm-post-tile::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--tile-bg, linear-gradient(135deg, #1c1c1c, #2a2a2a));
+}
+
+/* Hover overlay */
+.bsm-post-tile::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,194,199,0.12);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.bsm-post-tile:hover::after { opacity: 1; }
+
+.bsm-post-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+
+/* Featured tile — spans 2 cols */
+.bsm-post-tile.featured {
+    grid-column: span 2;
+    grid-row: span 2;
+    border-radius: 12px;
+}
+
+/* Color palettes for placeholder tiles */
+.bsm-post-tile:nth-child(1) { --tile-bg: linear-gradient(135deg, #0f0f0f, #1a1a2e); }
+.bsm-post-tile:nth-child(2) { --tile-bg: linear-gradient(135deg, #1a0a1a, #2d1b2d); }
+.bsm-post-tile:nth-child(3) { --tile-bg: linear-gradient(135deg, #0a1a1a, #0d2e2e); }
+.bsm-post-tile:nth-child(4) { --tile-bg: linear-gradient(135deg, #1a0d09, #2e1a10); }
+.bsm-post-tile:nth-child(5) { --tile-bg: linear-gradient(135deg, #0f0f0f, #1c1c1c); }
+.bsm-post-tile:nth-child(6) { --tile-bg: linear-gradient(135deg, #0a0e1a, #121830); }
+.bsm-post-tile:nth-child(7) { --tile-bg: linear-gradient(135deg, #130a1a, #1d0e28); }
+.bsm-post-tile:nth-child(8) { --tile-bg: linear-gradient(135deg, #001a1a, #002a2a); }
+
+/* Label inside placeholder */
+.bsm-post-tile .post-label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+    pointer-events: none;
+}
+
+
+/* ── CONTACT (index-style override) ─────────── */
+/* Asegura que la sección de contacto tome los estilos de index */
+#contact.contact-section {
+    background: #fafafa;
+}
+
+
+/* ── REVEAL ANIMATIONS ───────────────────────── */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(.25,.46,.45,.94);
+}
+
+.reveal.from-left  { transform: translateX(-28px); }
+.reveal.from-right { transform: translateX(28px);  }
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+
+/* ── RESPONSIVE ──────────────────────────────── */
+@media (max-width: 900px) {
+    .bsm-expertise-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .bsm-logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bsm-posts-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .bsm-hero {
+        padding-top: 4.5rem;
+        min-height: auto;
+    }
+
+    .bsm-hero-title h1 {
+        font-size: 2.8rem;
+        letter-spacing: -1px;
+    }
+
+    .bsm-hero::before {
+        width: 180px;
+        height: 180px;
+        top: -30px;
+        right: -50px;
+    }
+
+    .bsm-hero-desc {
+        font-size: 0.72rem;
+        max-width: 240px;
+        padding: 1rem 0 2rem;
+    }
+
+    .bsm-proj-card {
+        flex: 0 0 260px;
+        height: 340px;
+        padding-top: 50px;
+    }
+
+    .bsm-expertise-left h2 {
+        font-size: 2rem;
+    }
+
+    .bsm-projects h2 {
+        font-size: 1.8rem;
+    }
+
+    .bsm-logofolio h2 {
+        font-size: 2.2rem;
+    }
+
+    .bsm-posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Reset featured tile spanning on mobile — 2 col grid can't handle span 2 + span 2 */
+    .bsm-post-tile.featured {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .bsm-posts-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .bsm-posts-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .bsm-posts-tagline {
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .bsm-logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+    }
+
+    .bsm-logo-tile {
+        height: 140px;
+    }
+
+    .bsm-contact-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .bsm-form .btn {
+        align-self: stretch;
+        text-align: center;
+    }
+
+    /* Section padding reduction on mobile */
+    .bsm-expertise {
+        padding: 3.5rem 0 4rem;
+    }
+
+    .bsm-logofolio {
+        padding: 3.5rem 0 4.5rem;
+    }
+
+    .bsm-posts {
+        padding: 3.5rem 0 4rem;
+    }
+
+    .bsm-projects {
+        padding: 3rem 0 3.5rem;
+    }
+}
