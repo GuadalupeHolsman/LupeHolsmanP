@@ -4,7 +4,12 @@
       "Bash(Remove-Item \"C:\\\\Users\\\\guada\\\\Documents\\\\LupeHolsmanP\\\\LupeHolsmanP\\\\img\\\\profile.png\" -Force)",
       "Bash(Rename-Item \"C:\\\\Users\\\\guada\\\\Documents\\\\LupeHolsmanP\\\\LupeHolsmanP\\\\img\\\\7377FF4B-1CE0-42EC-AF90-E082BBF73FB8.jpeg\" \"profile.png\")",
       "PowerShell(Rename-Item \"C:\\\\Users\\\\guada\\\\Documents\\\\LupeHolsmanP\\\\LupeHolsmanP\\\\img\\\\7377FF4B-1CE0-42EC-AF90-E082BBF73FB8.jpeg\" \"profile.png\")",
-      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"C:\\\\Users\\\\guada\\\\Documents\\\\LupeHolsmanP\\\\LupeHolsmanP\\\\img\\\\profile.png\"\\); \"$\\($img.Width\\) x $\\($img.Height\\)\"; $img.Dispose\\(\\))"
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"C:\\\\Users\\\\guada\\\\Documents\\\\LupeHolsmanP\\\\LupeHolsmanP\\\\img\\\\profile.png\"\\); \"$\\($img.Width\\) x $\\($img.Height\\)\"; $img.Dispose\\(\\))",
+      "Bash(cp \"C:\\\\Users\\\\guada\\\\Downloads\\\\PERROSSS.svg\" \"C:\\\\Users\\\\guada\\\\Documents\\\\LupeHolsmanP\\\\LupeHolsmanP\\\\img\\\\PERROSSS.svg\")",
+      "Bash(cp \"C:\\\\Users\\\\guada\\\\Downloads\\\\expresiones.svg\" \"C:\\\\Users\\\\guada\\\\Documents\\\\LupeHolsmanP\\\\LupeHolsmanP\\\\img\\\\expresiones.svg\")",
+      "mcp__Claude_Preview__preview_start",
+      "PowerShell(\\(Get-Command python -ErrorAction SilentlyContinue\\).Source; \\(Get-Command python3 -ErrorAction SilentlyContinue\\).Source; \\(Get-Command node -ErrorAction SilentlyContinue\\).Source)",
+      "PowerShell(Get-Command php, ruby, go -ErrorAction SilentlyContinue)"
     ]
   }
 }

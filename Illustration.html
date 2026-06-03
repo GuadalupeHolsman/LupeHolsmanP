@@ -96,32 +96,246 @@
                     </p>
                 </div>
 
-                <div class="illus-char-grid">
-                    <div class="illus-char-item reveal from-left">
-                        <div class="illus-char-img-wrap">
-                            <img src="img/character-ref-1.png" alt="Character Design 1">
-                        </div>
-                        <div class="illus-char-info">
-                            <h3 data-i18n="char.1.name">Protagonist Alpha</h3>
-                            <p data-i18n="char.1.desc">Exploration of silhouettes and personality through expressive posing and a vibrant color palette.</p>
-                            <div class="illus-char-tags">
-                                <span>Concept</span>
-                                <span>Digital</span>
+                <!-- Project Cards Grid -->
+                <div class="illus-proj-grid">
+
+                    <!-- Card: Pie of Thrones -->
+                    <div class="illus-proj-wrap reveal">
+                        <article class="illus-proj-card" data-project="pieofthrones">
+                            <div class="illus-proj-thumb">
+                                <img src="img/reina pero la de Cande 2 .png" alt="Pie of Thrones">
                             </div>
+                            <div class="illus-proj-overlay">
+                                <div class="illus-proj-tags">
+                                    <span data-i18n="tag.chardesign">Character Design</span>
+                                    <span data-i18n="tag.animation">Animation</span>
+                                    <span data-i18n="tag.propdesign">Prop Design</span>
+                                </div>
+                            </div>
+                        </article>
+                        <div class="illus-proj-caption">
+                            <h4 data-i18n="project1.title">Pie of Thrones</h4>
+                            <p data-i18n="project1.shortdesc">Synchro / Shooting · Single player</p>
                         </div>
                     </div>
 
-                    <div class="illus-char-item reveal from-right">
-                        <div class="illus-char-img-wrap">
-                            <img src="img/character-ref-2.png" alt="Character Design 2">
-                        </div>
-                        <div class="illus-char-info">
-                            <h3 data-i18n="char.2.name">The Guardian</h3>
-                            <p data-i18n="char.2.desc">World-building through costume design and material rendering.</p>
-                            <div class="illus-char-tags">
-                                <span>Outfit</span>
-                                <span>Worldbuilding</span>
+                    <!-- Card: Furia Nórdica -->
+                    <div class="illus-proj-wrap reveal">
+                        <article class="illus-proj-card" data-project="furianordica">
+                            <div class="illus-proj-thumb">
+                                <img src="img/BannerSinRectangulo.jpg" alt="Furia Nórdica">
                             </div>
+                            <div class="illus-proj-overlay">
+                                <div class="illus-proj-tags">
+                                    <span data-i18n="tag.chardesign">Character Design</span>
+                                    <span>HUD Design</span>
+                                </div>
+                            </div>
+                        </article>
+                        <div class="illus-proj-caption">
+                            <h4 data-i18n="project2.title">Furia Nórdica</h4>
+                            <p data-i18n="project2.shortdesc">Character Design · HUD</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Lightbox: Pie of Thrones -->
+                <div class="illus-lightbox" id="lb-pieofthrones" role="dialog" aria-modal="true">
+                    <div class="illus-lb-backdrop"></div>
+                    <div class="illus-lb-panel">
+                        <button class="illus-lb-close" aria-label="Close">✕</button>
+
+                        <div class="illus-lb-header">
+                            <span class="illus-label" data-i18n="project1.label">Project</span>
+                            <h3 data-i18n="project1.title">Pie of Thrones</h3>
+                            <p data-i18n="project1.desc">One afternoon at Buckingham Palace, the queen's peace is interrupted by the arrival of her three corgis. Furious, the Monarch calls a servant and demands shepherd pie for her pets. With her terrible aim, the queen must feed the corgis — or at least try.</p>
+                        </div>
+
+                        <div class="illus-lb-images">
+
+                            <!-- Characters -->
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full illus-lb-img-wrap--hero">
+                                <img src="img/reina pero la de Cande 2 .png" alt="Queen — Character Design">
+                                <p class="illus-sheet-caption" data-i18n="project1.sheet3">Queen — Character Design</p>
+                            </div>
+                            <div class="illus-lb-img-wrap">
+                                <img src="img/17ReinaSeEnoja.png" alt="Queen — Angry Expression">
+                                <p class="illus-sheet-caption" data-i18n="project1.sheet6">Queen — Angry Expression</p>
+                            </div>
+                            <div class="illus-lb-img-wrap">
+                                <img src="img/6ReinaMiraParaTodosLados.png" alt="Queen — Looking Around">
+                                <p class="illus-sheet-caption" data-i18n="project1.sheet7">Queen — Looking Around</p>
+                            </div>
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full">
+                                <object data="img/expresiones.svg" type="image/svg+xml" aria-label="Queen & Corgi — Expressions & Poses"></object>
+                                <p class="illus-sheet-caption" data-i18n="project1.sheet1">Queen &amp; Corgi — Expressions &amp; Poses</p>
+                            </div>
+                            <div class="illus-lb-img-wrap">
+                                <img src="img/mayordomo.png" alt="Butler — Character Design">
+                                <p class="illus-sheet-caption" data-i18n="project1.sheet4">Butler — Character Design</p>
+                            </div>
+
+                            <!-- Props -->
+                            <div class="illus-lb-img-wrap">
+                                <object data="img/PERROSSS.svg" type="image/svg+xml" aria-label="Props — Royal Dog Bowls"></object>
+                                <p class="illus-sheet-caption" data-i18n="project1.sheet2">Props — Royal Dog Bowls &amp; Serving Tray</p>
+                            </div>
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full illus-lb-img-wrap--screen">
+                                <img src="img/PLATOS Y PIE CON LETRAS.png" alt="Props — Plates & Pie">
+                                <p class="illus-sheet-caption" data-i18n="project1.sheet5">Props — Plates &amp; Pie</p>
+                            </div>
+
+                            <!-- Game Screens -->
+                            <div class="illus-lb-section-title" data-i18n="project1.screens">Game Screens</div>
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--screen illus-lb-img-wrap--full">
+                                <img src="img/pantallainicio.png" alt="Start Screen">
+                                <p class="illus-sheet-caption" data-i18n="project1.screen1">Start Screen</p>
+                            </div>
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--screen">
+                                <img src="img/pantallajuego1.png" alt="Gameplay Screen 1">
+                                <p class="illus-sheet-caption" data-i18n="project1.screen2">Gameplay — Screen 1</p>
+                            </div>
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--screen">
+                                <img src="img/pantallajuego2.png" alt="Gameplay Screen 2">
+                                <p class="illus-sheet-caption" data-i18n="project1.screen3">Gameplay — Screen 2</p>
+                            </div>
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--screen illus-lb-img-wrap--full">
+                                <img src="img/pantallajuego3.png" alt="Gameplay Screen 3">
+                                <p class="illus-sheet-caption" data-i18n="project1.screen4">Gameplay — Screen 3</p>
+                            </div>
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--screen">
+                                <img src="img/pantallaganaste.png" alt="Win Screen">
+                                <p class="illus-sheet-caption" data-i18n="project1.screen5">Win Screen</p>
+                            </div>
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--screen">
+                                <img src="img/pantallaperdiste.png" alt="Game Over Screen">
+                                <p class="illus-sheet-caption" data-i18n="project1.screen6">Game Over Screen</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lightbox: Furia Nórdica -->
+                <div class="illus-lightbox" id="lb-furianordica" role="dialog" aria-modal="true">
+                    <div class="illus-lb-backdrop"></div>
+                    <div class="illus-lb-panel">
+                        <button class="illus-lb-close" aria-label="Close">✕</button>
+                        <div class="illus-lb-header">
+                            <span class="illus-label" data-i18n="project1.label">Project</span>
+                            <h3 data-i18n="project2.title">Furia Nórdica</h3>
+                            <p data-i18n="project2.desc">2D video game character design and HUD for a Norse-inspired beat-em-up. Design the hero, villains and interface.</p>
+                        </div>
+                        <div class="illus-lb-images">
+
+                            <!-- Characters -->
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full">
+                                <img src="img/BannerSinRectangulo.jpg" alt="Furia Nórdica — Banner">
+                                <p class="illus-sheet-caption" data-i18n="project2.banner">Furia Nórdica — Banner</p>
+                            </div>
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full illus-lb-img-wrap--hero">
+                                <img src="img/Raulcito_Saludando.png" alt="Raulcito — Waving">
+                                <p class="illus-sheet-caption" data-i18n="project2.sheet4">Raulcito — Waving</p>
+                            </div>
+                            <div class="illus-lb-img-wrap">
+                                <img src="img/Raulcito1.png" alt="Raulcito — Character Design">
+                                <p class="illus-sheet-caption" data-i18n="project2.sheet2">Raulcito — Character Design</p>
+                            </div>
+                            <div class="illus-lb-img-wrap">
+                                <img src="img/Cara_Raulcito_Final.png" alt="Raulcito — Face Detail">
+                                <p class="illus-sheet-caption" data-i18n="project2.sheet3">Raulcito — Face Detail</p>
+                            </div>
+                            <div class="illus-lb-img-wrap">
+                                <img src="img/El_Señor_De_Las_Máscaras_2.png" alt="El Señor de las Máscaras — Boss">
+                                <p class="illus-sheet-caption" data-i18n="project2.sheet5">El Señor de las Máscaras — Boss</p>
+                            </div>
+                            <div class="illus-lb-img-wrap">
+                                <img src="img/Ciudadano_Villano1.png" alt="Citizen Villain 1">
+                                <p class="illus-sheet-caption" data-i18n="project2.sheet7">Citizen Villain 1</p>
+                            </div>
+                            <div class="illus-lb-img-wrap">
+                                <img src="img/Ciudadana_Villana2.png" alt="Citizen Villain 2">
+                                <p class="illus-sheet-caption" data-i18n="project2.sheet8">Citizen Villain 2</p>
+                            </div>
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full illus-lb-img-wrap--hero">
+                                <img src="img/Sprites_Raulcito_Sin_Fondo.png" alt="Raulcito — Main Character">
+                                <p class="illus-sheet-caption" data-i18n="project2.sheet1">Raulcito — Main Character Sprites</p>
+                            </div>
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full illus-lb-img-wrap--hero">
+                                <img src="img/maloCompleto.png" alt="Villain — Full Design">
+                                <p class="illus-sheet-caption" data-i18n="project2.sheet6">Villain — Full Design</p>
+                            </div>
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full illus-lb-img-wrap--hero">
+                                <img src="img/Sprites_Villana_Sin_Fondo (1).png" alt="Villain — Sprites">
+                                <p class="illus-sheet-caption" data-i18n="project2.sheet9">Villain — Sprites</p>
+                            </div>
+
+                            <!-- HUD & Screens -->
+                            <div class="illus-lb-section-title" data-i18n="project2.screens">HUD &amp; Screens</div>
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full illus-lb-img-wrap--screen illus-lb-img-wrap--hud">
+                                <img src="img/Hud-02.png" alt="HUD Design">
+                                <p class="illus-sheet-caption" data-i18n="project2.hud">HUD Design</p>
+                            </div>
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--screen illus-lb-img-wrap--full">
+                                <img src="img/pantalla ganaste pintada.png" alt="Win Screen">
+                                <p class="illus-sheet-caption" data-i18n="project2.winscreen">Win Screen</p>
+                            </div>
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--screen">
+                                <img src="img/Pantalla_Perdiste_Raulcito_Mata1.jpg" alt="Game Over Screen 1">
+                                <p class="illus-sheet-caption" data-i18n="project2.lose1">Game Over — Screen 1</p>
+                            </div>
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--screen">
+                                <img src="img/Pantalla_Perdiste_Raulcito_Mata3.jpg" alt="Game Over Screen 2">
+                                <p class="illus-sheet-caption" data-i18n="project2.lose2">Game Over — Screen 2</p>
+                            </div>
+
+                            <!-- Gameplay -->
+                            <div class="illus-lb-section-title" data-i18n="project2.gameplay">Gameplay</div>
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full">
+                                <video src="img/video_web.mp4" controls playsinline></video>
+                                <p class="illus-sheet-caption" data-i18n="project2.video1">Gameplay Video</p>
+                            </div>
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full">
+                                <video src="img/video_gameplay_redes.mp4" controls playsinline></video>
+                                <p class="illus-sheet-caption" data-i18n="project2.video2">Gameplay — Social Media Cut</p>
+                            </div>
+                            <div class="illus-lb-img-wrap">
+                                <img src="img/gameplay_web3.jpg" alt="Gameplay">
+                                <p class="illus-sheet-caption" data-i18n="project2.gp1">Gameplay</p>
+                            </div>
+                            <div class="illus-lb-img-wrap">
+                                <img src="img/gameplay_web4.jpg" alt="Gameplay">
+                                <p class="illus-sheet-caption" data-i18n="project2.gp2">Gameplay</p>
+                            </div>
+                            <div class="illus-lb-img-wrap">
+                                <img src="img/gameplay_web5.jpg" alt="Gameplay">
+                                <p class="illus-sheet-caption" data-i18n="project2.gp3">Gameplay</p>
+                            </div>
+                            <div class="illus-lb-img-wrap">
+                                <img src="img/gameplay_web8.jpg" alt="Gameplay">
+                                <p class="illus-sheet-caption" data-i18n="project2.gp4">Gameplay</p>
+                            </div>
+                            <div class="illus-lb-img-wrap">
+                                <img src="img/gameplay_redes5.JPG" alt="Gameplay">
+                                <p class="illus-sheet-caption" data-i18n="project2.gp5">Gameplay</p>
+                            </div>
+                            <div class="illus-lb-img-wrap">
+                                <img src="img/gameplay_redes6.JPG" alt="Gameplay">
+                                <p class="illus-sheet-caption" data-i18n="project2.gp6">Gameplay</p>
+                            </div>
+
+                            <!-- Backgrounds -->
+                            <div class="illus-lb-section-title" data-i18n="project2.backgrounds">Backgrounds</div>
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full">
+                                <img src="img/Exterior2.png" alt="Exterior Background">
+                                <p class="illus-sheet-caption" data-i18n="project2.bg1">Exterior Background</p>
+                            </div>
+                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full">
+                                <img src="img/Fondo_Raulcito_Saludando.png" alt="Intro Background">
+                                <p class="illus-sheet-caption" data-i18n="project2.bg2">Intro Background</p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -331,6 +545,30 @@
     });
 
 
+    // ── PROJECT LIGHTBOX ────────────────────────
+    document.querySelectorAll('.illus-proj-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const lb = document.getElementById('lb-' + card.dataset.project);
+            if (lb) lb.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    document.querySelectorAll('.illus-lightbox').forEach(lb => {
+        lb.querySelector('.illus-lb-backdrop').addEventListener('click', () => closeLb(lb));
+        lb.querySelector('.illus-lb-close').addEventListener('click',    () => closeLb(lb));
+    });
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') document.querySelectorAll('.illus-lightbox.active').forEach(closeLb);
+    });
+
+    function closeLb(lb) {
+        lb.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+
     // ── LANGUAGE SWITCH ─────────────────────────
     const translations = {
         en: {
@@ -343,6 +581,43 @@
                 1: { name: 'Protagonist Alpha', desc: 'Exploration of silhouettes and personality through expressive posing and a vibrant color palette.' },
                 2: { name: 'The Guardian',      desc: 'World-building through costume design and material rendering.' }
             },
+            project1: {
+                label:  'Project',
+                title:  'Pie of Thrones',
+                desc:   'One afternoon at Buckingham Palace, the queen\'s peace is interrupted by the arrival of her three corgis. Furious, the Monarch calls a servant and demands shepherd pie for her pets. With her terrible aim, the queen must feed the corgis — or at least try.',
+                sheet1: 'Queen & Corgi — Expressions & Poses',
+                sheet2: 'Props — Royal Dog Bowls & Serving Tray',
+                sheet3: 'Queen — Character Design',
+                sheet4: 'Butler — Character Design',
+                sheet5: 'Props — Plates & Pie',
+                sheet6: 'Queen — Angry Expression',
+                sheet7: 'Queen — Looking Around',
+                screens: 'Game Screens',
+                screen1: 'Start Screen',
+                screen2: 'Gameplay — Screen 1',
+                screen3: 'Gameplay — Screen 2',
+                screen4: 'Gameplay — Screen 3',
+                screen5: 'Win Screen',
+                screen6: 'Game Over Screen',
+                shortdesc: '2D video game character design — feed the queen\'s corgis before they get angry.'
+            },
+            project2: {
+                label: 'Project',
+                title: 'Furia Nórdica',
+                desc:  '2D video game character design and HUD for a Norse-inspired beat-em-up. Design the hero, villains and interface.',
+                shortdesc: '2D video game character design — a Norse hero battles masked villains through the city.',
+                sheet1: 'Raulcito — Main Character Sprites', sheet2: 'Raulcito — Character Design',
+                sheet3: 'Raulcito — Face Detail', sheet4: 'Raulcito — Waving',
+                sheet5: 'El Señor de las Máscaras — Boss', sheet6: 'Villain — Full Design',
+                sheet7: 'Citizen Villain 1', sheet8: 'Citizen Villain 2', sheet9: 'Villain — Sprites',
+                screens: 'HUD & Screens', hud: 'HUD Design',
+                winscreen: 'Win Screen', lose1: 'Game Over — Screen 1', lose2: 'Game Over — Screen 2',
+                backgrounds: 'Backgrounds', bg1: 'Exterior Background', bg2: 'Intro Background',
+                gameplay: 'Gameplay', video1: 'Gameplay Video', video2: 'Gameplay — Social Media Cut',
+                gp1: 'Gameplay', gp2: 'Gameplay', gp3: 'Gameplay', gp4: 'Gameplay', gp5: 'Gameplay', gp6: 'Gameplay'
+            },
+            tag: { chardesign: 'Character Design', animation: 'Animation', propdesign: 'Prop Design' },
+            meta: { food: 'Food', category: 'Category', mode: 'Mode', players: 'Players', single: 'Single', oneplayer: 'One player' },
             expertise: {
                 label: 'Expertise',
                 desc:  'Every illustration starts with a question: who is this character, and what do they feel? I work from concept to finished piece — building personality, context, and visual language into every drawing.<br><br>From character sheets to standalone pieces, each artwork is delivered with full usage rights and all the formats you need.'
@@ -390,6 +665,43 @@
                 1: { name: 'Protagonista Alpha', desc: 'Exploración de siluetas y personalidad a través de poses expresivas y una paleta de colores vibrante.' },
                 2: { name: 'El Guardián',        desc: 'Construcción de mundos a través del diseño de vestuario y renderizado de materiales.' }
             },
+            project1: {
+                label:  'Proyecto',
+                title:  'Pie of Thrones',
+                desc:   'Una tarde en el palacio de Buckingham, la paz de la reina se ve interrumpida ante la llegada de sus tres perros. La Monarca muy enojada llama a un sirviente y pide shepherd pie para sus mascotas. Con su mala puntería, la reina deberá alimentar a los corgis — o al menos intentarlo.',
+                sheet1: 'Reina y Corgi — Expresiones y Poses',
+                sheet2: 'Props — Tazones Reales y Bandeja',
+                sheet3: 'Reina — Diseño de Personaje',
+                sheet4: 'Mayordomo — Diseño de Personaje',
+                sheet5: 'Props — Platos y Pie',
+                sheet6: 'Reina — Expresión Enojada',
+                sheet7: 'Reina — Mirando para todos lados',
+                screens: 'Pantallas del Juego',
+                screen1: 'Pantalla de Inicio',
+                screen2: 'Gameplay — Pantalla 1',
+                screen3: 'Gameplay — Pantalla 2',
+                screen4: 'Gameplay — Pantalla 3',
+                screen5: 'Pantalla de Victoria',
+                screen6: 'Pantalla de Game Over',
+                shortdesc: 'Diseño de personajes para videojuego 2D — alimentá a los corgis de la reina antes de que se enojen.'
+            },
+            project2: {
+                label: 'Proyecto',
+                title: 'Furia Nórdica',
+                desc:  'Diseño de personajes y HUD para un beat-em-up 2D de inspiración nórdica. Un héroe enfrenta villanos enmascarados por la ciudad.',
+                shortdesc: 'Diseño de personajes para videojuego 2D — un héroe nórdico combate villanos enmascarados por la ciudad.',
+                sheet1: 'Raulcito — Sprites Personaje Principal', sheet2: 'Raulcito — Diseño de Personaje',
+                sheet3: 'Raulcito — Detalle Cara', sheet4: 'Raulcito — Saludando',
+                sheet5: 'El Señor de las Máscaras — Boss', sheet6: 'Villano — Diseño Completo',
+                sheet7: 'Ciudadano Villano 1', sheet8: 'Ciudadana Villana 2', sheet9: 'Villana — Sprites',
+                screens: 'HUD y Pantallas', hud: 'Diseño de HUD',
+                winscreen: 'Pantalla de Victoria', lose1: 'Game Over — Pantalla 1', lose2: 'Game Over — Pantalla 2',
+                backgrounds: 'Fondos', bg1: 'Fondo Exterior', bg2: 'Fondo Intro',
+                gameplay: 'Gameplay', video1: 'Video Gameplay', video2: 'Gameplay — Corte Redes',
+                gp1: 'Gameplay', gp2: 'Gameplay', gp3: 'Gameplay', gp4: 'Gameplay', gp5: 'Gameplay', gp6: 'Gameplay'
+            },
+            tag: { chardesign: 'Diseño de Personajes', animation: 'Animación', propdesign: 'Diseño de Props' },
+            meta: { food: 'Comida', category: 'Categoría', mode: 'Modalidad', players: 'Jugadores', single: 'Single', oneplayer: 'One player' },
             expertise: {
                 label: 'Expertise',
                 desc:  'Cada ilustración empieza con una pregunta: ¿quién es este personaje y qué siente? Trabajo desde el concepto hasta la pieza terminada — construyendo personalidad, contexto y lenguaje visual en cada dibujo.<br><br>Desde fichas de personajes hasta piezas sueltas, cada obra se entrega con todos los derechos de uso y los formatos necesarios.'

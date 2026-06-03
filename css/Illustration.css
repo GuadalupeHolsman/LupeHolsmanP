@@ -217,6 +217,357 @@
 }
 
 
+/* ── PROJECT CARDS GRID ──────────────────────── */
+.illus-proj-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.illus-proj-card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 4/3;
+    background: #f0ede8;
+}
+
+.illus-proj-thumb {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: transform 0.45s cubic-bezier(.25,.46,.45,.94);
+}
+
+.illus-proj-thumb object {
+    width: 120%;
+    height: 120%;
+    pointer-events: none;
+    flex-shrink: 0;
+}
+
+.illus-proj-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.illus-proj-card:hover .illus-proj-thumb {
+    transform: scale(1.06);
+}
+
+.illus-proj-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.illus-proj-caption h4 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 0.2rem;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: -0.2px;
+}
+
+.illus-proj-caption p {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.45);
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.illus-proj-card--dark {
+    background: #0f1420;
+}
+
+.illus-proj-thumb--placeholder {
+    padding: 2rem;
+}
+
+.illus-proj-thumb--placeholder svg {
+    width: 100%;
+    height: 100%;
+}
+
+.illus-lb-images--empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 160px;
+    border: 1.5px dashed rgba(0,0,0,0.15);
+    border-radius: 14px;
+}
+
+.illus-lb-empty {
+    font-size: 0.9rem;
+    color: #aaa;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.illus-proj-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.6rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.illus-proj-card:hover .illus-proj-overlay {
+    opacity: 1;
+}
+
+.illus-proj-overlay h3 {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #fff;
+    margin: 0 0 0.5rem;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: -0.3px;
+}
+
+.illus-proj-overlay p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.7);
+    margin: 0.4rem 0 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.illus-proj-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.illus-proj-tags span {
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.15);
+    border-radius: 2rem;
+    padding: 0.2rem 0.65rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* ── LIGHTBOX ────────────────────────────────── */
+.illus-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.illus-lightbox.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.illus-lb-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+.illus-lb-panel {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    border-radius: 24px;
+    width: min(92vw, 900px);
+    max-height: 88vh;
+    overflow-y: auto;
+    padding: 2.5rem 2.5rem 3rem;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.3);
+    transform: translateY(20px) scale(0.97);
+    transition: transform 0.35s cubic-bezier(.25,.46,.45,.94);
+    scrollbar-width: thin;
+}
+
+.illus-lightbox.active .illus-lb-panel {
+    transform: none;
+}
+
+.illus-lb-close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.4rem;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #999;
+    line-height: 1;
+    padding: 0.3rem 0.5rem;
+    border-radius: 50%;
+    transition: background 0.2s, color 0.2s;
+}
+
+.illus-lb-close:hover {
+    background: #f0f0f0;
+    color: #000;
+}
+
+.illus-lb-header {
+    margin-bottom: 2rem;
+}
+
+.illus-lb-header h3 {
+    font-size: 1.9rem;
+    font-weight: 900;
+    color: #000;
+    letter-spacing: -0.5px;
+    margin: 0.4rem 0 1rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.illus-lb-header p {
+    font-size: 0.92rem;
+    color: #555;
+    line-height: 1.75;
+    max-width: 640px;
+    margin-top: 1rem;
+}
+
+.illus-lb-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.illus-lb-img-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    background: #f6f4f0;
+    border-radius: 14px;
+    padding: 1.2rem;
+}
+
+.illus-lb-img-wrap object,
+.illus-lb-img-wrap img {
+    width: 100%;
+    min-height: 200px;
+    display: block;
+    height: auto;
+    object-fit: contain;
+}
+
+.illus-lb-img-wrap--full {
+    grid-column: 1 / -1;
+}
+
+.illus-lb-img-wrap--screen img {
+    max-height: 220px;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+}
+
+.illus-lb-img-wrap--screen.illus-lb-img-wrap--full img {
+    max-height: 380px;
+}
+
+.illus-lb-img-wrap--hud img {
+    max-height: 100px;
+}
+
+.illus-lb-img-wrap--hero img {
+    max-height: 520px;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+}
+
+.illus-lb-img-wrap video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.illus-lb-section-title {
+    grid-column: 1 / -1;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    font-family: 'Raleway', sans-serif;
+}
+
+.illus-project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 0.8rem 0 0;
+}
+
+.illus-meta-pill {
+    display: flex;
+    flex-direction: column;
+    background: #f5f0e8;
+    border: 1.5px solid #c9a84c;
+    border-radius: 8px;
+    padding: 0.45rem 0.9rem;
+    min-width: 100px;
+}
+
+.illus-meta-pill span {
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #c9a84c;
+    font-family: 'Raleway', sans-serif;
+}
+
+.illus-meta-pill strong {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #222;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 0.1rem;
+}
+
+.illus-sheet-caption {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #999;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+
 /* ── GALLERY ─────────────────────────────────── */
 .illus-gallery {
     background: #000;
@@ -473,7 +824,20 @@
         flex: 0 0 220px;
     }
 
-    /* Characters grid — already 1 col at 900px; tighten gap on mobile */
+    /* Lightbox images — stack on mobile */
+    .illus-lb-images {
+        grid-template-columns: 1fr;
+    }
+
+    .illus-lb-panel {
+        padding: 1.8rem 1.4rem 2rem;
+    }
+
+    .illus-proj-grid {
+        grid-template-columns: 1fr;
+    }
+
+/* Characters grid — already 1 col at 900px; tighten gap on mobile */
     .illus-char-grid {
         gap: 2.5rem;
     }
