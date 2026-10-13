@@ -1812,3 +1812,118 @@ footer::before {
 .brand-word:hover { opacity: 1; }
 
 .footer-contact a { color: inherit; text-decoration: none; }
+
+
+/* =============================================
+   ELEVATION PASS
+   Refinements layered on top of the base styles.
+   Spacing follows a 4px/8px rhythm; brand colors (primary + cyan) unchanged.
+   ============================================= */
+
+/* Near-black instead of pure #000 — softer contrast against white */
+:root { --dark: #0a0a0a; }
+
+/* `.text-center` was referenced in the markup but never defined */
+.text-center { text-align: center; }
+
+/* What I Create — one centered axis for title, accent line and intro */
+#work .title h2 {
+    letter-spacing: -0.03em;
+    padding-bottom: 1.5rem;
+}
+
+.subtitle2 {
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 34rem;
+    margin: 0 auto 4rem;
+    color: rgba(255, 255, 255, 0.62);
+    opacity: 1;
+}
+
+/* Cards — calmer surface, left-aligned content reads faster */
+.card {
+    background: #141414;
+    border-color: rgba(255, 255, 255, 0.06);
+    align-items: flex-start;
+    text-align: left;
+    padding: 2.5rem 2rem;
+}
+
+.card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: rgba(0, 210, 211, 0.08);
+    align-items: center;
+}
+
+.card h3 {
+    font-size: 1.35rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+}
+
+.card p {
+    color: rgba(255, 255, 255, 0.62);
+    opacity: 1;
+    margin-bottom: 2rem;
+}
+
+/* Index number moves to the top corner so it no longer collides with "See more" */
+.card::before {
+    top: 1.5rem;
+    right: 1.75rem;
+    bottom: auto;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.22);
+}
+
+.card:hover::before { color: var(--primary); transform: none; }
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(245, 0, 65, 0.18);
+}
+
+/* About — text centered against the photo instead of hugging its bottom edge */
+@media (min-width: 768px) {
+    .about-content { align-items: center; }
+}
+
+.about-text h2 { letter-spacing: -0.03em; }
+.about-text p  { color: #404040; }
+
+/* Numbers don't jitter while counting up */
+.stat-number { font-variant-numeric: tabular-nums; letter-spacing: -0.04em; }
+
+/* Brands — wordmarks sit at the same visual weight as the grayscale logos */
+.brand-word {
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #0a0a0a;
+    opacity: 0.4;
+}
+
+/* Now — heading weight matches the other section titles */
+.now-head h2 { font-weight: 800; letter-spacing: -0.03em; }
+
+/* Keyboard focus is visible everywhere (custom cursor hides the native one) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card, .card:hover, .now-card, .now-card:hover { transform: none; transition: none; }
+}
+
+/* Let the intro wrap naturally — the hard <br> orphaned a word on phones */
+.subtitle2 br { display: none; }
