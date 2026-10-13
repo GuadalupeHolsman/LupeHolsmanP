@@ -874,3 +874,32 @@
         display: none;
     }
 }
+
+/* ── Current roles ─────────────────────────── */
+.abt-exp-card--current .abt-exp-year {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--cyan);
+}
+.abt-exp-card--current .abt-exp-year::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 0 0 var(--cyan-glow);
+    animation: abtPulse 2s infinite;
+}
+.abt-exp-card--current .abt-exp-company {
+    color: var(--dark);
+    font-weight: 700;
+}
+@keyframes abtPulse {
+    0%   { box-shadow: 0 0 0 0 rgba(0, 210, 211, 0.5); }
+    70%  { box-shadow: 0 0 0 8px rgba(0, 210, 211, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 210, 211, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .abt-exp-card--current .abt-exp-year::before { animation: none; }
+}

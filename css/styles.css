@@ -1660,3 +1660,155 @@ footer::before {
 
 /* NOTE: .reveal initial state is defined above with opacity:0 — do not duplicate here */
 
+
+
+/* =============================================
+   NOW — CURRENT ROLES
+   ============================================= */
+.text-primary { color: var(--primary); }
+
+.now-section {
+    background: var(--light);
+    padding: 6rem 0;
+}
+
+.now-head {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.now-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dark);
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1.2rem;
+}
+
+.now-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--cyan);
+    animation: nowPulse 2s infinite;
+}
+
+@keyframes nowPulse {
+    0%   { box-shadow: 0 0 0 0 rgba(0, 210, 211, 0.55); }
+    70%  { box-shadow: 0 0 0 9px rgba(0, 210, 211, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 210, 211, 0); }
+}
+
+.now-head h2 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.15;
+}
+
+.now-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+}
+
+.now-card {
+    background: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 1.2rem;
+    padding: 2rem 1.8rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.now-card::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--cyan));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.now-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    border-color: transparent;
+}
+
+.now-card:hover::after { transform: scaleX(1); }
+
+.now-company {
+    display: block;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: -0.3px;
+    margin-bottom: 0.4rem;
+}
+
+.now-card h3 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 0.9rem;
+}
+
+.now-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.65;
+}
+
+.now-more {
+    display: table;
+    margin: 2.5rem auto 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--dark);
+    text-decoration: none;
+    border-bottom: 2px solid var(--cyan);
+    padding-bottom: 2px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.now-more:hover { color: var(--primary); border-color: var(--primary); }
+
+@media (min-width: 768px) {
+    .now-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .now-dot { animation: none; }
+}
+
+/* Brand names without a logo file */
+.brand-word {
+    flex-shrink: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #000;
+    opacity: 0.45;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+}
+
+.brand-word:hover { opacity: 1; }
+
+.footer-contact a { color: inherit; text-decoration: none; }
