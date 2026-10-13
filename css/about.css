@@ -903,3 +903,28 @@
 @media (prefers-reduced-motion: reduce) {
     .abt-exp-card--current .abt-exp-year::before { animation: none; }
 }
+
+
+/* =============================================
+   ELEVATION PASS — portfolio cards match the homepage cards
+   ============================================= */
+.abt-port-card { align-items: flex-start; text-align: left; }
+
+/* Index number sits in the top corner instead of colliding with "See more" */
+.abt-port-card::before {
+    top: 1.5rem;
+    right: 1.75rem;
+    bottom: auto;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.22);
+}
+
+.abt-port-card:hover::before { color: var(--primary); }
+
+.abt-port-card p { color: rgba(255, 255, 255, 0.62); }
+
+/* Titles in the hero tighten slightly at display size */
+.abt-hero-text h1,
+.abt-section-head h2 { letter-spacing: -0.03em; }

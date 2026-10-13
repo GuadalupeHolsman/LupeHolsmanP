@@ -649,3 +649,23 @@
         padding: 3rem 0 3.5rem;
     }
 }
+
+
+/* =============================================
+   ELEVATION PASS — hero intro readable at a glance
+   (was 0.78rem uppercase gray, right-aligned far from the title)
+   ============================================= */
+.bsm-hero-desc {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #404040;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400;
+    max-width: 30rem;
+    text-wrap: pretty;
+}
+
+@media (max-width: 768px) {
+    .bsm-hero-desc { font-size: 0.95rem; max-width: 100%; text-align: left; }
+}

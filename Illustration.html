@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -345,7 +345,8 @@
 
 
         <!-- ══ GALLERY ═════════════════════════ -->
-        <section class="illus-gallery">
+        <!-- Hidden until its images are uploaded — remove `hidden` to show it again -->
+        <section class="illus-gallery" hidden>
             <div class="container">
 
                 <div class="illus-gallery-head">
@@ -370,7 +371,8 @@
 
 
         <!-- ══ SKETCHBOOK ══════════════════════ -->
-        <section class="illus-sketchbook">
+        <!-- Hidden until its images are uploaded — remove `hidden` to show it again -->
+        <section class="illus-sketchbook" hidden>
             <div class="container">
 
                 <div class="illus-sketch-head">
@@ -404,7 +406,7 @@
             <div class="container contact-wrapper">
 
                 <div class="contact-text reveal from-left">
-                    <h2>Let's build something <span class="text-cyan">together</span></h2>
+                    <h2 data-i18n="contact.title">Let's build something <span class="text-cyan">together</span></h2>
                     <p data-i18n="contact.subtitle">Have a project in mind? Send me a message and I'll get back to you as soon as possible.</p>
                 </div>
 
@@ -638,6 +640,7 @@
             },
             sketch: { label: 'The Process', title: 'Sketchbook', tagline: 'Behind every finished piece — the raw sketches and first lines.' },
             contact: {
+                title: 'Let\'s build something <span class="text-cyan">together</span>',
                 subtitle: "Have a project in mind? Send me a message and I'll get back to you as soon as possible.",
                 form: {
                     name: 'Name', namePlaceholder: 'Your name',
@@ -722,6 +725,7 @@
             },
             sketch: { label: 'El Proceso', title: 'Sketchbook', tagline: 'Detrás de cada pieza terminada — los bocetos y primeras líneas.' },
             contact: {
+                title: 'Construyamos algo único <span class="text-cyan">juntos</span>',
                 subtitle: '¿Tenés un proyecto en mente? Mandame un mensaje y te respondo a la brevedad.',
                 form: {
                     name: 'Nombre', namePlaceholder: 'Tu nombre',
@@ -779,7 +783,7 @@
         const wipModal    = document.getElementById('wipModal');
         const wipClose    = document.getElementById('wipClose');
         const wipBackdrop = document.getElementById('wipBackdrop');
-        setTimeout(() => wipModal.classList.add('active'), 600);
+        // WIP pop-up disabled: unfinished sections are hidden instead (see `hidden` sections above)
         wipClose.addEventListener('click',    () => { window.location.href = 'MotionVideo.html'; });
         wipBackdrop.addEventListener('click', () => wipModal.classList.remove('active'));
         document.addEventListener('keydown', e => {
