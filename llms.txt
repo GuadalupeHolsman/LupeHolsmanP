@@ -7,6 +7,7 @@ Lupe Holsman combines art direction, motion graphics, video editing, illustratio
 ## Pages
 - [Home](https://guadalupeholsman.github.io/LupeHolsmanP/): overview, current roles, AI workflow, FAQ and contact
 - [About](https://guadalupeholsman.github.io/LupeHolsmanP/about.html): experience, education, tools and languages
+- [AI Visual Media](https://guadalupeholsman.github.io/LupeHolsmanP/ai.html): AI visual media and agent workflow concept projects, process and tools
 - [Branding & Social Media](https://guadalupeholsman.github.io/LupeHolsmanP/BrandingySocialmedia.html): visual identity and social media projects
 - [Motion & Video](https://guadalupeholsman.github.io/LupeHolsmanP/MotionVideo.html): reels, motion graphics and long-form edits
 - [Illustration & Character Design](https://guadalupeholsman.github.io/LupeHolsmanP/Illustration.html): character design and 2D game art
