@@ -87,7 +87,7 @@ window.I18N = {
                 lead: 'AI speeds up production. Art direction keeps it on-brand. Every piece goes through the same four steps.',
                 s1: 'Brief & direction', s1d: 'Goal, audience and visual references. I define the look before generating a single frame.',
                 s2: 'Style frames & prompts', s2d: 'Key frames and prompt systems that lock in style, characters and brand colors.',
-                s3: 'Generation & curation', s3d: 'Image, video and voice with tools like Midjourney, Runway, Kling, Veo and ElevenLabs. I keep only what works.',
+                s3: 'Generation & curation', s3d: 'Image, video and voice with Midjourney, Runway, Kling, Veo and ElevenLabs, plus Claude agents and skills that automate repetitive steps. I keep only what works.',
                 s4: 'Compositing & final edit', s4d: 'Design, compositing, motion and sound in After Effects and Premiere for a finished, human result.'
             },
             stats: { projects: 'Projects delivered', years: 'Years of experience', roles: 'Current roles' },
@@ -97,7 +97,7 @@ window.I18N = {
                 q1: 'Are you available for freelance projects?', a1: 'Yes. Alongside my current roles I take on freelance projects in branding, motion and AI visual content. Send me a short description, timeline and budget.',
                 q2: 'What services do you offer?', a2: 'Creative and art direction, AI-generated images and video, branding and visual identity, social media design, motion graphics and video editing, and illustration and character design.',
                 q3: 'Where are you based and which languages do you work in?', a3: 'I\'m based in La Plata, Argentina (GMT-3). I work in Spanish (native) and English (C1).',
-                q4: 'Which AI tools do you use?', a4: 'Midjourney, Runway, Kling, Veo and ElevenLabs to generate, and After Effects, Premiere and Adobe Creative Suite to finish every piece.',
+                q4: 'Which AI tools do you use?', a4: 'Midjourney, Runway, Kling, Veo and ElevenLabs to generate; Claude, Claude Code, custom Claude Skills and AI agents with MCP connectors to automate workflows; ChatGPT and Gemini for ideation; and After Effects, Premiere and Adobe Creative Suite to finish every piece.',
                 q5: 'How do we get started?', a5: 'Tell me about your project with the form below, by email or on WhatsApp. I\'ll reply with questions and next steps.'
             }
         },
@@ -140,7 +140,7 @@ window.I18N = {
             },
             skills: {
                 title: 'Tools & skills',
-                ai: 'AI & generative media', design: 'Design & illustration', motion: 'Motion & video', digital: 'Strategy & communication',
+                ai: 'AI & generative media', agents: 'AI agents & LLMs', design: 'Design & illustration', motion: 'Motion & video', digital: 'Strategy & communication',
                 languages: 'Languages'
             },
             portfolio: { eyebrow: 'Portfolio', title: 'Explore the <em>work</em>' }
@@ -312,7 +312,7 @@ window.I18N = {
                 lead: 'La IA acelera la producción. La dirección de arte la mantiene fiel a la marca. Cada pieza pasa por los mismos cuatro pasos.',
                 s1: 'Brief y dirección', s1d: 'Objetivo, audiencia y referencias visuales. Defino el look antes de generar un solo cuadro.',
                 s2: 'Style frames y prompts', s2d: 'Cuadros clave y sistemas de prompts que fijan el estilo, los personajes y los colores de marca.',
-                s3: 'Generación y curaduría', s3d: 'Imagen, video y voz con herramientas como Midjourney, Runway, Kling, Veo y ElevenLabs. Me quedo solo con lo que funciona.',
+                s3: 'Generación y curaduría', s3d: 'Imagen, video y voz con Midjourney, Runway, Kling, Veo y ElevenLabs, más agentes y skills de Claude que automatizan los pasos repetitivos. Me quedo solo con lo que funciona.',
                 s4: 'Composición y edición final', s4d: 'Diseño, composición, motion y sonido en After Effects y Premiere para un resultado terminado y humano.'
             },
             stats: { projects: 'Proyectos entregados', years: 'Años de experiencia', roles: 'Roles actuales' },
@@ -322,7 +322,7 @@ window.I18N = {
                 q1: '¿Estás disponible para proyectos freelance?', a1: 'Sí. Además de mis roles actuales, tomo proyectos freelance de branding, motion y contenido visual con IA. Mandame una descripción breve, plazos y presupuesto.',
                 q2: '¿Qué servicios ofrecés?', a2: 'Dirección creativa y de arte, imágenes y video generados con IA, branding e identidad visual, diseño para redes, motion graphics y edición de video, e ilustración y diseño de personajes.',
                 q3: '¿Dónde estás y en qué idiomas trabajás?', a3: 'Estoy en La Plata, Argentina (GMT-3). Trabajo en español (nativo) e inglés (C1).',
-                q4: '¿Con qué herramientas de IA trabajás?', a4: 'Midjourney, Runway, Kling, Veo y ElevenLabs para generar, y After Effects, Premiere y Adobe Creative Suite para terminar cada pieza.',
+                q4: '¿Con qué herramientas de IA trabajás?', a4: 'Midjourney, Runway, Kling, Veo y ElevenLabs para generar; Claude, Claude Code, skills de Claude a medida y agentes de IA con conectores MCP para automatizar flujos; ChatGPT y Gemini para idear; y After Effects, Premiere y Adobe Creative Suite para terminar cada pieza.',
                 q5: '¿Cómo empezamos?', a5: 'Contame tu proyecto con el formulario de abajo, por email o por WhatsApp. Te respondo con preguntas y próximos pasos.'
             }
         },
@@ -365,7 +365,7 @@ window.I18N = {
             },
             skills: {
                 title: 'Herramientas y skills',
-                ai: 'IA y medios generativos', design: 'Diseño e ilustración', motion: 'Motion y video', digital: 'Estrategia y comunicación',
+                ai: 'IA y medios generativos', agents: 'Agentes de IA y LLMs', design: 'Diseño e ilustración', motion: 'Motion y video', digital: 'Estrategia y comunicación',
                 languages: 'Idiomas'
             },
             portfolio: { eyebrow: 'Portfolio', title: 'Explorá el <em>trabajo</em>' }
