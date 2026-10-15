@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/site.css?v=4">
+    <link rel="stylesheet" href="css/site.css?v=7">
 </head>
 <body>
     <a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
@@ -48,6 +48,7 @@
                 </button>
             </div>
         </div>
+        <div class="scroll-progress" aria-hidden="true"></div>
     </header>
 
     <div class="drawer" id="drawer">
@@ -106,54 +107,64 @@
                         </ul>
                     </div>
                 </div>
+                <div class="filter-bar">
+                    <div class="chips" role="group" aria-label="Filter reels by client" data-i18n-aria="motion.filter.label" data-filter-target="reelGrid">
+                        <button class="chip chip--toggle" type="button" aria-pressed="true" data-filter="all" data-i18n="common.all">All</button>
+                        <button class="chip chip--toggle" type="button" aria-pressed="false" data-filter="remax">RE/MAX Estilo</button>
+                        <button class="chip chip--toggle" type="button" aria-pressed="false" data-filter="gov" data-i18n="motion.filter.gov">Government</button>
+                        <button class="chip chip--toggle" type="button" aria-pressed="false" data-filter="live">Grupo Live</button>
+                        <button class="chip chip--toggle" type="button" aria-pressed="false" data-filter="film" data-i18n="motion.filter.film">Short film</button>
+                    </div>
+                    <p class="muted filter-count" aria-live="polite" data-count-of="reelGrid"></p>
+                </div>
                 <p class="muted" data-i18n="motion.reels.tap" style="font-size:var(--fs-sm);margin-bottom:1rem">Tap a video to watch it with sound</p>
-                <div class="media-grid media-grid--reels">
-                    <button class="media media--vertical reveal" type="button" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779201027/remax-isa-1_cqvtpd.mp4" data-ratio="vertical">
+                <div class="media-grid media-grid--reels" id="reelGrid">
+                    <button class="media media--vertical reveal" type="button" data-client="remax" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779201027/remax-isa-1_cqvtpd.mp4" data-ratio="vertical">
                         <video src="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779201027/remax-isa-1_cqvtpd.mp4#t=0.1" poster="https://res.cloudinary.com/ddf8rwemh/video/upload/so_1,w_480,q_auto,f_jpg/v1779201027/remax-isa-1_cqvtpd.jpg" muted loop playsinline preload="metadata" data-autoplay aria-hidden="true" tabindex="-1"></video>
                         <span class="media__play" aria-hidden="true">▶</span>
                         <span class="media__info"><span class="media__client">Isa Orozco · RE/MAX Estilo</span><span class="media__role" data-i18n="motion.roles.fullFilmEdit">Full filming &amp; editing</span></span>
                     </button>
-                    <button class="media media--vertical reveal" type="button" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200989/sin-testigos-trailer_bjloif.mp4" data-ratio="vertical">
+                    <button class="media media--vertical reveal" type="button" data-client="film" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200989/sin-testigos-trailer_bjloif.mp4" data-ratio="vertical">
                         <video src="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200989/sin-testigos-trailer_bjloif.mp4#t=0.1" poster="https://res.cloudinary.com/ddf8rwemh/video/upload/so_1,w_480,q_auto,f_jpg/v1779200989/sin-testigos-trailer_bjloif.jpg" muted loop playsinline preload="metadata" data-autoplay aria-hidden="true" tabindex="-1"></video>
                         <span class="media__play" aria-hidden="true">▶</span>
                         <span class="media__info"><span class="media__client">Sin Testigos</span><span class="media__role" data-i18n="motion.roles.trailer">Trailer · Short film</span></span>
                     </button>
-                    <button class="media media--vertical reveal" type="button" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779201011/ministerio-full-edit_bjscou.mp4" data-ratio="vertical">
+                    <button class="media media--vertical reveal" type="button" data-client="gov" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779201011/ministerio-full-edit_bjscou.mp4" data-ratio="vertical">
                         <video src="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779201011/ministerio-full-edit_bjscou.mp4#t=0.1" poster="https://res.cloudinary.com/ddf8rwemh/video/upload/so_1,w_480,q_auto,f_jpg/v1779201011/ministerio-full-edit_bjscou.jpg" muted loop playsinline preload="metadata" data-autoplay aria-hidden="true" tabindex="-1"></video>
                         <span class="media__play" aria-hidden="true">▶</span>
                         <span class="media__info"><span class="media__client">Ministerio de Desarrollo de la Comunidad</span><span class="media__role" data-i18n="motion.roles.fullEdit">Full editing</span></span>
                     </button>
-                    <button class="media media--vertical reveal" type="button" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779201013/ministerio-edit_xtawrs.mp4" data-ratio="vertical">
+                    <button class="media media--vertical reveal" type="button" data-client="gov" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779201013/ministerio-edit_xtawrs.mp4" data-ratio="vertical">
                         <video src="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779201013/ministerio-edit_xtawrs.mp4#t=0.1" poster="https://res.cloudinary.com/ddf8rwemh/video/upload/so_1,w_480,q_auto,f_jpg/v1779201013/ministerio-edit_xtawrs.jpg" muted loop playsinline preload="metadata" data-autoplay aria-hidden="true" tabindex="-1"></video>
                         <span class="media__play" aria-hidden="true">▶</span>
                         <span class="media__info"><span class="media__client">Ministerio de Desarrollo de la Comunidad</span><span class="media__role" data-i18n="motion.roles.edit">Editing</span></span>
                     </button>
-                    <button class="media media--vertical reveal" type="button" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200989/remax-isa-2_otbatw.mp4" data-ratio="vertical">
+                    <button class="media media--vertical reveal" type="button" data-client="remax" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200989/remax-isa-2_otbatw.mp4" data-ratio="vertical">
                         <video src="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200989/remax-isa-2_otbatw.mp4#t=0.1" poster="https://res.cloudinary.com/ddf8rwemh/video/upload/so_1,w_480,q_auto,f_jpg/v1779200989/remax-isa-2_otbatw.jpg" muted loop playsinline preload="metadata" data-autoplay aria-hidden="true" tabindex="-1"></video>
                         <span class="media__play" aria-hidden="true">▶</span>
                         <span class="media__info"><span class="media__client">Isa Orozco · RE/MAX Estilo</span><span class="media__role" data-i18n="motion.roles.filmEdit">Filming &amp; editing</span></span>
                     </button>
-                    <button class="media media--vertical reveal" type="button" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779201009/remax-isa-3_cfsp3w.mp4" data-ratio="vertical">
+                    <button class="media media--vertical reveal" type="button" data-client="remax" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779201009/remax-isa-3_cfsp3w.mp4" data-ratio="vertical">
                         <video src="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779201009/remax-isa-3_cfsp3w.mp4#t=0.1" poster="https://res.cloudinary.com/ddf8rwemh/video/upload/so_1,w_480,q_auto,f_jpg/v1779201009/remax-isa-3_cfsp3w.jpg" muted loop playsinline preload="metadata" data-autoplay aria-hidden="true" tabindex="-1"></video>
                         <span class="media__play" aria-hidden="true">▶</span>
                         <span class="media__info"><span class="media__client">Isa Orozco · RE/MAX Estilo</span><span class="media__role" data-i18n="motion.roles.filmEdit">Filming &amp; editing</span></span>
                     </button>
-                    <button class="media media--vertical reveal" type="button" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200992/grupo-live-1_m8a1ce.mp4" data-ratio="vertical">
+                    <button class="media media--vertical reveal" type="button" data-client="live" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200992/grupo-live-1_m8a1ce.mp4" data-ratio="vertical">
                         <video src="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200992/grupo-live-1_m8a1ce.mp4#t=0.1" poster="https://res.cloudinary.com/ddf8rwemh/video/upload/so_1,w_480,q_auto,f_jpg/v1779200992/grupo-live-1_m8a1ce.jpg" muted loop playsinline preload="metadata" data-autoplay aria-hidden="true" tabindex="-1"></video>
                         <span class="media__play" aria-hidden="true">▶</span>
                         <span class="media__info"><span class="media__client">Grupo Live</span><span class="media__role" data-i18n="motion.roles.filmEdit">Filming &amp; editing</span></span>
                     </button>
-                    <button class="media media--vertical reveal" type="button" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200991/grupo-live-2_pk0pob.mp4" data-ratio="vertical">
+                    <button class="media media--vertical reveal" type="button" data-client="live" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200991/grupo-live-2_pk0pob.mp4" data-ratio="vertical">
                         <video src="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200991/grupo-live-2_pk0pob.mp4#t=0.1" poster="https://res.cloudinary.com/ddf8rwemh/video/upload/so_1,w_480,q_auto,f_jpg/v1779200991/grupo-live-2_pk0pob.jpg" muted loop playsinline preload="metadata" data-autoplay aria-hidden="true" tabindex="-1"></video>
                         <span class="media__play" aria-hidden="true">▶</span>
                         <span class="media__info"><span class="media__client">Grupo Live</span><span class="media__role" data-i18n="motion.roles.filmEdit">Filming &amp; editing</span></span>
                     </button>
-                    <button class="media media--vertical reveal" type="button" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779201013/ministerio-1204_ok9dmy.mp4" data-ratio="vertical">
+                    <button class="media media--vertical reveal" type="button" data-client="gov" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779201013/ministerio-1204_ok9dmy.mp4" data-ratio="vertical">
                         <video src="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779201013/ministerio-1204_ok9dmy.mp4#t=0.1" poster="https://res.cloudinary.com/ddf8rwemh/video/upload/so_1,w_480,q_auto,f_jpg/v1779201013/ministerio-1204_ok9dmy.jpg" muted loop playsinline preload="metadata" data-autoplay aria-hidden="true" tabindex="-1"></video>
                         <span class="media__play" aria-hidden="true">▶</span>
                         <span class="media__info"><span class="media__client">Ministerio de Desarrollo de la Comunidad</span><span class="media__role" data-i18n="motion.roles.filmEdit">Filming &amp; editing</span></span>
                     </button>
-                    <button class="media media--vertical reveal" type="button" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779201014/remax-isa-4_hkw41v.mp4" data-ratio="vertical">
+                    <button class="media media--vertical reveal" type="button" data-client="remax" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779201014/remax-isa-4_hkw41v.mp4" data-ratio="vertical">
                         <video src="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779201014/remax-isa-4_hkw41v.mp4#t=0.1" poster="https://res.cloudinary.com/ddf8rwemh/video/upload/so_1,w_480,q_auto,f_jpg/v1779201014/remax-isa-4_hkw41v.jpg" muted loop playsinline preload="metadata" data-autoplay aria-hidden="true" tabindex="-1"></video>
                         <span class="media__play" aria-hidden="true">▶</span>
                         <span class="media__info"><span class="media__client">Isa Orozco · RE/MAX Estilo</span><span class="media__role" data-i18n="motion.roles.filmEdit">Filming &amp; editing</span></span>
@@ -184,23 +195,23 @@
                         </ul>
                     </div>
                 </div>
-                <div class="media-grid media-grid--wide">
-                    <button class="media media--wide reveal" type="button" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200969/anim-accenture_xidjgb.mp4" data-ratio="wide">
+                <div class="media-grid media-grid--wide" id="animGrid">
+                    <button class="media media--wide reveal" type="button" data-client="motion" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200969/anim-accenture_xidjgb.mp4" data-ratio="wide">
                         <video src="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200969/anim-accenture_xidjgb.mp4#t=0.1" poster="https://res.cloudinary.com/ddf8rwemh/video/upload/so_1,w_480,q_auto,f_jpg/v1779200969/anim-accenture_xidjgb.jpg" muted loop playsinline preload="metadata" data-autoplay aria-hidden="true" tabindex="-1"></video>
                         <span class="media__play" aria-hidden="true">▶</span>
                         <span class="media__info"><span class="media__client">Motion graphics</span><span class="media__role" data-i18n="motion.roles.motion">Motion graphics</span></span>
                     </button>
-                    <button class="media media--wide reveal" type="button" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200968/anim-2_a3vo8c.mp4" data-ratio="wide">
+                    <button class="media media--wide reveal" type="button" data-client="motion" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200968/anim-2_a3vo8c.mp4" data-ratio="wide">
                         <video src="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200968/anim-2_a3vo8c.mp4#t=0.1" poster="https://res.cloudinary.com/ddf8rwemh/video/upload/so_1,w_480,q_auto,f_jpg/v1779200968/anim-2_a3vo8c.jpg" muted loop playsinline preload="metadata" data-autoplay aria-hidden="true" tabindex="-1"></video>
                         <span class="media__play" aria-hidden="true">▶</span>
                         <span class="media__info"><span class="media__client">Motion graphics</span><span class="media__role" data-i18n="motion.roles.motion">Motion graphics</span></span>
                     </button>
-                    <button class="media media--wide reveal" type="button" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200968/anim-3_pxfcuj.mp4" data-ratio="wide">
+                    <button class="media media--wide reveal" type="button" data-client="motion" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200968/anim-3_pxfcuj.mp4" data-ratio="wide">
                         <video src="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200968/anim-3_pxfcuj.mp4#t=0.1" poster="https://res.cloudinary.com/ddf8rwemh/video/upload/so_1,w_480,q_auto,f_jpg/v1779200968/anim-3_pxfcuj.jpg" muted loop playsinline preload="metadata" data-autoplay aria-hidden="true" tabindex="-1"></video>
                         <span class="media__play" aria-hidden="true">▶</span>
                         <span class="media__info"><span class="media__client">Motion graphics</span><span class="media__role" data-i18n="motion.roles.motion">Motion graphics</span></span>
                     </button>
-                    <button class="media media--wide reveal" type="button" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200969/anim-blood-runs_xe0tqq.mp4" data-ratio="wide">
+                    <button class="media media--wide reveal" type="button" data-client="motion" data-video="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200969/anim-blood-runs_xe0tqq.mp4" data-ratio="wide">
                         <video src="https://res.cloudinary.com/ddf8rwemh/video/upload/q_auto/v1779200969/anim-blood-runs_xe0tqq.mp4#t=0.1" poster="https://res.cloudinary.com/ddf8rwemh/video/upload/so_1,w_480,q_auto,f_jpg/v1779200969/anim-blood-runs_xe0tqq.jpg" muted loop playsinline preload="metadata" data-autoplay aria-hidden="true" tabindex="-1"></video>
                         <span class="media__play" aria-hidden="true">▶</span>
                         <span class="media__info"><span class="media__client">Motion graphics</span><span class="media__role" data-i18n="motion.roles.motion">Motion graphics</span></span>
@@ -237,6 +248,11 @@
                 <button class="dialog__close" type="button" data-close aria-label="Close" data-i18n-aria="common.close">✕</button>
             </div>
             <video controls playsinline></video>
+            <div class="player-nav">
+                <button class="round-btn" type="button" data-player="prev" aria-label="Previous" data-i18n-aria="common.prev">←</button>
+                <span class="player-count" data-player-count aria-live="polite"></span>
+                <button class="round-btn" type="button" data-player="next" aria-label="Next" data-i18n-aria="common.next">→</button>
+            </div>
         </dialog>
 
         <section class="section band--paper2" id="contact" aria-labelledby="contact-title">
@@ -247,23 +263,37 @@
                     <p class="lead" data-i18n="contact.subtitle" style="margin-top:1rem">Have a project in mind? Send me a message and I'll reply within two working days.</p>
                     <div class="contact__direct">
                         <p class="muted" data-i18n="contact.direct">Or write to me directly</p>
-                        <a href="mailto:guadalupeholsman@gmail.com"><img src="img/icon-web.png" alt="" width="24" height="24">guadalupeholsman@gmail.com</a>
+                        <span class="copy-row"><a href="mailto:guadalupeholsman@gmail.com"><img src="img/icon-web.png" alt="" width="24" height="24">guadalupeholsman@gmail.com</a><button class="copy-btn" type="button" data-copy="guadalupeholsman@gmail.com" data-i18n="contact.copy">Copy</button></span>
                         <a href="https://wa.me/542215964111" target="_blank" rel="noopener"><img src="img/icon-whatsapp.png" alt="" width="24" height="24">+54 221 596 4111</a>
                         <a href="https://www.linkedin.com/in/guadalupe-holsman" target="_blank" rel="noopener"><img src="img/icon-linkedin.png" alt="" width="24" height="24">linkedin.com/in/guadalupe-holsman</a>
                     </div>
                 </div>
                 <form class="form" id="contactForm" novalidate>
+                    <fieldset class="topics">
+                        <legend data-i18n="contact.topicsLabel">What is it about?</legend>
+                        <div class="chips">
+                            <button class="chip chip--toggle" type="button" aria-pressed="false" data-topic="contact.topics.branding" data-i18n="contact.topics.branding">Branding</button>
+                            <button class="chip chip--toggle" type="button" aria-pressed="false" data-topic="contact.topics.motion" data-i18n="contact.topics.motion">Motion &amp; video</button>
+                            <button class="chip chip--toggle" type="button" aria-pressed="false" data-topic="contact.topics.ai" data-i18n="contact.topics.ai">AI visuals</button>
+                            <button class="chip chip--toggle" type="button" aria-pressed="false" data-topic="contact.topics.illus" data-i18n="contact.topics.illus">Illustration</button>
+                            <button class="chip chip--toggle" type="button" aria-pressed="false" data-topic="contact.topics.other" data-i18n="contact.topics.other">Something else</button>
+                        </div>
+                        <input type="hidden" name="topics" value="">
+                    </fieldset>
                     <div class="field">
                         <label for="name" data-i18n="contact.name">Name</label>
-                        <input id="name" name="from_name" type="text" autocomplete="name" required placeholder="Your name" data-i18n-placeholder="contact.namePh">
+                        <input id="name" name="from_name" type="text" autocomplete="name" required minlength="2" placeholder="Your name" data-i18n-placeholder="contact.namePh" aria-describedby="name-err">
+                        <p class="field__error" id="name-err" data-err="contact.errName"></p>
                     </div>
                     <div class="field">
                         <label for="email" data-i18n="contact.email">Email</label>
-                        <input id="email" name="from_email" type="email" autocomplete="email" inputmode="email" required placeholder="you@email.com" data-i18n-placeholder="contact.emailPh">
+                        <input id="email" name="from_email" type="email" autocomplete="email" inputmode="email" required placeholder="you@email.com" data-i18n-placeholder="contact.emailPh" aria-describedby="email-err">
+                        <p class="field__error" id="email-err" data-err="contact.errEmail"></p>
                     </div>
                     <div class="field">
-                        <label for="message" data-i18n="contact.message">Message</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project, timeline and budget" data-i18n-placeholder="contact.messagePh"></textarea>
+                        <div class="field__row"><label for="message" data-i18n="contact.message">Message</label><span class="field__count" data-count-for="message" aria-hidden="true">0 / 1000</span></div>
+                        <textarea id="message" name="message" rows="5" required minlength="10" maxlength="1000" placeholder="Tell me about your project, timeline and budget" data-i18n-placeholder="contact.messagePh" aria-describedby="message-err"></textarea>
+                        <p class="field__error" id="message-err" data-err="contact.errMessage"></p>
                     </div>
                     <button class="btn btn--primary" type="submit" data-i18n="contact.send">Send message</button>
                     <p class="form__status" role="status" aria-live="polite"></p>
@@ -302,9 +332,10 @@
             <p class="footer__legal">© <span data-year>2026</span> · <span data-i18n="common.footer.made">Designed and built by Lupe Holsman · La Plata, Argentina</span></p>
         </div>
     </footer>
+    <a class="to-top" href="#main" aria-label="Back to top" data-i18n-aria="common.backTop">↑</a>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
     <script>window.emailjs && emailjs.init("ISC9P7KgnY-2ohoqV");</script>
-    <script src="js/i18n.js?v=4"></script>
-    <script src="js/site.js?v=4"></script>
+    <script src="js/i18n.js?v=7"></script>
+    <script src="js/site.js?v=7"></script>
 </body>
 </html>

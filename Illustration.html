@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/site.css?v=4">
+    <link rel="stylesheet" href="css/site.css?v=7">
 </head>
 <body>
     <a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
@@ -48,6 +48,7 @@
                 </button>
             </div>
         </div>
+        <div class="scroll-progress" aria-hidden="true"></div>
     </header>
 
     <div class="drawer" id="drawer">
@@ -123,18 +124,19 @@
                 </div>
                 <button class="dialog__close" type="button" data-close aria-label="Close" data-i18n-aria="common.close">✕</button>
             </div>
+            <nav class="jump-bar" aria-label="Jump to" data-i18n-aria="illus.jump"></nav>
             <div class="dialog__body">
                 <div class="gallery">
-                        <h3 class="gallery__title" data-i18n="illus.p1.chars">Characters</h3>
+                        <h3 class="gallery__title" data-i18n="illus.p1.chars" data-jump>Characters</h3>
                         <figure class="full"><img src="img/web/queen.png" alt="" loading="lazy"><figcaption data-i18n="illus.p1.s1">Queen · Character design</figcaption></figure>
                         <figure><img src="img/web/queen-angry.png" alt="" loading="lazy"><figcaption data-i18n="illus.p1.s2">Queen · Angry expression</figcaption></figure>
                         <figure><img src="img/web/queen-looking.png" alt="" loading="lazy"><figcaption data-i18n="illus.p1.s3">Queen · Looking around</figcaption></figure>
                         <figure class="full"><img src="img/expresiones.svg" alt="" loading="lazy"><figcaption data-i18n="illus.p1.s4">Queen &amp; corgi · Expressions and poses</figcaption></figure>
                         <figure><img src="img/web/butler.png" alt="" loading="lazy"><figcaption data-i18n="illus.p1.s5">Butler · Character design</figcaption></figure>
                         <figure><img src="img/PERROSSS.svg" alt="" loading="lazy"><figcaption data-i18n="illus.p1.s6">Props · Royal dog bowls and serving tray</figcaption></figure>
-                        <h3 class="gallery__title" data-i18n="illus.p1.props">Props</h3>
+                        <h3 class="gallery__title" data-i18n="illus.p1.props" data-jump>Props</h3>
                         <figure class="full"><img src="img/web/plates-pie.png" alt="" loading="lazy"><figcaption data-i18n="illus.p1.s7">Props · Plates and pie</figcaption></figure>
-                        <h3 class="gallery__title" data-i18n="illus.p1.screens">Game screens</h3>
+                        <h3 class="gallery__title" data-i18n="illus.p1.screens" data-jump>Game screens</h3>
                         <figure class="full"><img src="img/web/pot-start.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p1.g1">Start screen</figcaption></figure>
                         <figure><img src="img/web/pot-game1.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p1.g2">Gameplay · Screen 1</figcaption></figure>
                         <figure><img src="img/web/pot-game2.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p1.g3">Gameplay · Screen 2</figcaption></figure>
@@ -154,9 +156,10 @@
                 </div>
                 <button class="dialog__close" type="button" data-close aria-label="Close" data-i18n-aria="common.close">✕</button>
             </div>
+            <nav class="jump-bar" aria-label="Jump to" data-i18n-aria="illus.jump"></nav>
             <div class="dialog__body">
                 <div class="gallery">
-                        <h3 class="gallery__title" data-i18n="illus.p2.chars">Characters</h3>
+                        <h3 class="gallery__title" data-i18n="illus.p2.chars" data-jump>Characters</h3>
                         <figure class="full"><img src="img/web/fn-banner.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.banner">Furia Nórdica · Key art</figcaption></figure>
                         <figure class="full"><img src="img/web/fn-raulcito-waving.png" alt="" loading="lazy"><figcaption data-i18n="illus.p2.s1">Raulcito · Waving</figcaption></figure>
                         <figure><img src="img/web/fn-raulcito.png" alt="" loading="lazy"><figcaption data-i18n="illus.p2.s2">Raulcito · Character design</figcaption></figure>
@@ -167,12 +170,12 @@
                         <figure class="full"><div class="strip" tabindex="0" role="region" aria-label="Raulcito · Sprites"><img src="img/web/fn-raulcito-sprites.png" alt="" loading="lazy"></div><figcaption data-i18n="illus.p2.s7">Raulcito · Sprites</figcaption></figure>
                         <figure class="full"><div class="strip" tabindex="0" role="region" aria-label="Villain · Full design"><img src="img/web/fn-villain-full.png" alt="" loading="lazy"></div><figcaption data-i18n="illus.p2.s8">Villain · Full design</figcaption></figure>
                         <figure class="full"><div class="strip" tabindex="0" role="region" aria-label="Villain · Sprites"><img src="img/web/fn-villain-sprites.png" alt="" loading="lazy"></div><figcaption data-i18n="illus.p2.s9">Villain · Sprites</figcaption></figure>
-                        <h3 class="gallery__title" data-i18n="illus.p2.screens">HUD &amp; screens</h3>
+                        <h3 class="gallery__title" data-i18n="illus.p2.screens" data-jump>HUD &amp; screens</h3>
                         <figure class="full"><img src="img/web/fn-hud.png" alt="" loading="lazy"><figcaption data-i18n="illus.p2.hud">HUD design</figcaption></figure>
                         <figure class="full"><img src="img/web/fn-win.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.win">Win screen</figcaption></figure>
                         <figure><img src="img/web/fn-lose1.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.lose1">Game over · Screen 1</figcaption></figure>
                         <figure><img src="img/web/fn-lose2.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.lose2">Game over · Screen 2</figcaption></figure>
-                        <h3 class="gallery__title" data-i18n="illus.p2.gameplay">Gameplay</h3>
+                        <h3 class="gallery__title" data-i18n="illus.p2.gameplay" data-jump>Gameplay</h3>
                         <figure class="full"><video src="img/video_web.mp4" controls playsinline preload="none"></video><figcaption data-i18n="illus.p2.v1">Gameplay video</figcaption></figure>
                         <figure class="full"><video src="img/video_gameplay_redes.mp4" controls playsinline preload="none"></video><figcaption data-i18n="illus.p2.v2">Gameplay · Social media cut</figcaption></figure>
                         <figure><img src="img/web/fn-gp1.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.gp">Gameplay still</figcaption></figure>
@@ -181,7 +184,7 @@
                         <figure><img src="img/web/fn-gp4.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.gp">Gameplay still</figcaption></figure>
                         <figure><img src="img/web/fn-gp5.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.gp">Gameplay still</figcaption></figure>
                         <figure><img src="img/web/fn-gp6.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.gp">Gameplay still</figcaption></figure>
-                        <h3 class="gallery__title" data-i18n="illus.p2.bgs">Backgrounds</h3>
+                        <h3 class="gallery__title" data-i18n="illus.p2.bgs" data-jump>Backgrounds</h3>
                         <figure class="full"><img src="img/web/fn-bg-exterior.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.bg1">Exterior background</figcaption></figure>
                         <figure class="full"><img src="img/web/fn-bg-intro.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.bg2">Intro background</figcaption></figure>
                 </div>
@@ -196,23 +199,37 @@
                     <p class="lead" data-i18n="contact.subtitle" style="margin-top:1rem">Have a project in mind? Send me a message and I'll reply within two working days.</p>
                     <div class="contact__direct">
                         <p class="muted" data-i18n="contact.direct">Or write to me directly</p>
-                        <a href="mailto:guadalupeholsman@gmail.com"><img src="img/icon-web.png" alt="" width="24" height="24">guadalupeholsman@gmail.com</a>
+                        <span class="copy-row"><a href="mailto:guadalupeholsman@gmail.com"><img src="img/icon-web.png" alt="" width="24" height="24">guadalupeholsman@gmail.com</a><button class="copy-btn" type="button" data-copy="guadalupeholsman@gmail.com" data-i18n="contact.copy">Copy</button></span>
                         <a href="https://wa.me/542215964111" target="_blank" rel="noopener"><img src="img/icon-whatsapp.png" alt="" width="24" height="24">+54 221 596 4111</a>
                         <a href="https://www.linkedin.com/in/guadalupe-holsman" target="_blank" rel="noopener"><img src="img/icon-linkedin.png" alt="" width="24" height="24">linkedin.com/in/guadalupe-holsman</a>
                     </div>
                 </div>
                 <form class="form" id="contactForm" novalidate>
+                    <fieldset class="topics">
+                        <legend data-i18n="contact.topicsLabel">What is it about?</legend>
+                        <div class="chips">
+                            <button class="chip chip--toggle" type="button" aria-pressed="false" data-topic="contact.topics.branding" data-i18n="contact.topics.branding">Branding</button>
+                            <button class="chip chip--toggle" type="button" aria-pressed="false" data-topic="contact.topics.motion" data-i18n="contact.topics.motion">Motion &amp; video</button>
+                            <button class="chip chip--toggle" type="button" aria-pressed="false" data-topic="contact.topics.ai" data-i18n="contact.topics.ai">AI visuals</button>
+                            <button class="chip chip--toggle" type="button" aria-pressed="false" data-topic="contact.topics.illus" data-i18n="contact.topics.illus">Illustration</button>
+                            <button class="chip chip--toggle" type="button" aria-pressed="false" data-topic="contact.topics.other" data-i18n="contact.topics.other">Something else</button>
+                        </div>
+                        <input type="hidden" name="topics" value="">
+                    </fieldset>
                     <div class="field">
                         <label for="name" data-i18n="contact.name">Name</label>
-                        <input id="name" name="from_name" type="text" autocomplete="name" required placeholder="Your name" data-i18n-placeholder="contact.namePh">
+                        <input id="name" name="from_name" type="text" autocomplete="name" required minlength="2" placeholder="Your name" data-i18n-placeholder="contact.namePh" aria-describedby="name-err">
+                        <p class="field__error" id="name-err" data-err="contact.errName"></p>
                     </div>
                     <div class="field">
                         <label for="email" data-i18n="contact.email">Email</label>
-                        <input id="email" name="from_email" type="email" autocomplete="email" inputmode="email" required placeholder="you@email.com" data-i18n-placeholder="contact.emailPh">
+                        <input id="email" name="from_email" type="email" autocomplete="email" inputmode="email" required placeholder="you@email.com" data-i18n-placeholder="contact.emailPh" aria-describedby="email-err">
+                        <p class="field__error" id="email-err" data-err="contact.errEmail"></p>
                     </div>
                     <div class="field">
-                        <label for="message" data-i18n="contact.message">Message</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project, timeline and budget" data-i18n-placeholder="contact.messagePh"></textarea>
+                        <div class="field__row"><label for="message" data-i18n="contact.message">Message</label><span class="field__count" data-count-for="message" aria-hidden="true">0 / 1000</span></div>
+                        <textarea id="message" name="message" rows="5" required minlength="10" maxlength="1000" placeholder="Tell me about your project, timeline and budget" data-i18n-placeholder="contact.messagePh" aria-describedby="message-err"></textarea>
+                        <p class="field__error" id="message-err" data-err="contact.errMessage"></p>
                     </div>
                     <button class="btn btn--primary" type="submit" data-i18n="contact.send">Send message</button>
                     <p class="form__status" role="status" aria-live="polite"></p>
@@ -251,9 +268,10 @@
             <p class="footer__legal">© <span data-year>2026</span> · <span data-i18n="common.footer.made">Designed and built by Lupe Holsman · La Plata, Argentina</span></p>
         </div>
     </footer>
+    <a class="to-top" href="#main" aria-label="Back to top" data-i18n-aria="common.backTop">↑</a>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
     <script>window.emailjs && emailjs.init("ISC9P7KgnY-2ohoqV");</script>
-    <script src="js/i18n.js?v=4"></script>
-    <script src="js/site.js?v=4"></script>
+    <script src="js/i18n.js?v=7"></script>
+    <script src="js/site.js?v=7"></script>
 </body>
 </html>

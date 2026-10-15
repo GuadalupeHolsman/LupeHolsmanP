@@ -16,7 +16,8 @@ window.I18N = {
                 elsewhere: 'Elsewhere',
                 made: 'Designed and built by Lupe Holsman · La Plata, Argentina'
             },
-            close: 'Close'
+            close: 'Close',
+            backTop: 'Back to top', prev: 'Previous', next: 'Next', all: 'All'
         },
         contact: {
             eyebrow: 'Contact',
@@ -29,7 +30,15 @@ window.I18N = {
             send: 'Send message',
             sending: 'Sending…',
             success: 'Message sent. I\'ll be in touch soon.',
-            error: 'The message couldn\'t be sent. Please email me at guadalupeholsman@gmail.com.'
+            error: 'The message couldn\'t be sent. Please email me at guadalupeholsman@gmail.com.',
+            topicsLabel: 'What is it about?',
+            topics: { branding: 'Branding', motion: 'Motion & video', ai: 'AI visuals', illus: 'Illustration', other: 'Something else' },
+            topicPrefix: 'Topics',
+            copy: 'Copy', copied: 'Copied',
+            errName: 'Please enter your name.',
+            errEmail: 'Enter a valid email, like name@email.com.',
+            errMessage: 'Tell me a little about your project (at least 10 characters).',
+            fixErrors: 'Check the highlighted fields.'
         },
         home: {
             metaTitle: 'Lupe Holsman · AI Visual Media & Creative Direction',
@@ -38,7 +47,9 @@ window.I18N = {
                 title: 'Hi, I\'m <em>Lupe Holsman</em>',
                 sub: 'Multimedia designer creating brands, motion and AI-powered visuals for teams that want to be remembered.',
                 primary: 'See my work',
-                now: 'Currently at'
+                now: 'Currently at',
+                rotPrefix: 'I create',
+                rot: ['brands that connect', 'motion that holds attention', 'AI-powered visuals', 'characters with personality']
             },
             now: {
                 eyebrow: 'Right now',
@@ -93,6 +104,7 @@ window.I18N = {
                 eyebrow: 'Experience',
                 title: 'Professional <em>experience</em>',
                 present: 'Present',
+                filterLabel: 'Filter experience', filterAll: 'All', filterCurrent: 'Current', filterPast: 'Previous',
                 bvRole: 'AI Visual Media Specialist',
                 bvDesc: 'I direct and produce AI-generated imagery and video, from prompt engineering and style frames to the final edit, and build repeatable generative workflows (image, video, voice) that keep campaigns consistent and on-brand.',
                 llRole: 'AI Visual Media Specialist',
@@ -172,10 +184,12 @@ window.I18N = {
                 client2: 'University project',
                 role2: 'Visual editing & color grading'
             },
-            player: 'Video player'
+            player: 'Video player',
+            filter: { label: 'Filter reels by client', gov: 'Government', film: 'Short film', showing: '{n} videos' }
         },
         illus: {
             metaTitle: 'Illustration & Character Design · Lupe Holsman',
+            jump: 'Jump to',
             hero: { eyebrow: 'Illustration · Characters', desc: 'Character design, digital illustration and the creative process behind every line.' },
             char: { eyebrow: 'Character archive', title: 'Worlds built one <em class="is-cyan">character</em> at a time', lead: 'Exploring personality, silhouette and story. Open a project to see the full sheets.', open: 'Open project' },
             tag: { char: 'Character design', anim: 'Animation', prop: 'Prop design', hud: 'HUD design', game: '2D video game' },
@@ -218,7 +232,8 @@ window.I18N = {
                 elsewhere: 'En otros lados',
                 made: 'Diseñado y desarrollado por Lupe Holsman · La Plata, Argentina'
             },
-            close: 'Cerrar'
+            close: 'Cerrar',
+            backTop: 'Volver arriba', prev: 'Anterior', next: 'Siguiente', all: 'Todos'
         },
         contact: {
             eyebrow: 'Contacto',
@@ -231,7 +246,15 @@ window.I18N = {
             send: 'Enviar mensaje',
             sending: 'Enviando…',
             success: 'Mensaje enviado. Te respondo pronto.',
-            error: 'No se pudo enviar el mensaje. Escribime a guadalupeholsman@gmail.com.'
+            error: 'No se pudo enviar el mensaje. Escribime a guadalupeholsman@gmail.com.',
+            topicsLabel: '¿De qué se trata?',
+            topics: { branding: 'Branding', motion: 'Motion y video', ai: 'Visuales con IA', illus: 'Ilustración', other: 'Otra cosa' },
+            topicPrefix: 'Temas',
+            copy: 'Copiar', copied: 'Copiado',
+            errName: 'Escribí tu nombre.',
+            errEmail: 'Ingresá un email válido, como nombre@email.com.',
+            errMessage: 'Contame un poco sobre tu proyecto (al menos 10 caracteres).',
+            fixErrors: 'Revisá los campos marcados.'
         },
         home: {
             metaTitle: 'Lupe Holsman · Medios Visuales con IA y Dirección Creativa',
@@ -240,7 +263,9 @@ window.I18N = {
                 title: 'Hola, soy <em>Lupe Holsman</em>',
                 sub: 'Diseñadora multimedia. Creo marcas, motion y visuales con IA para equipos que quieren ser recordados.',
                 primary: 'Ver mi trabajo',
-                now: 'Hoy en'
+                now: 'Hoy en',
+                rotPrefix: 'Creo',
+                rot: ['marcas que conectan', 'motion que atrapa', 'visuales con IA', 'personajes con personalidad']
             },
             now: {
                 eyebrow: 'Actualmente',
@@ -295,6 +320,7 @@ window.I18N = {
                 eyebrow: 'Experiencia',
                 title: 'Experiencia <em>profesional</em>',
                 present: 'Actualidad',
+                filterLabel: 'Filtrar experiencia', filterAll: 'Todo', filterCurrent: 'Actual', filterPast: 'Anterior',
                 bvRole: 'Especialista en Medios Visuales con IA',
                 bvDesc: 'Dirijo y produzco imágenes y video generados con IA, desde el prompt engineering y los style frames hasta la edición final, y armo flujos generativos (imagen, video, voz) que mantienen cada campaña coherente y fiel a la marca.',
                 llRole: 'Especialista en Medios Visuales con IA',
@@ -374,10 +400,12 @@ window.I18N = {
                 client2: 'Proyecto facultativo',
                 role2: 'Montaje visual y corrección de color'
             },
-            player: 'Reproductor de video'
+            player: 'Reproductor de video',
+            filter: { label: 'Filtrar reels por cliente', gov: 'Gobierno', film: 'Cortometraje', showing: '{n} videos' }
         },
         illus: {
             metaTitle: 'Ilustración y Personajes · Lupe Holsman',
+            jump: 'Ir a',
             hero: { eyebrow: 'Ilustración · Personajes', desc: 'Diseño de personajes, ilustración digital y el proceso creativo detrás de cada trazo.' },
             char: { eyebrow: 'Archivo de personajes', title: 'Mundos construidos <em class="is-cyan">personaje</em> a personaje', lead: 'Explorando personalidad, silueta e historia. Abrí un proyecto para ver las fichas completas.', open: 'Abrir proyecto' },
             tag: { char: 'Diseño de personajes', anim: 'Animación', prop: 'Diseño de props', hud: 'Diseño de HUD', game: 'Videojuego 2D' },
