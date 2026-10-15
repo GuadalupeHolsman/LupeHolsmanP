@@ -2,887 +2,249 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Illustration — Lupe Holsman</title>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/Illustration.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">emailjs.init("ISC9P7KgnY-2ohoqV");</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title data-i18n="illus.metaTitle">Illustration &amp; Character Design · Lupe Holsman</title>
+    <meta name="description" content="Character design and game art by Lupe Holsman: Pie of Thrones and Furia Nórdica.">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Illustration &amp; Character Design · Lupe Holsman">
+    <meta property="og:description" content="Character design and game art by Lupe Holsman: Pie of Thrones and Furia Nórdica.">
+    <meta property="og:image" content="img/web/character.png">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b0b0f'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='900' font-size='30' fill='%23fff'%3ELH%3C/text%3E%3Ccircle cx='50' cy='46' r='5' fill='%23F50041'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/site.css?v=3">
 </head>
-
 <body>
+    <a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
 
-    <div class="cursor-dot"  id="cursorDot"></div>
-    <div class="cursor-ring" id="cursorRing"></div>
-
-    <!-- ══ HEADER ══════════════════════════════ -->
-    <header id="siteHeader">
-        <div class="container">
-            <nav>
-                <ul id="navLinks">
-                    <li><a href="index.html"     data-i18n="nav.home">Home</a></li>
-                    <li><a href="about.html"      data-i18n="nav.about">About</a></li>
-                    <li><a href="index.html#work" data-i18n="nav.work">My Work</a></li>
+    <header class="site-header">
+        <div class="container site-header__bar">
+            <a class="brand" href="index.html" aria-label="Lupe Holsman, home">Lupe Holsman<span class="brand__dot" aria-hidden="true">.</span></a>
+            <nav class="nav" aria-label="Main" data-i18n-aria="common.nav.label">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="index.html" data-i18n="common.nav.home">Home</a></li>
+                    <li><a class="nav__link" href="about.html" data-i18n="common.nav.about">About</a></li>
+                    <li><a class="nav__link" href="BrandingySocialmedia.html" data-i18n="common.nav.branding">Branding</a></li>
+                    <li><a class="nav__link" href="MotionVideo.html" data-i18n="common.nav.motion">Motion</a></li>
+                    <li><a class="nav__link" href="Illustration.html" data-i18n="common.nav.illus" aria-current="page">Illustration</a></li>
                 </ul>
-                <div class="nav-right">
-                    <button class="lang-switch" id="langSwitch" aria-label="Switch language">
-                        <span class="lang-flag" id="langFlag">🇦🇷</span>
-                        <span class="lang-label" id="langLabel">ES</span>
-                    </button>
-                    <a href="#contact" class="btn" data-i18n="nav.contact">Get in touch</a>
-                    <button class="hamburger" id="hamburger" aria-label="Menu">
-                        <span></span><span></span><span></span>
-                    </button>
-                </div>
             </nav>
+            <div class="header-actions">
+                <button class="lang-toggle" type="button" data-lang-toggle>ES</button>
+                <a class="btn btn--primary btn--sm header-cta" href="#contact" data-i18n="common.cta">Get in touch</a>
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu">
+                    <span class="menu-toggle__icon" aria-hidden="true"></span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <main>
-
-        <!-- ══ HERO ════════════════════════════ -->
-        <section class="illus-hero">
-
-            <div class="container illus-hero-title-wrap">
-                <div class="illus-hero-title">
-                    <h1>Illustration &amp;<em>Character Design</em></h1>
-                </div>
+    <div class="drawer" id="drawer">
+        <ul class="drawer__list">
+            <li><a class="drawer__link" href="index.html" data-i18n="common.nav.home">Home</a></li>
+            <li><a class="drawer__link" href="about.html" data-i18n="common.nav.about">About</a></li>
+            <li><a class="drawer__link" href="BrandingySocialmedia.html" data-i18n="common.nav.branding">Branding</a></li>
+            <li><a class="drawer__link" href="MotionVideo.html" data-i18n="common.nav.motion">Motion</a></li>
+            <li><a class="drawer__link" href="Illustration.html" data-i18n="common.nav.illus" aria-current="page">Illustration</a></li>
+        </ul>
+        <div class="drawer__foot">
+            <a class="btn btn--primary" href="#contact" data-i18n="common.cta">Get in touch</a>
+            <div class="drawer__contact">
+                <span>guadalupeholsman@gmail.com</span>
+                <span>+54 221 596 4111</span>
             </div>
-
-            <!-- Decoración orgánica — trazo tipo pincel -->
-            <div class="illus-brush-wrap" aria-hidden="true">
-                <svg viewBox="0 0 1440 90" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="illusGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%"   stop-color="#F50041"/>
-                            <stop offset="45%"  stop-color="#8b3fa8"/>
-                            <stop offset="100%" stop-color="#00d2d3"/>
-                        </linearGradient>
-                    </defs>
-                    <path d="M -40 65 C 180 10, 420 80, 720 45 S 1180 5, 1480 60"
-                          stroke="url(#illusGrad)" stroke-width="4"
-                          stroke-linecap="round" fill="none"/>
-                    <path d="M -40 65 C 180 10, 420 80, 720 45 S 1180 5, 1480 60"
-                          stroke="url(#illusGrad)" stroke-width="1.2"
-                          stroke-linecap="round" fill="none" opacity="0.25"
-                          transform="translate(0, 14)"/>
-                    <circle cx="320"  cy="28" r="3.5" fill="#F50041" opacity="0.55"/>
-                    <circle cx="860"  cy="22" r="3.5" fill="#00d2d3" opacity="0.55"/>
-                    <circle cx="1140" cy="48" r="2.5" fill="#8b3fa8" opacity="0.5"/>
-                </svg>
-            </div>
-
-            <div class="container">
-                <p class="illus-hero-desc" data-i18n="hero.desc">
-                    Character Design, Digital Illustration &amp; The Creative Process Behind Every Line.
-                </p>
-            </div>
-
-        </section>
-
-
-        <!-- ══ CHARACTERS ══════════════════════ -->
-        <section class="illus-characters" id="characters">
-            <div class="container">
-
-                <div class="illus-section-head">
-                    <div class="reveal from-left">
-                        <span class="illus-label" data-i18n="char.label">Characters</span>
-                        <h2 data-i18n="char.title">Character<br><em>Archive</em></h2>
-                    </div>
-                    <p class="illus-section-tagline reveal from-right" data-i18n="char.tagline">
-                        Worlds built one character at a time — exploring personality, silhouette and story.
-                    </p>
-                </div>
-
-                <!-- Project Cards Grid -->
-                <div class="illus-proj-grid">
-
-                    <!-- Card: Pie of Thrones -->
-                    <div class="illus-proj-wrap reveal">
-                        <article class="illus-proj-card" data-project="pieofthrones">
-                            <div class="illus-proj-thumb">
-                                <img src="img/reina pero la de Cande 2 .png" alt="Pie of Thrones">
-                            </div>
-                            <div class="illus-proj-overlay">
-                                <div class="illus-proj-tags">
-                                    <span data-i18n="tag.chardesign">Character Design</span>
-                                    <span data-i18n="tag.animation">Animation</span>
-                                    <span data-i18n="tag.propdesign">Prop Design</span>
-                                </div>
-                            </div>
-                        </article>
-                        <div class="illus-proj-caption">
-                            <h4 data-i18n="project1.title">Pie of Thrones</h4>
-                            <p data-i18n="project1.shortdesc">Synchro / Shooting · Single player</p>
-                        </div>
-                    </div>
-
-                    <!-- Card: Furia Nórdica -->
-                    <div class="illus-proj-wrap reveal">
-                        <article class="illus-proj-card" data-project="furianordica">
-                            <div class="illus-proj-thumb">
-                                <img src="img/BannerSinRectangulo.jpg" alt="Furia Nórdica">
-                            </div>
-                            <div class="illus-proj-overlay">
-                                <div class="illus-proj-tags">
-                                    <span data-i18n="tag.chardesign">Character Design</span>
-                                    <span>HUD Design</span>
-                                </div>
-                            </div>
-                        </article>
-                        <div class="illus-proj-caption">
-                            <h4 data-i18n="project2.title">Furia Nórdica</h4>
-                            <p data-i18n="project2.shortdesc">Character Design · HUD</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Lightbox: Pie of Thrones -->
-                <div class="illus-lightbox" id="lb-pieofthrones" role="dialog" aria-modal="true">
-                    <div class="illus-lb-backdrop"></div>
-                    <div class="illus-lb-panel">
-                        <button class="illus-lb-close" aria-label="Close">✕</button>
-
-                        <div class="illus-lb-header">
-                            <span class="illus-label" data-i18n="project1.label">Project</span>
-                            <h3 data-i18n="project1.title">Pie of Thrones</h3>
-                            <p data-i18n="project1.desc">One afternoon at Buckingham Palace, the queen's peace is interrupted by the arrival of her three corgis. Furious, the Monarch calls a servant and demands shepherd pie for her pets. With her terrible aim, the queen must feed the corgis — or at least try.</p>
-                        </div>
-
-                        <div class="illus-lb-images">
-
-                            <!-- Characters -->
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full illus-lb-img-wrap--hero">
-                                <img src="img/reina pero la de Cande 2 .png" alt="Queen — Character Design">
-                                <p class="illus-sheet-caption" data-i18n="project1.sheet3">Queen — Character Design</p>
-                            </div>
-                            <div class="illus-lb-img-wrap">
-                                <img src="img/17ReinaSeEnoja.png" alt="Queen — Angry Expression">
-                                <p class="illus-sheet-caption" data-i18n="project1.sheet6">Queen — Angry Expression</p>
-                            </div>
-                            <div class="illus-lb-img-wrap">
-                                <img src="img/6ReinaMiraParaTodosLados.png" alt="Queen — Looking Around">
-                                <p class="illus-sheet-caption" data-i18n="project1.sheet7">Queen — Looking Around</p>
-                            </div>
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full">
-                                <object data="img/expresiones.svg" type="image/svg+xml" aria-label="Queen & Corgi — Expressions & Poses"></object>
-                                <p class="illus-sheet-caption" data-i18n="project1.sheet1">Queen &amp; Corgi — Expressions &amp; Poses</p>
-                            </div>
-                            <div class="illus-lb-img-wrap">
-                                <img src="img/mayordomo.png" alt="Butler — Character Design">
-                                <p class="illus-sheet-caption" data-i18n="project1.sheet4">Butler — Character Design</p>
-                            </div>
-
-                            <!-- Props -->
-                            <div class="illus-lb-img-wrap">
-                                <object data="img/PERROSSS.svg" type="image/svg+xml" aria-label="Props — Royal Dog Bowls"></object>
-                                <p class="illus-sheet-caption" data-i18n="project1.sheet2">Props — Royal Dog Bowls &amp; Serving Tray</p>
-                            </div>
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full illus-lb-img-wrap--screen">
-                                <img src="img/PLATOS Y PIE CON LETRAS.png" alt="Props — Plates & Pie">
-                                <p class="illus-sheet-caption" data-i18n="project1.sheet5">Props — Plates &amp; Pie</p>
-                            </div>
-
-                            <!-- Game Screens -->
-                            <div class="illus-lb-section-title" data-i18n="project1.screens">Game Screens</div>
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--screen illus-lb-img-wrap--full">
-                                <img src="img/pantallainicio.png" alt="Start Screen">
-                                <p class="illus-sheet-caption" data-i18n="project1.screen1">Start Screen</p>
-                            </div>
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--screen">
-                                <img src="img/pantallajuego1.png" alt="Gameplay Screen 1">
-                                <p class="illus-sheet-caption" data-i18n="project1.screen2">Gameplay — Screen 1</p>
-                            </div>
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--screen">
-                                <img src="img/pantallajuego2.png" alt="Gameplay Screen 2">
-                                <p class="illus-sheet-caption" data-i18n="project1.screen3">Gameplay — Screen 2</p>
-                            </div>
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--screen illus-lb-img-wrap--full">
-                                <img src="img/pantallajuego3.png" alt="Gameplay Screen 3">
-                                <p class="illus-sheet-caption" data-i18n="project1.screen4">Gameplay — Screen 3</p>
-                            </div>
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--screen">
-                                <img src="img/pantallaganaste.png" alt="Win Screen">
-                                <p class="illus-sheet-caption" data-i18n="project1.screen5">Win Screen</p>
-                            </div>
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--screen">
-                                <img src="img/pantallaperdiste.png" alt="Game Over Screen">
-                                <p class="illus-sheet-caption" data-i18n="project1.screen6">Game Over Screen</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Lightbox: Furia Nórdica -->
-                <div class="illus-lightbox" id="lb-furianordica" role="dialog" aria-modal="true">
-                    <div class="illus-lb-backdrop"></div>
-                    <div class="illus-lb-panel">
-                        <button class="illus-lb-close" aria-label="Close">✕</button>
-                        <div class="illus-lb-header">
-                            <span class="illus-label" data-i18n="project1.label">Project</span>
-                            <h3 data-i18n="project2.title">Furia Nórdica</h3>
-                            <p data-i18n="project2.desc">2D video game character design and HUD for a Norse-inspired beat-em-up. Design the hero, villains and interface.</p>
-                        </div>
-                        <div class="illus-lb-images">
-
-                            <!-- Characters -->
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full">
-                                <img src="img/BannerSinRectangulo.jpg" alt="Furia Nórdica — Banner">
-                                <p class="illus-sheet-caption" data-i18n="project2.banner">Furia Nórdica — Banner</p>
-                            </div>
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full illus-lb-img-wrap--hero">
-                                <img src="img/Raulcito_Saludando.png" alt="Raulcito — Waving">
-                                <p class="illus-sheet-caption" data-i18n="project2.sheet4">Raulcito — Waving</p>
-                            </div>
-                            <div class="illus-lb-img-wrap">
-                                <img src="img/Raulcito1.png" alt="Raulcito — Character Design">
-                                <p class="illus-sheet-caption" data-i18n="project2.sheet2">Raulcito — Character Design</p>
-                            </div>
-                            <div class="illus-lb-img-wrap">
-                                <img src="img/Cara_Raulcito_Final.png" alt="Raulcito — Face Detail">
-                                <p class="illus-sheet-caption" data-i18n="project2.sheet3">Raulcito — Face Detail</p>
-                            </div>
-                            <div class="illus-lb-img-wrap">
-                                <img src="img/El_Señor_De_Las_Máscaras_2.png" alt="El Señor de las Máscaras — Boss">
-                                <p class="illus-sheet-caption" data-i18n="project2.sheet5">El Señor de las Máscaras — Boss</p>
-                            </div>
-                            <div class="illus-lb-img-wrap">
-                                <img src="img/Ciudadano_Villano1.png" alt="Citizen Villain 1">
-                                <p class="illus-sheet-caption" data-i18n="project2.sheet7">Citizen Villain 1</p>
-                            </div>
-                            <div class="illus-lb-img-wrap">
-                                <img src="img/Ciudadana_Villana2.png" alt="Citizen Villain 2">
-                                <p class="illus-sheet-caption" data-i18n="project2.sheet8">Citizen Villain 2</p>
-                            </div>
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full illus-lb-img-wrap--hero">
-                                <img src="img/Sprites_Raulcito_Sin_Fondo.png" alt="Raulcito — Main Character">
-                                <p class="illus-sheet-caption" data-i18n="project2.sheet1">Raulcito — Main Character Sprites</p>
-                            </div>
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full illus-lb-img-wrap--hero">
-                                <img src="img/maloCompleto.png" alt="Villain — Full Design">
-                                <p class="illus-sheet-caption" data-i18n="project2.sheet6">Villain — Full Design</p>
-                            </div>
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full illus-lb-img-wrap--hero">
-                                <img src="img/Sprites_Villana_Sin_Fondo (1).png" alt="Villain — Sprites">
-                                <p class="illus-sheet-caption" data-i18n="project2.sheet9">Villain — Sprites</p>
-                            </div>
-
-                            <!-- HUD & Screens -->
-                            <div class="illus-lb-section-title" data-i18n="project2.screens">HUD &amp; Screens</div>
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full illus-lb-img-wrap--screen illus-lb-img-wrap--hud">
-                                <img src="img/Hud-02.png" alt="HUD Design">
-                                <p class="illus-sheet-caption" data-i18n="project2.hud">HUD Design</p>
-                            </div>
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--screen illus-lb-img-wrap--full">
-                                <img src="img/pantalla ganaste pintada.png" alt="Win Screen">
-                                <p class="illus-sheet-caption" data-i18n="project2.winscreen">Win Screen</p>
-                            </div>
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--screen">
-                                <img src="img/Pantalla_Perdiste_Raulcito_Mata1.jpg" alt="Game Over Screen 1">
-                                <p class="illus-sheet-caption" data-i18n="project2.lose1">Game Over — Screen 1</p>
-                            </div>
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--screen">
-                                <img src="img/Pantalla_Perdiste_Raulcito_Mata3.jpg" alt="Game Over Screen 2">
-                                <p class="illus-sheet-caption" data-i18n="project2.lose2">Game Over — Screen 2</p>
-                            </div>
-
-                            <!-- Gameplay -->
-                            <div class="illus-lb-section-title" data-i18n="project2.gameplay">Gameplay</div>
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full">
-                                <video src="img/video_web.mp4" controls playsinline></video>
-                                <p class="illus-sheet-caption" data-i18n="project2.video1">Gameplay Video</p>
-                            </div>
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full">
-                                <video src="img/video_gameplay_redes.mp4" controls playsinline></video>
-                                <p class="illus-sheet-caption" data-i18n="project2.video2">Gameplay — Social Media Cut</p>
-                            </div>
-                            <div class="illus-lb-img-wrap">
-                                <img src="img/gameplay_web3.jpg" alt="Gameplay">
-                                <p class="illus-sheet-caption" data-i18n="project2.gp1">Gameplay</p>
-                            </div>
-                            <div class="illus-lb-img-wrap">
-                                <img src="img/gameplay_web4.jpg" alt="Gameplay">
-                                <p class="illus-sheet-caption" data-i18n="project2.gp2">Gameplay</p>
-                            </div>
-                            <div class="illus-lb-img-wrap">
-                                <img src="img/gameplay_web5.jpg" alt="Gameplay">
-                                <p class="illus-sheet-caption" data-i18n="project2.gp3">Gameplay</p>
-                            </div>
-                            <div class="illus-lb-img-wrap">
-                                <img src="img/gameplay_web8.jpg" alt="Gameplay">
-                                <p class="illus-sheet-caption" data-i18n="project2.gp4">Gameplay</p>
-                            </div>
-                            <div class="illus-lb-img-wrap">
-                                <img src="img/gameplay_redes5.JPG" alt="Gameplay">
-                                <p class="illus-sheet-caption" data-i18n="project2.gp5">Gameplay</p>
-                            </div>
-                            <div class="illus-lb-img-wrap">
-                                <img src="img/gameplay_redes6.JPG" alt="Gameplay">
-                                <p class="illus-sheet-caption" data-i18n="project2.gp6">Gameplay</p>
-                            </div>
-
-                            <!-- Backgrounds -->
-                            <div class="illus-lb-section-title" data-i18n="project2.backgrounds">Backgrounds</div>
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full">
-                                <img src="img/Exterior2.png" alt="Exterior Background">
-                                <p class="illus-sheet-caption" data-i18n="project2.bg1">Exterior Background</p>
-                            </div>
-                            <div class="illus-lb-img-wrap illus-lb-img-wrap--full">
-                                <img src="img/Fondo_Raulcito_Saludando.png" alt="Intro Background">
-                                <p class="illus-sheet-caption" data-i18n="project2.bg2">Intro Background</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- ══ GALLERY ═════════════════════════ -->
-        <!-- Hidden until its images are uploaded — remove `hidden` to show it again -->
-        <section class="illus-gallery" hidden>
-            <div class="container">
-
-                <div class="illus-gallery-head">
-                    <span class="illus-label reveal" data-i18n="gallery.label">Artworks</span>
-                    <h2 class="reveal" data-i18n="gallery.title">Digital<br><em>Gallery</em></h2>
-                    <p class="illus-gallery-tagline reveal" data-i18n="gallery.tagline">
-                        Selected pieces — digital painting, fan art &amp; original characters.
-                    </p>
-                </div>
-
-                <div class="illus-gallery-grid">
-                    <div class="illus-gallery-item reveal"><img src="img/art-1.png" alt="Art 1"></div>
-                    <div class="illus-gallery-item reveal"><img src="img/art-2.png" alt="Art 2"></div>
-                    <div class="illus-gallery-item reveal"><img src="img/art-3.png" alt="Art 3"></div>
-                    <div class="illus-gallery-item reveal"><img src="img/art-4.png" alt="Art 4"></div>
-                    <div class="illus-gallery-item reveal"><img src="img/art-5.png" alt="Art 5"></div>
-                    <div class="illus-gallery-item reveal"><img src="img/art-6.png" alt="Art 6"></div>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- ══ SKETCHBOOK ══════════════════════ -->
-        <!-- Hidden until its images are uploaded — remove `hidden` to show it again -->
-        <section class="illus-sketchbook" hidden>
-            <div class="container">
-
-                <div class="illus-sketch-head">
-                    <div>
-                        <span class="illus-label illus-label--dark reveal" data-i18n="sketch.label">The Process</span>
-                        <h2 class="reveal" data-i18n="sketch.title">Sketchbook</h2>
-                    </div>
-                    <p class="illus-sketch-tagline reveal" data-i18n="sketch.tagline">
-                        Behind every finished piece — the raw sketches and first lines.
-                    </p>
-                </div>
-
-                <div class="sketch-carousel-wrap">
-                    <div class="sketch-carousel" id="sketchCarousel">
-                        <div class="sketch-card reveal" style="--rotation: -2deg"><img src="img/sketch-1.png" alt="Sketch 1"></div>
-                        <div class="sketch-card reveal" style="--rotation: 3deg"><img src="img/sketch-2.png" alt="Sketch 2"></div>
-                        <div class="sketch-card reveal" style="--rotation: -1deg"><img src="img/sketch-3.png" alt="Sketch 3"></div>
-                        <div class="sketch-card reveal" style="--rotation: 4deg"><img src="img/sketch-4.png" alt="Sketch 4"></div>
-                        <div class="sketch-card reveal" style="--rotation: -3deg"><img src="img/sketch-5.png" alt="Sketch 5"></div>
-                    </div>
-                    <button class="sketch-btn" id="sketchNext" aria-label="Next">›</button>
-                    <button class="sketch-btn sketch-btn--prev" id="sketchPrev" aria-label="Prev">‹</button>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- ══ CONTACT ══════════════════════════ -->
-        <section class="contact-section" id="contact">
-            <div class="container contact-wrapper">
-
-                <div class="contact-text reveal from-left">
-                    <h2 data-i18n="contact.title">Let's build something <span class="text-cyan">together</span></h2>
-                    <p data-i18n="contact.subtitle">Have a project in mind? Send me a message and I'll get back to you as soon as possible.</p>
-                </div>
-
-                <form class="contact-form reveal from-right" id="contactForm">
-                    <div class="form-group">
-                        <label for="name" data-i18n="contact.form.name">Name</label>
-                        <input type="text" id="name" name="from_name" placeholder="Your name" data-i18n-placeholder="contact.form.namePlaceholder" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" data-i18n="contact.form.email">Email</label>
-                        <input type="email" id="email" name="from_email" placeholder="your@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message" data-i18n="contact.form.message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." data-i18n-placeholder="contact.form.messagePlaceholder" required></textarea>
-                    </div>
-                    <button type="submit" class="btn" data-i18n="contact.form.send">Send message</button>
-                <p class="form-success" id="formSuccess" data-i18n="contact.form.success">Message sent! I'll be in touch soon ✦</p>
-            </form>
-
-            </div>
-        </section>
-
-    </main>
-
-
-    <!-- ══ FOOTER ═══════════════════════════════ -->
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <h3>LUPE HOLSMAN</h3>
-                <p data-i18n="footer.role">AI Visual Media &amp; Creative Direction</p>
-            </div>
-            <div class="footer-divider"></div>
-            <div class="footer-contact">
-                <p>+54 221 596 4111</p>
-                <p>guadalupeholsman@gmail.com</p>
-                <p>La Plata, Buenos Aires, Argentina</p>
-            </div>
-            <div class="footer-social">
-                <a href="https://wa.me/542215964111" class="social-icon" target="_blank" rel="noopener" aria-label="WhatsApp">
-                    <img src="img/icon-whatsapp.png" alt="WhatsApp">
-                </a>
-                <a href="https://www.linkedin.com/in/guadalupe-holsman" class="social-icon" aria-label="LinkedIn">
-                    <img src="img/icon-linkedin.png" alt="LinkedIn">
-                </a>
-                <a href="#" class="social-icon" aria-label="Instagram">
-                    <img src="img/icon-instagram.png" alt="Instagram">
-                </a>
-            </div>
-        </div>
-    </footer>
-
-
-    <script>
-    // ── CURSOR ──────────────────────────────────
-    const cursorDot  = document.getElementById('cursorDot');
-    const cursorRing = document.getElementById('cursorRing');
-    let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
-
-    window.addEventListener('mousemove', e => {
-        mouseX = e.clientX; mouseY = e.clientY;
-        cursorDot.style.transform = `translate(calc(${mouseX}px - 50%), calc(${mouseY}px - 50%))`;
-    });
-
-    (function animateRing() {
-        ringX += (mouseX - ringX) * 0.14;
-        ringY += (mouseY - ringY) * 0.14;
-        cursorRing.style.transform = `translate(calc(${ringX}px - 50%), calc(${ringY}px - 50%))`;
-        requestAnimationFrame(animateRing);
-    })();
-
-
-    // ── STICKY HEADER ───────────────────────────
-    const siteHeader = document.getElementById('siteHeader');
-    window.addEventListener('scroll', () => {
-        siteHeader.classList.toggle('scrolled', window.scrollY > 20);
-    });
-
-
-    // ── HAMBURGER ───────────────────────────────
-    const hamburger = document.getElementById('hamburger');
-    const navLinks  = document.getElementById('navLinks');
-
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('open');
-        navLinks.classList.toggle('mobile-open');
-        siteHeader.classList.toggle('nav-open');
-    });
-
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('open');
-            navLinks.classList.remove('mobile-open');
-        });
-    });
-
-
-    // ── SCROLL REVEAL ───────────────────────────
-    const revealObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add('is-visible');
-            revealObserver.unobserve(entry.target);
-        });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-
-    // ── SKETCH CAROUSEL ─────────────────────────
-    const sketchCarousel = document.getElementById('sketchCarousel');
-    document.getElementById('sketchNext').addEventListener('click', () => {
-        sketchCarousel.scrollBy({ left: 320, behavior: 'smooth' });
-    });
-    document.getElementById('sketchPrev').addEventListener('click', () => {
-        sketchCarousel.scrollBy({ left: -320, behavior: 'smooth' });
-    });
-
-
-    // ── FORM ────────────────────────────────────
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const btn = this.querySelector('button[type="submit"]');
-        btn.textContent = 'Sending...';
-        btn.disabled = true;
-        emailjs.sendForm('service_e1hgfwj', 'template_xpotur4', this)
-            .then(() => {
-                document.getElementById('formSuccess').classList.add('visible');
-                this.reset();
-                btn.textContent = btn.getAttribute('data-original') || 'Send message';
-                btn.disabled = false;
-            }, (error) => {
-                console.error('EmailJS error:', error);
-                btn.textContent = btn.getAttribute('data-original') || 'Send message';
-                btn.disabled = false;
-            });
-    });
-
-
-    // ── PROJECT LIGHTBOX ────────────────────────
-    document.querySelectorAll('.illus-proj-card').forEach(card => {
-        card.addEventListener('click', () => {
-            const lb = document.getElementById('lb-' + card.dataset.project);
-            if (lb) lb.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-    });
-
-    document.querySelectorAll('.illus-lightbox').forEach(lb => {
-        lb.querySelector('.illus-lb-backdrop').addEventListener('click', () => closeLb(lb));
-        lb.querySelector('.illus-lb-close').addEventListener('click',    () => closeLb(lb));
-    });
-
-    document.addEventListener('keydown', e => {
-        if (e.key === 'Escape') document.querySelectorAll('.illus-lightbox.active').forEach(closeLb);
-    });
-
-    function closeLb(lb) {
-        lb.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-
-    // ── LANGUAGE SWITCH ─────────────────────────
-    const translations = {
-        en: {
-            nav: { home: 'Home', about: 'About', work: 'My Work', contact: 'Get in touch' },
-            hero: { desc: 'Character Design, Digital Illustration & The Creative Process Behind Every Line.' },
-            char: {
-                label:   'Characters',
-                title:   'Character Archive',
-                tagline: 'Worlds built one character at a time — exploring personality, silhouette and story.',
-                1: { name: 'Protagonist Alpha', desc: 'Exploration of silhouettes and personality through expressive posing and a vibrant color palette.' },
-                2: { name: 'The Guardian',      desc: 'World-building through costume design and material rendering.' }
-            },
-            project1: {
-                label:  'Project',
-                title:  'Pie of Thrones',
-                desc:   'One afternoon at Buckingham Palace, the queen\'s peace is interrupted by the arrival of her three corgis. Furious, the Monarch calls a servant and demands shepherd pie for her pets. With her terrible aim, the queen must feed the corgis — or at least try.',
-                sheet1: 'Queen & Corgi — Expressions & Poses',
-                sheet2: 'Props — Royal Dog Bowls & Serving Tray',
-                sheet3: 'Queen — Character Design',
-                sheet4: 'Butler — Character Design',
-                sheet5: 'Props — Plates & Pie',
-                sheet6: 'Queen — Angry Expression',
-                sheet7: 'Queen — Looking Around',
-                screens: 'Game Screens',
-                screen1: 'Start Screen',
-                screen2: 'Gameplay — Screen 1',
-                screen3: 'Gameplay — Screen 2',
-                screen4: 'Gameplay — Screen 3',
-                screen5: 'Win Screen',
-                screen6: 'Game Over Screen',
-                shortdesc: '2D video game character design — feed the queen\'s corgis before they get angry.'
-            },
-            project2: {
-                label: 'Project',
-                title: 'Furia Nórdica',
-                desc:  '2D video game character design and HUD for a Norse-inspired beat-em-up. Design the hero, villains and interface.',
-                shortdesc: '2D video game character design — a Norse hero battles masked villains through the city.',
-                sheet1: 'Raulcito — Main Character Sprites', sheet2: 'Raulcito — Character Design',
-                sheet3: 'Raulcito — Face Detail', sheet4: 'Raulcito — Waving',
-                sheet5: 'El Señor de las Máscaras — Boss', sheet6: 'Villain — Full Design',
-                sheet7: 'Citizen Villain 1', sheet8: 'Citizen Villain 2', sheet9: 'Villain — Sprites',
-                screens: 'HUD & Screens', hud: 'HUD Design',
-                winscreen: 'Win Screen', lose1: 'Game Over — Screen 1', lose2: 'Game Over — Screen 2',
-                backgrounds: 'Backgrounds', bg1: 'Exterior Background', bg2: 'Intro Background',
-                gameplay: 'Gameplay', video1: 'Gameplay Video', video2: 'Gameplay — Social Media Cut',
-                gp1: 'Gameplay', gp2: 'Gameplay', gp3: 'Gameplay', gp4: 'Gameplay', gp5: 'Gameplay', gp6: 'Gameplay'
-            },
-            tag: { chardesign: 'Character Design', animation: 'Animation', propdesign: 'Prop Design' },
-            meta: { food: 'Food', category: 'Category', mode: 'Mode', players: 'Players', single: 'Single', oneplayer: 'One player' },
-            expertise: {
-                label: 'Expertise',
-                desc:  'Every illustration starts with a question: who is this character, and what do they feel? I work from concept to finished piece — building personality, context, and visual language into every drawing.<br><br>From character sheets to standalone pieces, each artwork is delivered with full usage rights and all the formats you need.'
-            },
-            included: {
-                title: "What's Included",
-                item1: 'Character Design & Sheet',
-                item2: 'Digital Illustration',
-                item3: 'Concept Art',
-                item4: 'Color & Lighting',
-                item5: 'Revisions Included',
-                item6: 'All File Formats (PNG, PSD, PDF)'
-            },
-            gallery: {
-                label:   'Artworks',
-                title:   'Digital Gallery',
-                tagline: 'Selected pieces — digital painting, fan art & original characters.'
-            },
-            sketch: { label: 'The Process', title: 'Sketchbook', tagline: 'Behind every finished piece — the raw sketches and first lines.' },
-            contact: {
-                title: 'Let\'s build something <span class="text-cyan">together</span>',
-                subtitle: "Have a project in mind? Send me a message and I'll get back to you as soon as possible.",
-                form: {
-                    name: 'Name', namePlaceholder: 'Your name',
-                    email: 'Email',
-                    message: 'Message', messagePlaceholder: 'Tell me about your project...',
-                    send: 'Send message',
-                    success: "Message sent! I'll be in touch soon ✦"
-                }
-            },
-            footer: { role: 'AI Visual Media & Creative Direction' },
-            wip: {
-                badge: 'Work in Progress',
-                title: 'Still being built ✦',
-                desc: 'This section is still in progress. The only fully completed section right now is <strong>Motion &amp; Video</strong> — check it out!',
-                btn: 'Take me there →'
-            },
-        },
-        es: {
-            nav: { home: 'Inicio', about: 'Sobre mí', work: 'Mi trabajo', contact: 'Contactame' },
-            hero: { desc: 'Diseño de personajes, ilustración digital y el proceso creativo detrás de cada trazo.' },
-            char: {
-                label:   'Personajes',
-                title:   'Archivo de Personajes',
-                tagline: 'Mundos construidos personaje a personaje — explorando personalidad, silueta e historia.',
-                1: { name: 'Protagonista Alpha', desc: 'Exploración de siluetas y personalidad a través de poses expresivas y una paleta de colores vibrante.' },
-                2: { name: 'El Guardián',        desc: 'Construcción de mundos a través del diseño de vestuario y renderizado de materiales.' }
-            },
-            project1: {
-                label:  'Proyecto',
-                title:  'Pie of Thrones',
-                desc:   'Una tarde en el palacio de Buckingham, la paz de la reina se ve interrumpida ante la llegada de sus tres perros. La Monarca muy enojada llama a un sirviente y pide shepherd pie para sus mascotas. Con su mala puntería, la reina deberá alimentar a los corgis — o al menos intentarlo.',
-                sheet1: 'Reina y Corgi — Expresiones y Poses',
-                sheet2: 'Props — Tazones Reales y Bandeja',
-                sheet3: 'Reina — Diseño de Personaje',
-                sheet4: 'Mayordomo — Diseño de Personaje',
-                sheet5: 'Props — Platos y Pie',
-                sheet6: 'Reina — Expresión Enojada',
-                sheet7: 'Reina — Mirando para todos lados',
-                screens: 'Pantallas del Juego',
-                screen1: 'Pantalla de Inicio',
-                screen2: 'Gameplay — Pantalla 1',
-                screen3: 'Gameplay — Pantalla 2',
-                screen4: 'Gameplay — Pantalla 3',
-                screen5: 'Pantalla de Victoria',
-                screen6: 'Pantalla de Game Over',
-                shortdesc: 'Diseño de personajes para videojuego 2D — alimentá a los corgis de la reina antes de que se enojen.'
-            },
-            project2: {
-                label: 'Proyecto',
-                title: 'Furia Nórdica',
-                desc:  'Diseño de personajes y HUD para un beat-em-up 2D de inspiración nórdica. Un héroe enfrenta villanos enmascarados por la ciudad.',
-                shortdesc: 'Diseño de personajes para videojuego 2D — un héroe nórdico combate villanos enmascarados por la ciudad.',
-                sheet1: 'Raulcito — Sprites Personaje Principal', sheet2: 'Raulcito — Diseño de Personaje',
-                sheet3: 'Raulcito — Detalle Cara', sheet4: 'Raulcito — Saludando',
-                sheet5: 'El Señor de las Máscaras — Boss', sheet6: 'Villano — Diseño Completo',
-                sheet7: 'Ciudadano Villano 1', sheet8: 'Ciudadana Villana 2', sheet9: 'Villana — Sprites',
-                screens: 'HUD y Pantallas', hud: 'Diseño de HUD',
-                winscreen: 'Pantalla de Victoria', lose1: 'Game Over — Pantalla 1', lose2: 'Game Over — Pantalla 2',
-                backgrounds: 'Fondos', bg1: 'Fondo Exterior', bg2: 'Fondo Intro',
-                gameplay: 'Gameplay', video1: 'Video Gameplay', video2: 'Gameplay — Corte Redes',
-                gp1: 'Gameplay', gp2: 'Gameplay', gp3: 'Gameplay', gp4: 'Gameplay', gp5: 'Gameplay', gp6: 'Gameplay'
-            },
-            tag: { chardesign: 'Diseño de Personajes', animation: 'Animación', propdesign: 'Diseño de Props' },
-            meta: { food: 'Comida', category: 'Categoría', mode: 'Modalidad', players: 'Jugadores', single: 'Single', oneplayer: 'One player' },
-            expertise: {
-                label: 'Expertise',
-                desc:  'Cada ilustración empieza con una pregunta: ¿quién es este personaje y qué siente? Trabajo desde el concepto hasta la pieza terminada — construyendo personalidad, contexto y lenguaje visual en cada dibujo.<br><br>Desde fichas de personajes hasta piezas sueltas, cada obra se entrega con todos los derechos de uso y los formatos necesarios.'
-            },
-            included: {
-                title: 'Qué incluye',
-                item1: 'Diseño y ficha de personaje',
-                item2: 'Ilustración digital',
-                item3: 'Arte conceptual',
-                item4: 'Color e iluminación',
-                item5: 'Revisiones incluidas',
-                item6: 'Todos los formatos (PNG, PSD, PDF)'
-            },
-            gallery: {
-                label:   'Obras',
-                title:   'Galería Digital',
-                tagline: 'Piezas seleccionadas — pintura digital, fan art y personajes originales.'
-            },
-            sketch: { label: 'El Proceso', title: 'Sketchbook', tagline: 'Detrás de cada pieza terminada — los bocetos y primeras líneas.' },
-            contact: {
-                title: 'Construyamos algo único <span class="text-cyan">juntos</span>',
-                subtitle: '¿Tenés un proyecto en mente? Mandame un mensaje y te respondo a la brevedad.',
-                form: {
-                    name: 'Nombre', namePlaceholder: 'Tu nombre',
-                    email: 'Email',
-                    message: 'Mensaje', messagePlaceholder: 'Contame sobre tu proyecto...',
-                    send: 'Enviar mensaje',
-                    success: '¡Mensaje enviado! Te respondo pronto ✦'
-                }
-            },
-            footer: { role: 'Medios Visuales con IA y Dirección Creativa' },
-            wip: {
-                badge: 'En construcción',
-                title: 'Todavía en proceso ✦',
-                desc: 'Esta sección todavía está en construcción. La única sección completamente terminada es <strong>Motion &amp; Video</strong> — ¡mirala!',
-                btn: 'Llevame ahí →'
-            },
-        }
-    };
-
-    function getT(lang, key) {
-        return key.split('.').reduce((obj, k) => (obj && obj[k] !== undefined ? obj[k] : null), translations[lang]);
-    }
-
-    function applyLang(lang) {
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            const val = getT(lang, el.dataset.i18n);
-            if (val !== null) {
-                el.innerHTML = val;
-                el.classList.add('lang-fade');
-                el.addEventListener('animationend', () => el.classList.remove('lang-fade'), { once: true });
-            }
-        });
-
-        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-            const val = getT(lang, el.dataset.i18nPlaceholder);
-            if (val !== null) el.placeholder = val;
-        });
-
-        document.documentElement.lang = lang;
-        const isES = lang === 'es';
-        document.getElementById('langFlag').textContent  = isES ? '🇺🇸' : '🇦🇷';
-        document.getElementById('langLabel').textContent = isES ? 'EN' : 'ES';
-    }
-
-    let currentLang = localStorage.getItem('lupe-lang') || 'en';
-    applyLang(currentLang);
-
-    document.getElementById('langSwitch').addEventListener('click', () => {
-        currentLang = currentLang === 'en' ? 'es' : 'en';
-        localStorage.setItem('lupe-lang', currentLang);
-        applyLang(currentLang);
-    });
-    // ── WIP MODAL ───────────────────────────────
-    document.addEventListener('DOMContentLoaded', () => {
-        const wipModal    = document.getElementById('wipModal');
-        const wipClose    = document.getElementById('wipClose');
-        const wipBackdrop = document.getElementById('wipBackdrop');
-        // WIP pop-up disabled: unfinished sections are hidden instead (see `hidden` sections above)
-        wipClose.addEventListener('click',    () => { window.location.href = 'MotionVideo.html'; });
-        wipBackdrop.addEventListener('click', () => wipModal.classList.remove('active'));
-        document.addEventListener('keydown', e => {
-            if (e.key === 'Escape') wipModal.classList.remove('active');
-        });
-    });
-    </script>
-
-    <!-- ══ WIP MODAL ════════════════════════════ -->
-    <div class="wip-modal" id="wipModal">
-        <div class="wip-backdrop" id="wipBackdrop"></div>
-        <div class="wip-card">
-            <span class="wip-badge" data-i18n="wip.badge">Work in Progress</span>
-            <h3 data-i18n="wip.title">Still being built ✦</h3>
-            <p data-i18n="wip.desc">This section is still in progress. The only fully completed section right now is <strong>Motion &amp; Video</strong> — check it out!</p>
-            <button class="wip-close" id="wipClose" data-i18n="wip.btn">Take me there →</button>
         </div>
     </div>
 
-    <style>
-    .wip-modal {
-        position: fixed;
-        inset: 0;
-        z-index: 8000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.35s ease;
-    }
-    .wip-modal.active { opacity: 1; pointer-events: all; }
-    .wip-backdrop {
-        position: absolute;
-        inset: 0;
-        background: rgba(0,0,0,0.55);
-        cursor: pointer;
-    }
-    .wip-card {
-        position: relative;
-        z-index: 1;
-        background: #fff;
-        border-radius: 20px;
-        padding: 2.5rem 2rem 2rem;
-        max-width: 360px;
-        width: 88%;
-        text-align: center;
-        box-shadow: 0 24px 60px rgba(0,0,0,0.2);
-        animation: wipIn 0.4s cubic-bezier(.25,.46,.45,.94) both;
-    }
-    @keyframes wipIn {
-        from { transform: translateY(20px) scale(0.97); opacity: 0; }
-        to   { transform: none; opacity: 1; }
-    }
-    .wip-badge {
-        display: inline-block;
-        font-size: 0.6rem;
-        font-weight: 800;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        color: #F50041;
-        border: 1.5px solid #F50041;
-        border-radius: 2rem;
-        padding: 0.28rem 0.8rem;
-        margin-bottom: 1.1rem;
-        font-family: 'Raleway', sans-serif;
-    }
-    .wip-card h3 {
-        font-size: 1.45rem;
-        font-weight: 900;
-        color: #000;
-        letter-spacing: -0.5px;
-        margin: 0 0 0.7rem;
-        font-family: 'Raleway', sans-serif;
-    }
-    .wip-card p {
-        font-size: 0.86rem;
-        color: #666;
-        line-height: 1.7;
-        margin: 0 0 1.8rem;
-        font-family: 'Raleway', sans-serif;
-    }
-    .wip-close {
-        background: #F50041;
-        color: #fff;
-        border: none;
-        border-radius: 2rem;
-        padding: 0.75rem 1.8rem;
-        font-size: 0.9rem;
-        font-weight: 700;
-        cursor: pointer;
-        font-family: 'Raleway', sans-serif;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .wip-close:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(245,0,65,0.35);
-    }
-    </style>
+    <main id="main">
+        <section class="page-hero">
+            <div class="container page-hero__inner">
+                <p class="eyebrow" data-i18n="illus.hero.eyebrow">Illustration · Characters</p>
+                <h1 class="display">Illustration &amp; <em class="is-cyan">Character design</em></h1>
+                <p class="lead" data-i18n="illus.hero.desc">Character design, digital illustration and the creative process behind every line.</p>
+            </div>
+            <div class="container">
+            <svg class="page-hero__rule" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <defs><linearGradient id="gIllus" x1="0" x2="1"><stop offset="0" stop-color="#F50041"/><stop offset=".5" stop-color="#8b3fa8"/><stop offset="1" stop-color="#00D2D3"/></linearGradient></defs>
+                <path d="M0 60 C 200 10, 380 78, 600 40 S 1000 4, 1200 30" fill="none" stroke="url(#gIllus)" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            </div>
+        </section>
 
+        <section class="section band--ink" aria-labelledby="char-title">
+            <div class="container">
+                <div class="section-head section-head--row">
+                    <div>
+                        <p class="eyebrow" data-i18n="illus.char.eyebrow">Character archive</p>
+                        <h2 class="h2" id="char-title" data-i18n="illus.char.title" style="margin-top:.75rem">Worlds built one <em class="is-cyan">character</em> at a time</h2>
+                    </div>
+                    <p class="lead" data-i18n="illus.char.lead">Exploring personality, silhouette and story. Open a project to see the full sheets.</p>
+                </div>
+                <div class="grid grid--2">
+                    <article class="reveal">
+                        <button class="project" type="button" data-dialog="dlg-pot" aria-haspopup="dialog">
+                            <span class="project__thumb"><img src="img/web/queen.png" alt="" width="783" height="573" loading="lazy"></span>
+                            <span class="project__title">Pie of Thrones</span>
+                            <span class="project__desc" data-i18n="illus.p1.short">Feed the Queen's corgis before they get angry.</span>
+                            <span class="link-arrow" data-i18n="illus.char.open">Open project</span>
+                        </button>
+                        <ul class="chips" role="list" style="margin-top:.75rem"><li class="chip" data-i18n="illus.tag.char">Character design</li><li class="chip" data-i18n="illus.tag.anim">Animation</li><li class="chip" data-i18n="illus.tag.prop">Prop design</li></ul>
+                    </article>
+                    <article class="reveal">
+                        <button class="project" type="button" data-dialog="dlg-fn" aria-haspopup="dialog">
+                            <span class="project__thumb"><img src="img/web/fn-banner.jpg" alt="" width="1600" height="667" loading="lazy"></span>
+                            <span class="project__title">Furia Nórdica</span>
+                            <span class="project__desc" data-i18n="illus.p2.short">A Norse hero fights masked villains across the city.</span>
+                            <span class="link-arrow" data-i18n="illus.char.open">Open project</span>
+                        </button>
+                        <ul class="chips" role="list" style="margin-top:.75rem"><li class="chip" data-i18n="illus.tag.char">Character design</li><li class="chip" data-i18n="illus.tag.hud">HUD design</li></ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <dialog class="dialog" id="dlg-pot" aria-labelledby="dlg-pot-title">
+            <div class="dialog__head">
+                <div>
+                    <p class="eyebrow" data-i18n="illus.tag.game">2D video game</p>
+                    <h2 class="h3" id="dlg-pot-title" style="margin-top:.25rem">Pie of Thrones</h2>
+                    <p class="muted" data-i18n="illus.p1.desc" style="margin-top:.5rem;font-size:var(--fs-sm);max-width:44rem">One afternoon at Buckingham Palace, the Queen's peace is interrupted by her three corgis. Furious, she calls a servant and demands shepherd's pie for her pets. With her terrible aim, the Queen has to feed the corgis, or at least try.</p>
+                </div>
+                <button class="dialog__close" type="button" data-close aria-label="Close" data-i18n-aria="common.close">✕</button>
+            </div>
+            <div class="dialog__body">
+                <div class="gallery">
+                        <h3 class="gallery__title" data-i18n="illus.p1.chars">Characters</h3>
+                        <figure class="full"><img src="img/web/queen.png" alt="" loading="lazy"><figcaption data-i18n="illus.p1.s1">Queen · Character design</figcaption></figure>
+                        <figure><img src="img/web/queen-angry.png" alt="" loading="lazy"><figcaption data-i18n="illus.p1.s2">Queen · Angry expression</figcaption></figure>
+                        <figure><img src="img/web/queen-looking.png" alt="" loading="lazy"><figcaption data-i18n="illus.p1.s3">Queen · Looking around</figcaption></figure>
+                        <figure class="full"><img src="img/expresiones.svg" alt="" loading="lazy"><figcaption data-i18n="illus.p1.s4">Queen &amp; corgi · Expressions and poses</figcaption></figure>
+                        <figure><img src="img/web/butler.png" alt="" loading="lazy"><figcaption data-i18n="illus.p1.s5">Butler · Character design</figcaption></figure>
+                        <figure><img src="img/PERROSSS.svg" alt="" loading="lazy"><figcaption data-i18n="illus.p1.s6">Props · Royal dog bowls and serving tray</figcaption></figure>
+                        <h3 class="gallery__title" data-i18n="illus.p1.props">Props</h3>
+                        <figure class="full"><img src="img/web/plates-pie.png" alt="" loading="lazy"><figcaption data-i18n="illus.p1.s7">Props · Plates and pie</figcaption></figure>
+                        <h3 class="gallery__title" data-i18n="illus.p1.screens">Game screens</h3>
+                        <figure class="full"><img src="img/web/pot-start.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p1.g1">Start screen</figcaption></figure>
+                        <figure><img src="img/web/pot-game1.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p1.g2">Gameplay · Screen 1</figcaption></figure>
+                        <figure><img src="img/web/pot-game2.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p1.g3">Gameplay · Screen 2</figcaption></figure>
+                        <figure class="full"><img src="img/web/pot-game3.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p1.g4">Gameplay · Screen 3</figcaption></figure>
+                        <figure><img src="img/web/pot-win.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p1.g5">Win screen</figcaption></figure>
+                        <figure><img src="img/web/pot-lose.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p1.g6">Game over screen</figcaption></figure>
+                </div>
+            </div>
+        </dialog>
+
+        <dialog class="dialog" id="dlg-fn" aria-labelledby="dlg-fn-title">
+            <div class="dialog__head">
+                <div>
+                    <p class="eyebrow" data-i18n="illus.tag.game">2D video game</p>
+                    <h2 class="h3" id="dlg-fn-title" style="margin-top:.25rem">Furia Nórdica</h2>
+                    <p class="muted" data-i18n="illus.p2.desc" style="margin-top:.5rem;font-size:var(--fs-sm);max-width:44rem">Character design and HUD for a Norse-inspired 2D beat 'em up. I designed the hero, the villains and the interface.</p>
+                </div>
+                <button class="dialog__close" type="button" data-close aria-label="Close" data-i18n-aria="common.close">✕</button>
+            </div>
+            <div class="dialog__body">
+                <div class="gallery">
+                        <h3 class="gallery__title" data-i18n="illus.p2.chars">Characters</h3>
+                        <figure class="full"><img src="img/web/fn-banner.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.banner">Furia Nórdica · Key art</figcaption></figure>
+                        <figure class="full"><img src="img/web/fn-raulcito-waving.png" alt="" loading="lazy"><figcaption data-i18n="illus.p2.s1">Raulcito · Waving</figcaption></figure>
+                        <figure><img src="img/web/fn-raulcito.png" alt="" loading="lazy"><figcaption data-i18n="illus.p2.s2">Raulcito · Character design</figcaption></figure>
+                        <figure><img src="img/web/fn-raulcito-face.png" alt="" loading="lazy"><figcaption data-i18n="illus.p2.s3">Raulcito · Face detail</figcaption></figure>
+                        <figure><img src="img/web/fn-boss.png" alt="" loading="lazy"><figcaption data-i18n="illus.p2.s4">The Lord of Masks · Boss</figcaption></figure>
+                        <figure><img src="img/web/fn-villain1.png" alt="" loading="lazy"><figcaption data-i18n="illus.p2.s5">Citizen villain 1</figcaption></figure>
+                        <figure><img src="img/web/fn-villain2.png" alt="" loading="lazy"><figcaption data-i18n="illus.p2.s6">Citizen villain 2</figcaption></figure>
+                        <figure class="full"><div class="strip" tabindex="0" role="region" aria-label="Raulcito · Sprites"><img src="img/web/fn-raulcito-sprites.png" alt="" loading="lazy"></div><figcaption data-i18n="illus.p2.s7">Raulcito · Sprites</figcaption></figure>
+                        <figure class="full"><div class="strip" tabindex="0" role="region" aria-label="Villain · Full design"><img src="img/web/fn-villain-full.png" alt="" loading="lazy"></div><figcaption data-i18n="illus.p2.s8">Villain · Full design</figcaption></figure>
+                        <figure class="full"><div class="strip" tabindex="0" role="region" aria-label="Villain · Sprites"><img src="img/web/fn-villain-sprites.png" alt="" loading="lazy"></div><figcaption data-i18n="illus.p2.s9">Villain · Sprites</figcaption></figure>
+                        <h3 class="gallery__title" data-i18n="illus.p2.screens">HUD &amp; screens</h3>
+                        <figure class="full"><img src="img/web/fn-hud.png" alt="" loading="lazy"><figcaption data-i18n="illus.p2.hud">HUD design</figcaption></figure>
+                        <figure class="full"><img src="img/web/fn-win.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.win">Win screen</figcaption></figure>
+                        <figure><img src="img/web/fn-lose1.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.lose1">Game over · Screen 1</figcaption></figure>
+                        <figure><img src="img/web/fn-lose2.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.lose2">Game over · Screen 2</figcaption></figure>
+                        <h3 class="gallery__title" data-i18n="illus.p2.gameplay">Gameplay</h3>
+                        <figure class="full"><video src="img/video_web.mp4" controls playsinline preload="none"></video><figcaption data-i18n="illus.p2.v1">Gameplay video</figcaption></figure>
+                        <figure class="full"><video src="img/video_gameplay_redes.mp4" controls playsinline preload="none"></video><figcaption data-i18n="illus.p2.v2">Gameplay · Social media cut</figcaption></figure>
+                        <figure><img src="img/web/fn-gp1.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.gp">Gameplay still</figcaption></figure>
+                        <figure><img src="img/web/fn-gp2.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.gp">Gameplay still</figcaption></figure>
+                        <figure><img src="img/web/fn-gp3.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.gp">Gameplay still</figcaption></figure>
+                        <figure><img src="img/web/fn-gp4.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.gp">Gameplay still</figcaption></figure>
+                        <figure><img src="img/web/fn-gp5.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.gp">Gameplay still</figcaption></figure>
+                        <figure><img src="img/web/fn-gp6.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.gp">Gameplay still</figcaption></figure>
+                        <h3 class="gallery__title" data-i18n="illus.p2.bgs">Backgrounds</h3>
+                        <figure class="full"><img src="img/web/fn-bg-exterior.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.bg1">Exterior background</figcaption></figure>
+                        <figure class="full"><img src="img/web/fn-bg-intro.jpg" alt="" loading="lazy"><figcaption data-i18n="illus.p2.bg2">Intro background</figcaption></figure>
+                </div>
+            </div>
+        </dialog>
+
+        <section class="section band--paper2" id="contact" aria-labelledby="contact-title">
+            <div class="container contact">
+                <div>
+                    <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+                    <h2 class="h2" id="contact-title" data-i18n="contact.title" style="margin-top:.75rem">Let's build something <em class="is-cyan">together</em></h2>
+                    <p class="lead" data-i18n="contact.subtitle" style="margin-top:1rem">Have a project in mind? Send me a message and I'll reply within two working days.</p>
+                    <div class="contact__direct">
+                        <p class="muted" data-i18n="contact.direct">Or write to me directly</p>
+                        <a href="mailto:guadalupeholsman@gmail.com"><img src="img/icon-web.png" alt="" width="24" height="24">guadalupeholsman@gmail.com</a>
+                        <a href="https://wa.me/542215964111" target="_blank" rel="noopener"><img src="img/icon-whatsapp.png" alt="" width="24" height="24">+54 221 596 4111</a>
+                        <a href="https://www.linkedin.com/in/guadalupe-holsman" target="_blank" rel="noopener"><img src="img/icon-linkedin.png" alt="" width="24" height="24">linkedin.com/in/guadalupe-holsman</a>
+                    </div>
+                </div>
+                <form class="form" id="contactForm" novalidate>
+                    <div class="field">
+                        <label for="name" data-i18n="contact.name">Name</label>
+                        <input id="name" name="from_name" type="text" autocomplete="name" required placeholder="Your name" data-i18n-placeholder="contact.namePh">
+                    </div>
+                    <div class="field">
+                        <label for="email" data-i18n="contact.email">Email</label>
+                        <input id="email" name="from_email" type="email" autocomplete="email" inputmode="email" required placeholder="you@email.com" data-i18n-placeholder="contact.emailPh">
+                    </div>
+                    <div class="field">
+                        <label for="message" data-i18n="contact.message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project, timeline and budget" data-i18n-placeholder="contact.messagePh"></textarea>
+                    </div>
+                    <button class="btn btn--primary" type="submit" data-i18n="contact.send">Send message</button>
+                    <p class="form__status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <p class="footer__brand">Lupe Holsman<span class="text-pink">.</span></p>
+                    <p class="footer__role" data-i18n="common.footer.role">AI Visual Media &amp; Creative Direction</p>
+                </div>
+                <nav aria-label="Footer">
+                    <p class="eyebrow" data-i18n="common.footer.pages">Pages</p>
+                    <ul class="footer__nav">
+                        <li><a href="index.html" data-i18n="common.nav.home">Home</a></li>
+                        <li><a href="about.html" data-i18n="common.nav.about">About</a></li>
+                        <li><a href="BrandingySocialmedia.html" data-i18n="common.nav.branding">Branding</a></li>
+                        <li><a href="MotionVideo.html" data-i18n="common.nav.motion">Motion</a></li>
+                        <li><a href="Illustration.html" data-i18n="common.nav.illus">Illustration</a></li>
+                    </ul>
+                </nav>
+                <div>
+                    <p class="eyebrow" data-i18n="common.footer.elsewhere">Elsewhere</p>
+                    <div class="socials" style="margin-top:.75rem">
+                        <a href="https://wa.me/542215964111" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="img/icon-whatsapp.png" alt="" width="20" height="20"></a>
+                        <a href="https://www.linkedin.com/in/guadalupe-holsman" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/icon-linkedin.png" alt="" width="20" height="20"></a>
+                        <a href="mailto:guadalupeholsman@gmail.com" aria-label="Email"><img src="img/icon-web.png" alt="" width="20" height="20"></a>
+                    </div>
+                    <p class="contact-lines muted" style="margin-top:1rem">La Plata, Buenos Aires, Argentina</p>
+                </div>
+            </div>
+            <p class="footer__legal">© <span data-year>2026</span> · <span data-i18n="common.footer.made">Designed and built by Lupe Holsman · La Plata, Argentina</span></p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
+    <script>window.emailjs && emailjs.init("ISC9P7KgnY-2ohoqV");</script>
+    <script src="js/i18n.js?v=3"></script>
+    <script src="js/site.js?v=3"></script>
 </body>
 </html>
