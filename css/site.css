@@ -500,6 +500,25 @@ a.card:hover, .card--link:hover { transform: translateY(-4px); box-shadow: var(-
 .logos__word { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem); letter-spacing: -0.02em; color: var(--muted); white-space: nowrap; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
+/* ── Steps (AI process) ────────────────────────────────────────────────── */
+.steps { list-style: none; padding: 0; display: grid; gap: var(--s-4); counter-reset: step; }
+@media (min-width: 600px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1080px) { .steps { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.step {
+    position: relative; display: grid; gap: var(--s-3); align-content: start;
+    padding: var(--s-5); border-radius: var(--radius);
+    background: var(--ink-2); border: 1px solid var(--ink-line);
+}
+.step__num { font-family: var(--font-mono); font-size: var(--fs-xs); font-weight: 500; letter-spacing: .08em; color: var(--cyan); }
+.step__title { font-size: var(--fs-lg); font-weight: 800; letter-spacing: -0.015em; }
+.step p { color: var(--muted); font-size: var(--fs-sm); }
+@media (min-width: 1080px) {
+    .step:not(:last-child)::after {
+        content: ''; position: absolute; top: calc(var(--s-5) + 0.55em); right: calc(var(--s-4) * -1); width: var(--s-4); height: 2px;
+        background: linear-gradient(90deg, var(--pink), var(--cyan));
+    }
+}
+
 /* ── Timeline (experience) ─────────────────────────────────────────────── */
 .timeline { list-style: none; padding: 0; border-top: 1px solid var(--line); }
 .timeline__item {

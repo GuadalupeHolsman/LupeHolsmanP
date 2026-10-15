@@ -69,6 +69,15 @@ window.I18N = {
                 english: 'English', englishLevel: 'Advanced · C1',
                 spanish: 'Spanish', spanishLevel: 'Native'
             },
+            ai: {
+                eyebrow: 'AI visual media',
+                title: 'How I work with <em class="is-cyan">AI</em>',
+                lead: 'AI speeds up production. Art direction keeps it on-brand. Every piece goes through the same four steps.',
+                s1: 'Brief & direction', s1d: 'Goal, audience and visual references. I define the look before generating a single frame.',
+                s2: 'Style frames & prompts', s2d: 'Key frames and prompt systems that lock in style, characters and brand colors.',
+                s3: 'Generation & curation', s3d: 'Image, video and voice with tools like Midjourney, Runway, Kling, Veo and ElevenLabs. I keep only what works.',
+                s4: 'Compositing & final edit', s4d: 'Design, compositing, motion and sound in After Effects and Premiere for a finished, human result.'
+            },
             stats: { projects: 'Projects delivered', years: 'Years of experience', roles: 'Current roles' },
             logos: 'Teams and brands I\'ve worked with'
         },
@@ -261,6 +270,15 @@ window.I18N = {
                 more: 'Más sobre mí',
                 english: 'Inglés', englishLevel: 'Avanzado · C1',
                 spanish: 'Español', spanishLevel: 'Nativo'
+            },
+            ai: {
+                eyebrow: 'Medios visuales con IA',
+                title: 'Cómo trabajo con <em class="is-cyan">IA</em>',
+                lead: 'La IA acelera la producción. La dirección de arte la mantiene fiel a la marca. Cada pieza pasa por los mismos cuatro pasos.',
+                s1: 'Brief y dirección', s1d: 'Objetivo, audiencia y referencias visuales. Defino el look antes de generar un solo cuadro.',
+                s2: 'Style frames y prompts', s2d: 'Cuadros clave y sistemas de prompts que fijan el estilo, los personajes y los colores de marca.',
+                s3: 'Generación y curaduría', s3d: 'Imagen, video y voz con herramientas como Midjourney, Runway, Kling, Veo y ElevenLabs. Me quedo solo con lo que funciona.',
+                s4: 'Composición y edición final', s4d: 'Diseño, composición, motion y sonido en After Effects y Premiere para un resultado terminado y humano.'
             },
             stats: { projects: 'Proyectos entregados', years: 'Años de experiencia', roles: 'Roles actuales' },
             logos: 'Equipos y marcas con los que trabajé'

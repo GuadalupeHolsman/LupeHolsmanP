@@ -6,15 +6,47 @@
     <title data-i18n="home.metaTitle">Lupe Holsman · AI Visual Media &amp; Creative Direction</title>
     <meta name="description" content="Guadalupe (Lupe) Holsman: AI Visual Media Specialist at Black Vitriol and Loomlock, Creative Marketing Director at EatsBueno. Multimedia designer in La Plata, Argentina.">
     <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://guadalupeholsman.github.io/LupeHolsmanP/">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Lupe Holsman">
+    <meta property="og:url" content="https://guadalupeholsman.github.io/LupeHolsmanP/">
     <meta property="og:title" content="Lupe Holsman · AI Visual Media &amp; Creative Direction">
     <meta property="og:description" content="Guadalupe (Lupe) Holsman: AI Visual Media Specialist at Black Vitriol and Loomlock, Creative Marketing Director at EatsBueno. Multimedia designer in La Plata, Argentina.">
-    <meta property="og:image" content="img/web/character.png">
+    <meta property="og:image" content="https://guadalupeholsman.github.io/LupeHolsmanP/img/web/og-card.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_AR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://guadalupeholsman.github.io/LupeHolsmanP/img/web/og-card.jpg">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b0b0f'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='900' font-size='30' fill='%23fff'%3ELH%3C/text%3E%3Ccircle cx='50' cy='46' r='5' fill='%23F50041'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/site.css?v=3">
+    <link rel="stylesheet" href="css/site.css?v=4">
+    <link rel="preload" as="image" href="img/web/character.webp" type="image/webp">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Guadalupe Holsman",
+      "alternateName": "Lupe Holsman",
+      "url": "https://guadalupeholsman.github.io/LupeHolsmanP/",
+      "image": "https://guadalupeholsman.github.io/LupeHolsmanP/img/web/profile.jpg",
+      "jobTitle": ["AI Visual Media Specialist", "Creative Marketing Director", "Multimedia Designer"],
+      "worksFor": [
+        {"@type": "Organization", "name": "Black Vitriol"},
+        {"@type": "Organization", "name": "Loomlock"},
+        {"@type": "Organization", "name": "EatsBueno"}
+      ],
+      "alumniOf": {"@type": "CollegeOrUniversity", "name": "Universidad Nacional de La Plata"},
+      "address": {"@type": "PostalAddress", "addressLocality": "La Plata", "addressRegion": "Buenos Aires", "addressCountry": "AR"},
+      "email": "mailto:guadalupeholsman@gmail.com",
+      "knowsLanguage": ["es", "en"],
+      "knowsAbout": ["Generative AI", "AI image and video generation", "Creative direction", "Branding", "Motion graphics", "Video editing", "Illustration", "Character design", "Social media marketing"],
+      "sameAs": ["https://www.linkedin.com/in/guadalupe-holsman"]
+    }
+    </script>
 </head>
 <body>
     <a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
@@ -72,7 +104,10 @@
                     <p class="hero__now"><span class="pulse" aria-hidden="true"></span><span data-i18n="home.hero.now">Currently at</span> <strong>Black Vitriol · Loomlock · EatsBueno</strong></p>
                 </div>
                 <div class="hero__art">
-                    <img src="img/web/character.png" alt="Illustrated character of Lupe" width="833" height="1400" fetchpriority="high">
+                    <picture>
+                        <source srcset="img/web/character.webp" type="image/webp">
+                        <img src="img/web/character.png" alt="Illustrated character of Lupe" width="833" height="1400" fetchpriority="high">
+                    </picture>
                 </div>
             </div>
         </section>
@@ -144,11 +179,29 @@
             </div>
         </section>
 
+        <section class="section band--ink" aria-labelledby="ai-title">
+            <div class="container">
+                <div class="section-head section-head--row">
+                    <div>
+                        <p class="eyebrow" data-i18n="home.ai.eyebrow">AI visual media</p>
+                        <h2 class="h2" id="ai-title" data-i18n="home.ai.title" style="margin-top:.75rem">How I work with <em class="is-cyan">AI</em></h2>
+                    </div>
+                    <p class="lead" data-i18n="home.ai.lead">AI speeds up production. Art direction keeps it on-brand. Every piece goes through the same four steps.</p>
+                </div>
+                <ol class="steps" role="list">
+                    <li class="step reveal"><span class="step__num" aria-hidden="true">01</span><h3 class="step__title" data-i18n="home.ai.s1">Brief &amp; direction</h3><p data-i18n="home.ai.s1d">Goal, audience and visual references. I define the look before generating a single frame.</p></li>
+                    <li class="step reveal"><span class="step__num" aria-hidden="true">02</span><h3 class="step__title" data-i18n="home.ai.s2">Style frames &amp; prompts</h3><p data-i18n="home.ai.s2d">Key frames and prompt systems that lock in style, characters and brand colors.</p></li>
+                    <li class="step reveal"><span class="step__num" aria-hidden="true">03</span><h3 class="step__title" data-i18n="home.ai.s3">Generation &amp; curation</h3><p data-i18n="home.ai.s3d">Image, video and voice with tools like Midjourney, Runway, Kling, Veo and ElevenLabs. I keep only what works.</p></li>
+                    <li class="step reveal"><span class="step__num" aria-hidden="true">04</span><h3 class="step__title" data-i18n="home.ai.s4">Compositing &amp; final edit</h3><p data-i18n="home.ai.s4d">Design, compositing, motion and sound in After Effects and Premiere for a finished, human result.</p></li>
+                </ol>
+            </div>
+        </section>
+
         <section class="section band--paper2" aria-labelledby="about-title">
             <div class="container split">
                 <div class="portrait reveal">
-                    <img class="portrait__photo" src="img/web/profile.jpg" alt="Portrait of Guadalupe Holsman" width="900" height="1200" loading="lazy">
-                    <img class="portrait__sticker" src="img/web/character-sitting.png" alt="" width="605" height="800" loading="lazy">
+                    <picture><source srcset="img/web/profile.webp" type="image/webp"><img class="portrait__photo" src="img/web/profile.jpg" alt="Portrait of Guadalupe Holsman" width="900" height="1200" loading="lazy"></picture>
+                    <picture><source srcset="img/web/character-sitting.webp" type="image/webp"><img class="portrait__sticker" src="img/web/character-sitting.png" alt="" width="605" height="800" loading="lazy"></picture>
                 </div>
                 <div class="reveal">
                     <p class="eyebrow" data-i18n="home.about.eyebrow">About</p>
@@ -179,7 +232,7 @@
             </div>
         </section>
 
-        <section class="section--tight band--paper2" aria-labelledby="logos-title" style="padding-top:2.5rem;padding-bottom:2.5rem">
+        <section class="section--tight" aria-labelledby="logos-title" style="padding-top:1rem;padding-bottom:3rem">
             <div class="container">
                 <p class="eyebrow eyebrow--cyan" id="logos-title" data-i18n="home.logos" style="margin-bottom:1.5rem">Teams and brands I've worked with</p>
                 <div class="logos">
@@ -268,7 +321,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
     <script>window.emailjs && emailjs.init("ISC9P7KgnY-2ohoqV");</script>
-    <script src="js/i18n.js?v=3"></script>
-    <script src="js/site.js?v=3"></script>
+    <script src="js/i18n.js?v=4"></script>
+    <script src="js/site.js?v=4"></script>
 </body>
 </html>

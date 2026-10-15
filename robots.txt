@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://guadalupeholsman.github.io/LupeHolsmanP/sitemap.xml
