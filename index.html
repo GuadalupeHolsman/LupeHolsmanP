@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/site.css?v=7">
+    <link rel="stylesheet" href="css/site.css?v=8">
     <link rel="preload" as="image" href="img/web/character.webp" type="image/webp">
     <script type="application/ld+json">
     {
@@ -46,6 +46,54 @@
       "knowsAbout": ["Generative AI", "AI image and video generation", "Creative direction", "Branding", "Motion graphics", "Video editing", "Illustration", "Character design", "Social media marketing"],
       "sameAs": ["https://www.linkedin.com/in/guadalupe-holsman"]
     }
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are you available for freelance projects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Alongside my current roles I take on freelance projects in branding, motion and AI visual content. Send me a short description, timeline and budget."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What services do you offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Creative and art direction, AI-generated images and video, branding and visual identity, social media design, motion graphics and video editing, and illustration and character design."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are you based and which languages do you work in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I'm based in La Plata, Argentina (GMT-3). I work in Spanish (native) and English (C1)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which AI tools do you use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Midjourney, Runway, Kling, Veo and ElevenLabs to generate, and After Effects, Premiere and Adobe Creative Suite to finish every piece."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do we get started?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tell me about your project with the form below, by email or on WhatsApp. I'll reply with questions and next steps."
+      }
+    }
+  ]
+}
     </script>
 </head>
 <body>
@@ -124,6 +172,12 @@
                     <p class="lead" data-i18n="home.work.lead">Four fields, one visual language. Pick one to see the projects.</p>
                 </div>
                 <div class="grid grid--4">
+                    <a class="card reveal" href="#ai">
+                        <span class="card__icon card__icon--ai" aria-hidden="true">✦</span>
+                        <h3 class="card__title" data-i18n="home.work.aiTitle">AI Visual Media</h3>
+                        <p data-i18n="home.work.aiDesc">AI-generated imagery and video with art direction, from prompt to final edit.</p>
+                        <span class="card__foot link-arrow" data-i18n="home.work.aiSee">See the process</span>
+                    </a>
                     <a class="card reveal" href="BrandingySocialmedia.html">
                         <span class="card__icon"><img src="img/icon-branding.png" alt="" width="28" height="28"></span>
                         <h3 class="card__title" data-i18n="home.work.brandTitle">Branding &amp; Social Media</h3>
@@ -142,13 +196,6 @@
                         <p data-i18n="home.work.illusDesc">Characters, props and game art with personality.</p>
                         <span class="card__foot link-arrow" data-i18n="home.work.see">See projects</span>
                     </a>
-                    <div class="card reveal">
-                        <span class="card__icon"><img src="img/icon-web.png" alt="" width="28" height="28"></span>
-                        <h3 class="card__title" data-i18n="home.work.uxTitle">UX/UI Design</h3>
-                        <p data-i18n="home.work.uxDesc">Digital products and interfaces designed around people.</p>
-                        <span class="card__foot"><span class="badge badge--muted" data-i18n="common.comingSoon">Coming soon</span></span>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -181,7 +228,7 @@
             </div>
         </section>
 
-        <section class="section band--ink" aria-labelledby="ai-title">
+        <section class="section band--ink" id="ai" aria-labelledby="ai-title">
             <div class="container">
                 <div class="section-head section-head--row">
                     <div>
@@ -258,15 +305,47 @@
             </div>
         </section>
 
+        <section class="section" aria-labelledby="faq-title">
+            <div class="container split split--top">
+                <div>
+                    <p class="eyebrow" data-i18n="home.faq.eyebrow">FAQ</p>
+                    <h2 class="h2" id="faq-title" data-i18n="home.faq.title" style="margin-top:.75rem">Quick <em>answers</em></h2>
+                    <p class="lead" data-i18n="home.faq.lead" style="margin-top:1rem">What clients and recruiters usually ask before we talk.</p>
+                </div>
+                <div class="faq">
+                    <details class="faq__item reveal">
+                        <summary data-i18n="home.faq.q1">Are you available for freelance projects?</summary>
+                        <p data-i18n="home.faq.a1">Yes. Alongside my current roles I take on freelance projects in branding, motion and AI visual content. Send me a short description, timeline and budget.</p>
+                    </details>
+                    <details class="faq__item reveal">
+                        <summary data-i18n="home.faq.q2">What services do you offer?</summary>
+                        <p data-i18n="home.faq.a2">Creative and art direction, AI-generated images and video, branding and visual identity, social media design, motion graphics and video editing, and illustration and character design.</p>
+                    </details>
+                    <details class="faq__item reveal">
+                        <summary data-i18n="home.faq.q3">Where are you based and which languages do you work in?</summary>
+                        <p data-i18n="home.faq.a3">I'm based in La Plata, Argentina (GMT-3). I work in Spanish (native) and English (C1).</p>
+                    </details>
+                    <details class="faq__item reveal">
+                        <summary data-i18n="home.faq.q4">Which AI tools do you use?</summary>
+                        <p data-i18n="home.faq.a4">Midjourney, Runway, Kling, Veo and ElevenLabs to generate, and After Effects, Premiere and Adobe Creative Suite to finish every piece.</p>
+                    </details>
+                    <details class="faq__item reveal">
+                        <summary data-i18n="home.faq.q5">How do we get started?</summary>
+                        <p data-i18n="home.faq.a5">Tell me about your project with the form below, by email or on WhatsApp. I'll reply with questions and next steps.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
         <section class="section band--paper2" id="contact" aria-labelledby="contact-title">
             <div class="container contact">
                 <div>
                     <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
                     <h2 class="h2" id="contact-title" data-i18n="contact.title" style="margin-top:.75rem">Let's build something <em class="is-cyan">together</em></h2>
-                    <p class="lead" data-i18n="contact.subtitle" style="margin-top:1rem">Have a project in mind? Send me a message and I'll reply within two working days.</p>
+                    <p class="lead" data-i18n="contact.subtitle" style="margin-top:1rem">Have a project in mind? Send me a message and I'll get back to you as soon as possible.</p>
                     <div class="contact__direct">
                         <p class="muted" data-i18n="contact.direct">Or write to me directly</p>
-                        <span class="copy-row"><a href="mailto:guadalupeholsman@gmail.com"><img src="img/icon-web.png" alt="" width="24" height="24">guadalupeholsman@gmail.com</a><button class="copy-btn" type="button" data-copy="guadalupeholsman@gmail.com" data-i18n="contact.copy">Copy</button></span>
+                        <span class="copy-row"><a href="mailto:guadalupeholsman@gmail.com"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>guadalupeholsman@gmail.com</a><button class="copy-btn" type="button" data-copy="guadalupeholsman@gmail.com" data-i18n="contact.copy">Copy</button></span>
                         <a href="https://wa.me/542215964111" target="_blank" rel="noopener"><img src="img/icon-whatsapp.png" alt="" width="24" height="24">+54 221 596 4111</a>
                         <a href="https://www.linkedin.com/in/guadalupe-holsman" target="_blank" rel="noopener"><img src="img/icon-linkedin.png" alt="" width="24" height="24">linkedin.com/in/guadalupe-holsman</a>
                     </div>
@@ -327,7 +406,7 @@
                     <div class="socials" style="margin-top:.75rem">
                         <a href="https://wa.me/542215964111" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="img/icon-whatsapp.png" alt="" width="20" height="20"></a>
                         <a href="https://www.linkedin.com/in/guadalupe-holsman" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/icon-linkedin.png" alt="" width="20" height="20"></a>
-                        <a href="mailto:guadalupeholsman@gmail.com" aria-label="Email"><img src="img/icon-web.png" alt="" width="20" height="20"></a>
+                        <a href="mailto:guadalupeholsman@gmail.com" aria-label="Email"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                     </div>
                     <p class="contact-lines muted" style="margin-top:1rem">La Plata, Buenos Aires, Argentina</p>
                 </div>
@@ -338,7 +417,7 @@
     <a class="to-top" href="#main" aria-label="Back to top" data-i18n-aria="common.backTop">↑</a>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
     <script>window.emailjs && emailjs.init("ISC9P7KgnY-2ohoqV");</script>
-    <script src="js/i18n.js?v=7"></script>
-    <script src="js/site.js?v=7"></script>
+    <script src="js/i18n.js?v=8"></script>
+    <script src="js/site.js?v=8"></script>
 </body>
 </html>

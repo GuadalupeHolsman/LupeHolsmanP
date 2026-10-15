@@ -1,4 +1,23 @@
+# Search engines and AI assistants are welcome to read and cite this portfolio.
 User-agent: *
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://guadalupeholsman.github.io/LupeHolsmanP/sitemap.xml

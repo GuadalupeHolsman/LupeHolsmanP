@@ -17,12 +17,12 @@ window.I18N = {
                 made: 'Designed and built by Lupe Holsman · La Plata, Argentina'
             },
             close: 'Close',
-            backTop: 'Back to top', prev: 'Previous', next: 'Next', all: 'All'
+            backTop: 'Back to top', prev: 'Previous', next: 'Next', all: 'All', keepExploring: 'Keep exploring'
         },
         contact: {
             eyebrow: 'Contact',
             title: 'Let\'s build something <em class="is-cyan">together</em>',
-            subtitle: 'Have a project in mind? Send me a message and I\'ll reply within two working days.',
+            subtitle: 'Have a project in mind? Send me a message and I\'ll get back to you as soon as possible.',
             direct: 'Or write to me directly',
             name: 'Name', namePh: 'Your name',
             email: 'Email', emailPh: 'you@email.com',
@@ -45,7 +45,7 @@ window.I18N = {
             hero: {
                 eyebrow: 'AI Visual Media · Creative Direction',
                 title: 'Hi, I\'m <em>Lupe Holsman</em>',
-                sub: 'Multimedia designer creating brands, motion and AI-powered visuals for teams that want to be remembered.',
+                sub: 'Multimedia designer in La Plata, Argentina. I combine art direction, motion and generative AI for teams that want to be remembered.',
                 primary: 'See my work',
                 now: 'Currently at',
                 rotPrefix: 'I create',
@@ -66,6 +66,7 @@ window.I18N = {
                 eyebrow: 'Work',
                 title: 'What I <em class="is-cyan">create</em>',
                 lead: 'Four fields, one visual language. Pick one to see the projects.',
+                aiTitle: 'AI Visual Media', aiDesc: 'AI-generated imagery and video with art direction, from prompt to final edit.', aiSee: 'See the process',
                 brandTitle: 'Branding & Social Media', brandDesc: 'Identities and content systems that make a brand recognizable everywhere.',
                 uxTitle: 'UX/UI Design', uxDesc: 'Digital products and interfaces designed around people.',
                 motionTitle: 'Motion & Video', motionDesc: 'Reels, animation and long-form edits that hold attention.',
@@ -90,7 +91,15 @@ window.I18N = {
                 s4: 'Compositing & final edit', s4d: 'Design, compositing, motion and sound in After Effects and Premiere for a finished, human result.'
             },
             stats: { projects: 'Projects delivered', years: 'Years of experience', roles: 'Current roles' },
-            logos: 'Teams and brands I\'ve worked with'
+            logos: 'Teams and brands I\'ve worked with',
+            faq: {
+                eyebrow: 'FAQ', title: 'Quick <em>answers</em>', lead: 'What clients and recruiters usually ask before we talk.',
+                q1: 'Are you available for freelance projects?', a1: 'Yes. Alongside my current roles I take on freelance projects in branding, motion and AI visual content. Send me a short description, timeline and budget.',
+                q2: 'What services do you offer?', a2: 'Creative and art direction, AI-generated images and video, branding and visual identity, social media design, motion graphics and video editing, and illustration and character design.',
+                q3: 'Where are you based and which languages do you work in?', a3: 'I\'m based in La Plata, Argentina (GMT-3). I work in Spanish (native) and English (C1).',
+                q4: 'Which AI tools do you use?', a4: 'Midjourney, Runway, Kling, Veo and ElevenLabs to generate, and After Effects, Premiere and Adobe Creative Suite to finish every piece.',
+                q5: 'How do we get started?', a5: 'Tell me about your project with the form below, by email or on WhatsApp. I\'ll reply with questions and next steps.'
+            }
         },
         about: {
             metaTitle: 'About · Lupe Holsman',
@@ -233,12 +242,12 @@ window.I18N = {
                 made: 'Diseñado y desarrollado por Lupe Holsman · La Plata, Argentina'
             },
             close: 'Cerrar',
-            backTop: 'Volver arriba', prev: 'Anterior', next: 'Siguiente', all: 'Todos'
+            backTop: 'Volver arriba', prev: 'Anterior', next: 'Siguiente', all: 'Todos', keepExploring: 'Seguí explorando'
         },
         contact: {
             eyebrow: 'Contacto',
             title: 'Construyamos algo <em class="is-cyan">juntos</em>',
-            subtitle: '¿Tenés un proyecto en mente? Mandame un mensaje y te respondo en menos de dos días hábiles.',
+            subtitle: '¿Tenés un proyecto en mente? Mandame un mensaje y te respondo a la brevedad.',
             direct: 'O escribime directo',
             name: 'Nombre', namePh: 'Tu nombre',
             email: 'Email', emailPh: 'vos@email.com',
@@ -261,7 +270,7 @@ window.I18N = {
             hero: {
                 eyebrow: 'Medios visuales con IA · Dirección creativa',
                 title: 'Hola, soy <em>Lupe Holsman</em>',
-                sub: 'Diseñadora multimedia. Creo marcas, motion y visuales con IA para equipos que quieren ser recordados.',
+                sub: 'Diseñadora multimedia en La Plata, Argentina. Combino dirección de arte, motion e IA generativa para equipos que quieren ser recordados.',
                 primary: 'Ver mi trabajo',
                 now: 'Hoy en',
                 rotPrefix: 'Creo',
@@ -282,6 +291,7 @@ window.I18N = {
                 eyebrow: 'Trabajo',
                 title: 'Lo que <em class="is-cyan">hago</em>',
                 lead: 'Cuatro áreas, un mismo lenguaje visual. Elegí una para ver los proyectos.',
+                aiTitle: 'Medios Visuales con IA', aiDesc: 'Imágenes y video generados con IA y dirección de arte, del prompt a la edición final.', aiSee: 'Ver el proceso',
                 brandTitle: 'Branding y Redes', brandDesc: 'Identidades y sistemas de contenido que hacen reconocible a una marca en todos lados.',
                 uxTitle: 'Diseño UX/UI', uxDesc: 'Productos e interfaces digitales pensados para las personas.',
                 motionTitle: 'Motion y Video', motionDesc: 'Reels, animación y edición larga que sostienen la atención.',
@@ -306,7 +316,15 @@ window.I18N = {
                 s4: 'Composición y edición final', s4d: 'Diseño, composición, motion y sonido en After Effects y Premiere para un resultado terminado y humano.'
             },
             stats: { projects: 'Proyectos entregados', years: 'Años de experiencia', roles: 'Roles actuales' },
-            logos: 'Equipos y marcas con los que trabajé'
+            logos: 'Equipos y marcas con los que trabajé',
+            faq: {
+                eyebrow: 'Preguntas frecuentes', title: 'Respuestas <em>rápidas</em>', lead: 'Lo que clientes y reclutadores suelen preguntar antes de hablar.',
+                q1: '¿Estás disponible para proyectos freelance?', a1: 'Sí. Además de mis roles actuales, tomo proyectos freelance de branding, motion y contenido visual con IA. Mandame una descripción breve, plazos y presupuesto.',
+                q2: '¿Qué servicios ofrecés?', a2: 'Dirección creativa y de arte, imágenes y video generados con IA, branding e identidad visual, diseño para redes, motion graphics y edición de video, e ilustración y diseño de personajes.',
+                q3: '¿Dónde estás y en qué idiomas trabajás?', a3: 'Estoy en La Plata, Argentina (GMT-3). Trabajo en español (nativo) e inglés (C1).',
+                q4: '¿Con qué herramientas de IA trabajás?', a4: 'Midjourney, Runway, Kling, Veo y ElevenLabs para generar, y After Effects, Premiere y Adobe Creative Suite para terminar cada pieza.',
+                q5: '¿Cómo empezamos?', a5: 'Contame tu proyecto con el formulario de abajo, por email o por WhatsApp. Te respondo con preguntas y próximos pasos.'
+            }
         },
         about: {
             metaTitle: 'Sobre mí · Lupe Holsman',

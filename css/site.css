@@ -916,3 +916,28 @@ button.media:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0
 .role-card__logo--bv img { height: 3.5rem; }
 .role-card__logo--ll img { height: 2.25rem; }
 .role-card__logo--eb img { height: 1.75rem; }
+
+/* AI card icon + inline SVG icons */
+.card__icon--ai { font-size: 1.5rem; color: var(--cyan); background: rgba(0, 210, 211, .12); }
+.icon { flex: none; width: 1.5rem; height: 1.5rem; color: var(--cyan-ink); }
+.socials .icon { width: 1.25rem; height: 1.25rem; color: var(--text); }
+
+/* FAQ accordion (native <details>) */
+.faq { display: grid; border-top: 1px solid var(--line); }
+.faq__item { border-bottom: 1px solid var(--line); }
+.faq__item summary {
+    display: flex; align-items: center; justify-content: space-between; gap: var(--s-4);
+    min-height: 3.5rem; padding-block: var(--s-4); cursor: pointer; list-style: none;
+    font-weight: 700; font-size: var(--fs-md); line-height: 1.35;
+}
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary::after {
+    content: '+'; flex: none; width: 2rem; height: 2rem; border-radius: 50%;
+    display: grid; place-items: center; border: 1px solid var(--line);
+    font-weight: 400; font-size: 1.25rem; transition: transform .25s var(--ease), background-color .2s, color .2s;
+}
+.faq__item[open] summary::after { transform: rotate(45deg); background: var(--text); color: var(--paper); border-color: var(--text); }
+.faq__item summary:hover::after { border-color: var(--text); }
+.faq__item p { color: var(--muted); font-size: var(--fs-sm); padding-bottom: var(--s-5); max-width: 40rem; }
+.faq__item[open] p { animation: faq-in .3s var(--ease); }
+@keyframes faq-in { from { opacity: 0; transform: translateY(-4px); } }

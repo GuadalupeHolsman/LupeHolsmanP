@@ -1,0 +1,16 @@
+# Guadalupe (Lupe) Holsman
+
+> Multimedia designer in La Plata, Argentina. AI Visual Media Specialist at Black Vitriol and Loomlock, and Creative Marketing Director at EatsBueno. Works in Spanish (native) and English (C1). Available for freelance projects.
+
+Lupe Holsman combines art direction, motion graphics, video editing, illustration and generative AI (Midjourney, Runway, Kling, Veo, ElevenLabs, Adobe Creative Suite) to create brand identities, social content, AI-generated imagery and video.
+
+## Pages
+- [Home](https://guadalupeholsman.github.io/LupeHolsmanP/): overview, current roles, AI workflow, FAQ and contact
+- [About](https://guadalupeholsman.github.io/LupeHolsmanP/about.html): experience, education, tools and languages
+- [Branding & Social Media](https://guadalupeholsman.github.io/LupeHolsmanP/BrandingySocialmedia.html): visual identity and social media projects
+- [Motion & Video](https://guadalupeholsman.github.io/LupeHolsmanP/MotionVideo.html): reels, motion graphics and long-form edits
+- [Illustration & Character Design](https://guadalupeholsman.github.io/LupeHolsmanP/Illustration.html): character design and 2D game art
+
+## Contact
+- Email: guadalupeholsman@gmail.com
+- LinkedIn: https://www.linkedin.com/in/guadalupe-holsman
